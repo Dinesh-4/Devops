@@ -89,7 +89,8 @@ def save_to_mongodb(summary_text, commit_sha, branch, status):
         "commit_sha": commit_sha,
         "branch": branch,
         "status": status,
-        "timestamp": datetime.utcnow()
+        "timestamp": datetime.now(timezone.utc)
+
     }
 
     result = collection.insert_one(doc)
