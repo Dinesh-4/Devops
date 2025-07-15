@@ -1,0 +1,2 @@
+[console_scripts]
+autodevops = autodevops_cli.cli:autodevops

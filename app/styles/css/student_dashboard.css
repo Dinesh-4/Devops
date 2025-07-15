@@ -1,0 +1,51 @@
+/* Custom styles to enhance Bootstrap theme */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+    border: none;
+    background-color: var(--bs-dark);
+}
+
+.form-select, .form-control {
+    background-color: var(--bs-dark);
+    border-color: var(--bs-border-color);
+}
+
+.form-select:focus, .form-control:focus {
+    border-color: var(--bs-primary);
+    box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25);
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+/* Animation for table appearance */
+.fade-in {
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar-nav {
+        padding: 1rem 0;
+    }
+    
+    .nav-link {
+        padding: 0.5rem 0;
+    }
+}
+
