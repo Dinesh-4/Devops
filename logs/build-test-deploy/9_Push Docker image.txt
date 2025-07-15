@@ -1,0 +1,36 @@
+﻿2025-07-15T19:14:31.2377255Z ##[group]Run docker push ***/flask-ci-cd-demo
+2025-07-15T19:14:31.2377638Z [36;1mdocker push ***/flask-ci-cd-demo[0m
+2025-07-15T19:14:31.2405475Z shell: /usr/bin/bash -e {0}
+2025-07-15T19:14:31.2405749Z env:
+2025-07-15T19:14:31.2406000Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-15T19:14:31.2406403Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib/pkgconfig
+2025-07-15T19:14:31.2406793Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-15T19:14:31.2407145Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-15T19:14:31.2407486Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-15T19:14:31.2407833Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib
+2025-07-15T19:14:31.2408125Z ##[endgroup]
+2025-07-15T19:14:31.2550603Z Using default tag: latest
+2025-07-15T19:14:31.2564288Z The push refers to repository [docker.io/***/flask-ci-cd-demo]
+2025-07-15T19:14:31.3299249Z 41379009bfc8: Preparing
+2025-07-15T19:14:31.3299923Z d5e359723a1a: Preparing
+2025-07-15T19:14:31.3300363Z 8144a14e978d: Preparing
+2025-07-15T19:14:31.3300683Z 7c051d0de793: Preparing
+2025-07-15T19:14:31.3301149Z 79fd2fa66fa3: Preparing
+2025-07-15T19:14:31.3301352Z 31abbb538de0: Preparing
+2025-07-15T19:14:31.3301558Z a2ccf7527b3c: Preparing
+2025-07-15T19:14:31.3301748Z abd92ba2021e: Preparing
+2025-07-15T19:14:31.3302007Z 1bb35e8b4de1: Preparing
+2025-07-15T19:14:31.3302203Z 31abbb538de0: Waiting
+2025-07-15T19:14:31.3302393Z a2ccf7527b3c: Waiting
+2025-07-15T19:14:31.3302570Z abd92ba2021e: Waiting
+2025-07-15T19:14:31.3302750Z 1bb35e8b4de1: Waiting
+2025-07-15T19:14:32.8751267Z 7c051d0de793: Pushed
+2025-07-15T19:14:33.4472064Z 31abbb538de0: Mounted from library/python
+2025-07-15T19:14:33.6173141Z d5e359723a1a: Pushed
+2025-07-15T19:14:33.9730059Z a2ccf7527b3c: Mounted from library/python
+2025-07-15T19:14:34.1124658Z abd92ba2021e: Mounted from library/python
+2025-07-15T19:14:34.4822426Z 1bb35e8b4de1: Mounted from library/python
+2025-07-15T19:14:34.5593995Z 41379009bfc8: Pushed
+2025-07-15T19:14:36.2273003Z 8144a14e978d: Pushed
+2025-07-15T19:14:46.7584499Z 79fd2fa66fa3: Pushed
+2025-07-15T19:14:49.2597621Z latest: digest: sha256:ea47b89b6081293913098af9a23b13af46e606820f10b729e0a8519de770ee54 size: 2212
