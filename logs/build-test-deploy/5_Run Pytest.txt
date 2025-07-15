@@ -1,27 +1,27 @@
-﻿2025-07-15T22:14:40.6606775Z ##[group]Run export PYTHONPATH=.
-2025-07-15T22:14:40.6607117Z [36;1mexport PYTHONPATH=.[0m
-2025-07-15T22:14:40.6607357Z [36;1mpytest test_main.py -v[0m
-2025-07-15T22:14:40.6635221Z shell: /usr/bin/bash -e {0}
-2025-07-15T22:14:40.6635447Z env:
-2025-07-15T22:14:40.6635708Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.18/x64
-2025-07-15T22:14:40.6636119Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib/pkgconfig
-2025-07-15T22:14:40.6636503Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
-2025-07-15T22:14:40.6636849Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
-2025-07-15T22:14:40.6637226Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
-2025-07-15T22:14:40.6637577Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib
-2025-07-15T22:14:40.6637867Z ##[endgroup]
-2025-07-15T22:14:41.0384436Z ============================= test session starts ==============================
-2025-07-15T22:14:41.0385623Z platform linux -- Python 3.10.18, pytest-8.2.1, pluggy-1.6.0 -- /opt/hostedtoolcache/Python/3.10.18/x64/bin/python
-2025-07-15T22:14:41.0386542Z cachedir: .pytest_cache
-2025-07-15T22:14:41.0386956Z rootdir: /home/runner/work/Devops/Devops
-2025-07-15T22:14:41.3429647Z collecting ... collected 7 items
-2025-07-15T22:14:41.3430049Z 
-2025-07-15T22:14:41.3561481Z test_main.py::test_home_page PASSED                                      [ 14%]
-2025-07-15T22:14:41.3711146Z test_main.py::test_admin_dashboard PASSED                                [ 28%]
-2025-07-15T22:14:41.3774196Z test_main.py::test_student_dashboard PASSED                              [ 42%]
-2025-07-15T22:14:41.3816816Z test_main.py::test_generate_attendance_no_input PASSED                   [ 57%]
-2025-07-15T22:14:41.3859565Z test_main.py::test_student_generate_attendance_invalid PASSED            [ 71%]
-2025-07-15T22:14:41.3919743Z test_main.py::test_register_user_get PASSED                              [ 85%]
-2025-07-15T22:14:41.3978083Z test_main.py::test_receive_rfid_missing PASSED                           [100%]
-2025-07-15T22:14:41.3978428Z 
-2025-07-15T22:14:41.3978566Z ============================== 7 passed in 0.36s ===============================
+﻿2025-07-15T22:20:40.3822459Z ##[group]Run export PYTHONPATH=.
+2025-07-15T22:20:40.3823124Z [36;1mexport PYTHONPATH=.[0m
+2025-07-15T22:20:40.3823384Z [36;1mpytest test_main.py -v[0m
+2025-07-15T22:20:40.3851811Z shell: /usr/bin/bash -e {0}
+2025-07-15T22:20:40.3852034Z env:
+2025-07-15T22:20:40.3852292Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-15T22:20:40.3852900Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib/pkgconfig
+2025-07-15T22:20:40.3853290Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-15T22:20:40.3853632Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-15T22:20:40.3853972Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-15T22:20:40.3854307Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib
+2025-07-15T22:20:40.3854594Z ##[endgroup]
+2025-07-15T22:20:40.7494321Z ============================= test session starts ==============================
+2025-07-15T22:20:40.7495142Z platform linux -- Python 3.10.18, pytest-8.2.1, pluggy-1.6.0 -- /opt/hostedtoolcache/Python/3.10.18/x64/bin/python
+2025-07-15T22:20:40.7495706Z cachedir: .pytest_cache
+2025-07-15T22:20:40.7495948Z rootdir: /home/runner/work/Devops/Devops
+2025-07-15T22:20:41.0382823Z collecting ... collected 7 items
+2025-07-15T22:20:41.0383168Z 
+2025-07-15T22:20:41.0514846Z test_main.py::test_home_page PASSED                                      [ 14%]
+2025-07-15T22:20:41.0675931Z test_main.py::test_admin_dashboard PASSED                                [ 28%]
+2025-07-15T22:20:41.0739264Z test_main.py::test_student_dashboard PASSED                              [ 42%]
+2025-07-15T22:20:41.0782140Z test_main.py::test_generate_attendance_no_input PASSED                   [ 57%]
+2025-07-15T22:20:41.0825364Z test_main.py::test_student_generate_attendance_invalid PASSED            [ 71%]
+2025-07-15T22:20:41.0885706Z test_main.py::test_register_user_get PASSED                              [ 85%]
+2025-07-15T22:20:41.0943506Z test_main.py::test_receive_rfid_missing PASSED                           [100%]
+2025-07-15T22:20:41.0944213Z 
+2025-07-15T22:20:41.0944435Z ============================== 7 passed in 0.34s ===============================
