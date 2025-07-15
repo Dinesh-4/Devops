@@ -79,7 +79,7 @@ def print_logs():
                 print(f.read())
 
 # Save summary to MongoDB
-def save_to_mongodb(summary_text, commit_sha, branch, status):
+def save_to_mongodb(summary_text, commit_sha, branch, status, author):
     client = MongoClient(MONGO_URI)
     db = client["ci_cd_logs"]
     collection = db["summaries"]
@@ -88,6 +88,7 @@ def save_to_mongodb(summary_text, commit_sha, branch, status):
         "summary": summary_text,
         "commit_sha": commit_sha,
         "branch": branch,
+        "author": author,
         "status": status,
         "timestamp": datetime.now(timezone.utc)
 
@@ -165,7 +166,7 @@ def summarize_run(run_id):
         f.write(summary)
 
     # Save to MongoDB
-    save_to_mongodb(summary, commit_sha, branch, status)
+    save_to_mongodb(summary, commit_sha, branch, status, actor)
 
     print(summary)
 

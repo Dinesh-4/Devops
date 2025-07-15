@@ -24,7 +24,9 @@ def fetch_recent_summaries(hours=2):
         print("📂 Branch:", log["branch"])
         print("✅ Status:", log["status"])
         # print("📋 Summary:\n" + log["summary"])
-        # print("-" * 60)
+        print("\n")
+        print("-" * 60)
+        print("\n")
 
 if __name__ == "__main__":
     fetch_recent_summaries(hours=2)
