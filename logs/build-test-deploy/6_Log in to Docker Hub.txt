@@ -1,16 +1,16 @@
-﻿2025-07-15T22:02:35.8959181Z ##[group]Run docker/login-action@v3
-2025-07-15T22:02:35.8959446Z with:
-2025-07-15T22:02:35.8959915Z   username: ***
-2025-07-15T22:02:35.8960150Z   password: ***
-2025-07-15T22:02:35.8960323Z   ecr: auto
-2025-07-15T22:02:35.8960482Z   logout: true
-2025-07-15T22:02:35.8960636Z env:
-2025-07-15T22:02:35.8960872Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.18/x64
-2025-07-15T22:02:35.8961266Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib/pkgconfig
-2025-07-15T22:02:35.8961641Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
-2025-07-15T22:02:35.8961981Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
-2025-07-15T22:02:35.8962322Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
-2025-07-15T22:02:35.8962657Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib
-2025-07-15T22:02:35.8962941Z ##[endgroup]
-2025-07-15T22:02:36.1858464Z Logging into Docker Hub...
-2025-07-15T22:02:36.3754477Z Login Succeeded!
+﻿2025-07-15T22:07:27.4460824Z ##[group]Run docker/login-action@v3
+2025-07-15T22:07:27.4461094Z with:
+2025-07-15T22:07:27.4461578Z   username: ***
+2025-07-15T22:07:27.4461826Z   password: ***
+2025-07-15T22:07:27.4461997Z   ecr: auto
+2025-07-15T22:07:27.4462159Z   logout: true
+2025-07-15T22:07:27.4462326Z env:
+2025-07-15T22:07:27.4462558Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-15T22:07:27.4462959Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib/pkgconfig
+2025-07-15T22:07:27.4463361Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-15T22:07:27.4463701Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-15T22:07:27.4464052Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-15T22:07:27.4464399Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib
+2025-07-15T22:07:27.4464689Z ##[endgroup]
+2025-07-15T22:07:27.7248471Z Logging into Docker Hub...
+2025-07-15T22:07:27.8848473Z Login Succeeded!

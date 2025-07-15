@@ -1,6 +1,6 @@
-﻿2025-07-15T22:03:17.1706822Z Post job cleanup.
-2025-07-15T22:03:17.4554203Z [command]/usr/bin/docker logout 
-2025-07-15T22:03:17.4685177Z Removing login credentials for https://index.docker.io/v1/
-2025-07-15T22:03:17.4718455Z ##[group]Post cache
-2025-07-15T22:03:17.4719784Z State not set
-2025-07-15T22:03:17.4721273Z ##[endgroup]
+﻿2025-07-15T22:08:08.1103645Z Post job cleanup.
+2025-07-15T22:08:08.3966420Z [command]/usr/bin/docker logout 
+2025-07-15T22:08:08.4097802Z Removing login credentials for https://index.docker.io/v1/
+2025-07-15T22:08:08.4130682Z ##[group]Post cache
+2025-07-15T22:08:08.4132225Z State not set
+2025-07-15T22:08:08.4133667Z ##[endgroup]
