@@ -1,131 +1,131 @@
-﻿2025-07-15T19:13:59.6342484Z ##[group]Run python -m pip install --upgrade pip
-2025-07-15T19:13:59.6342979Z [36;1mpython -m pip install --upgrade pip[0m
-2025-07-15T19:13:59.6343344Z [36;1mpip install -r requirements.txt[0m
-2025-07-15T19:13:59.6384859Z shell: /usr/bin/bash -e {0}
-2025-07-15T19:13:59.6385165Z env:
-2025-07-15T19:13:59.6385472Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.18/x64
-2025-07-15T19:13:59.6385929Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib/pkgconfig
-2025-07-15T19:13:59.6386391Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
-2025-07-15T19:13:59.6386793Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
-2025-07-15T19:13:59.6387184Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
-2025-07-15T19:13:59.6387576Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib
-2025-07-15T19:13:59.6387903Z ##[endgroup]
-2025-07-15T19:14:00.1923168Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.10.18/x64/lib/python3.10/site-packages (25.1.1)
-2025-07-15T19:14:00.8279661Z Collecting Flask==3.1.0 (from -r requirements.txt (line 1))
-2025-07-15T19:14:00.8626486Z   Downloading flask-3.1.0-py3-none-any.whl.metadata (2.7 kB)
-2025-07-15T19:14:00.8783829Z Collecting Flask-PyMongo==3.0.1 (from -r requirements.txt (line 2))
-2025-07-15T19:14:00.8863766Z   Downloading flask_pymongo-3.0.1-py3-none-any.whl.metadata (3.5 kB)
-2025-07-15T19:14:00.9373220Z Collecting pytest==8.2.1 (from -r requirements.txt (line 3))
-2025-07-15T19:14:00.9415533Z   Downloading pytest-8.2.1-py3-none-any.whl.metadata (7.6 kB)
-2025-07-15T19:14:00.9549057Z Collecting blinker==1.9.0 (from -r requirements.txt (line 4))
-2025-07-15T19:14:00.9588748Z   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
-2025-07-15T19:14:00.9785423Z Collecting certifi==2025.7.14 (from -r requirements.txt (line 5))
-2025-07-15T19:14:00.9820854Z   Downloading certifi-2025.7.14-py3-none-any.whl.metadata (2.4 kB)
-2025-07-15T19:14:01.0718464Z Collecting charset-normalizer==3.4.2 (from -r requirements.txt (line 6))
-2025-07-15T19:14:01.0756522Z   Downloading charset_normalizer-3.4.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (35 kB)
-2025-07-15T19:14:01.0981078Z Collecting click==8.2.1 (from -r requirements.txt (line 7))
-2025-07-15T19:14:01.1018871Z   Downloading click-8.2.1-py3-none-any.whl.metadata (2.5 kB)
-2025-07-15T19:14:01.1155083Z Collecting dnspython==2.7.0 (from -r requirements.txt (line 8))
-2025-07-15T19:14:01.1194016Z   Downloading dnspython-2.7.0-py3-none-any.whl.metadata (5.8 kB)
-2025-07-15T19:14:01.1389698Z Collecting idna==3.10 (from -r requirements.txt (line 9))
-2025-07-15T19:14:01.1424821Z   Downloading idna-3.10-py3-none-any.whl.metadata (10 kB)
-2025-07-15T19:14:01.1553480Z Collecting itsdangerous==2.2.0 (from -r requirements.txt (line 10))
-2025-07-15T19:14:01.1593927Z   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
-2025-07-15T19:14:01.1753341Z Collecting Jinja2==3.1.6 (from -r requirements.txt (line 11))
-2025-07-15T19:14:01.1788588Z   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
-2025-07-15T19:14:01.2361876Z Collecting MarkupSafe==3.0.2 (from -r requirements.txt (line 12))
-2025-07-15T19:14:01.2398173Z   Downloading MarkupSafe-3.0.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.0 kB)
-2025-07-15T19:14:01.2513562Z Collecting paho-mqtt==2.1.0 (from -r requirements.txt (line 13))
-2025-07-15T19:14:01.2594769Z   Downloading paho_mqtt-2.1.0-py3-none-any.whl.metadata (23 kB)
-2025-07-15T19:14:01.5956730Z Collecting pymongo==4.13.2 (from -r requirements.txt (line 14))
-2025-07-15T19:14:01.6019902Z   Downloading pymongo-4.13.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (22 kB)
-2025-07-15T19:14:01.6254814Z Collecting python-dotenv==1.1.1 (from -r requirements.txt (line 15))
-2025-07-15T19:14:01.6289985Z   Downloading python_dotenv-1.1.1-py3-none-any.whl.metadata (24 kB)
-2025-07-15T19:14:01.6571914Z Collecting requests==2.32.4 (from -r requirements.txt (line 16))
-2025-07-15T19:14:01.6608738Z   Downloading requests-2.32.4-py3-none-any.whl.metadata (4.9 kB)
-2025-07-15T19:14:01.6869031Z Collecting urllib3==2.5.0 (from -r requirements.txt (line 17))
-2025-07-15T19:14:01.6904473Z   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
-2025-07-15T19:14:01.7144279Z Collecting Werkzeug==3.1.3 (from -r requirements.txt (line 18))
-2025-07-15T19:14:01.7181974Z   Downloading werkzeug-3.1.3-py3-none-any.whl.metadata (3.7 kB)
-2025-07-15T19:14:01.7294801Z Collecting autodevops-cli==0.1.1 (from -r requirements.txt (line 19))
-2025-07-15T19:14:01.7342356Z   Downloading autodevops_cli-0.1.1-py3-none-any.whl.metadata (494 bytes)
-2025-07-15T19:14:01.7444152Z Collecting iniconfig==2.1.0 (from -r requirements.txt (line 20))
-2025-07-15T19:14:01.7479970Z   Downloading iniconfig-2.1.0-py3-none-any.whl.metadata (2.7 kB)
-2025-07-15T19:14:01.7613758Z Collecting loguru==0.7.3 (from -r requirements.txt (line 21))
-2025-07-15T19:14:01.7649926Z   Downloading loguru-0.7.3-py3-none-any.whl.metadata (22 kB)
-2025-07-15T19:14:01.7883535Z Collecting markdown-it-py==3.0.0 (from -r requirements.txt (line 22))
-2025-07-15T19:14:01.7919561Z   Downloading markdown_it_py-3.0.0-py3-none-any.whl.metadata (6.9 kB)
-2025-07-15T19:14:01.8062845Z Collecting mdurl==0.1.2 (from -r requirements.txt (line 23))
-2025-07-15T19:14:01.8098521Z   Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
-2025-07-15T19:14:01.8245084Z Collecting mongomock==4.3.0 (from -r requirements.txt (line 24))
-2025-07-15T19:14:01.8295827Z   Downloading mongomock-4.3.0-py2.py3-none-any.whl.metadata (12 kB)
-2025-07-15T19:14:01.8468302Z Collecting packaging==25.0 (from -r requirements.txt (line 25))
-2025-07-15T19:14:01.8505737Z   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
-2025-07-15T19:14:01.8628465Z Collecting pluggy==1.6.0 (from -r requirements.txt (line 26))
-2025-07-15T19:14:01.8663663Z   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
-2025-07-15T19:14:01.8866219Z Collecting Pygments==2.19.2 (from -r requirements.txt (line 27))
-2025-07-15T19:14:01.8901384Z   Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
-2025-07-15T19:14:01.9294922Z Collecting pytz==2025.2 (from -r requirements.txt (line 28))
-2025-07-15T19:14:01.9334792Z   Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
-2025-07-15T19:14:01.9750546Z Collecting rich==14.0.0 (from -r requirements.txt (line 29))
-2025-07-15T19:14:01.9795129Z   Downloading rich-14.0.0-py3-none-any.whl.metadata (18 kB)
-2025-07-15T19:14:01.9914530Z Collecting sentinels==1.0.0 (from -r requirements.txt (line 30))
-2025-07-15T19:14:01.9960475Z   Downloading sentinels-1.0.0.tar.gz (4.1 kB)
-2025-07-15T19:14:02.0045939Z   Installing build dependencies: started
-2025-07-15T19:14:02.8722923Z   Installing build dependencies: finished with status 'done'
-2025-07-15T19:14:02.8731253Z   Getting requirements to build wheel: started
-2025-07-15T19:14:03.2062532Z   Getting requirements to build wheel: finished with status 'done'
-2025-07-15T19:14:03.2072848Z   Preparing metadata (pyproject.toml): started
-2025-07-15T19:14:03.3830537Z   Preparing metadata (pyproject.toml): finished with status 'done'
-2025-07-15T19:14:03.4004115Z Collecting sh==2.2.2 (from -r requirements.txt (line 31))
-2025-07-15T19:14:03.4055951Z   Downloading sh-2.2.2-py3-none-any.whl.metadata (3.7 kB)
-2025-07-15T19:14:03.4499741Z Collecting exceptiongroup>=1.0.0rc8 (from pytest==8.2.1->-r requirements.txt (line 3))
-2025-07-15T19:14:03.4536924Z   Downloading exceptiongroup-1.3.0-py3-none-any.whl.metadata (6.7 kB)
-2025-07-15T19:14:03.4762091Z Collecting tomli>=1 (from pytest==8.2.1->-r requirements.txt (line 3))
-2025-07-15T19:14:03.4800162Z   Downloading tomli-2.2.1-py3-none-any.whl.metadata (10 kB)
-2025-07-15T19:14:03.5556832Z Collecting typing-extensions<5.0,>=4.0.0 (from rich==14.0.0->-r requirements.txt (line 29))
-2025-07-15T19:14:03.5600767Z   Downloading typing_extensions-4.14.1-py3-none-any.whl.metadata (3.0 kB)
-2025-07-15T19:14:03.5780064Z Downloading flask-3.1.0-py3-none-any.whl (102 kB)
-2025-07-15T19:14:03.5859667Z Downloading flask_pymongo-3.0.1-py3-none-any.whl (11 kB)
-2025-07-15T19:14:03.5920404Z Downloading pytest-8.2.1-py3-none-any.whl (339 kB)
-2025-07-15T19:14:03.5998750Z Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
-2025-07-15T19:14:03.6053309Z Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
-2025-07-15T19:14:03.6113392Z Downloading certifi-2025.7.14-py3-none-any.whl (162 kB)
-2025-07-15T19:14:03.6177187Z Downloading charset_normalizer-3.4.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (149 kB)
-2025-07-15T19:14:03.6240568Z Downloading click-8.2.1-py3-none-any.whl (102 kB)
-2025-07-15T19:14:03.6308516Z Downloading dnspython-2.7.0-py3-none-any.whl (313 kB)
-2025-07-15T19:14:03.6372211Z Downloading idna-3.10-py3-none-any.whl (70 kB)
-2025-07-15T19:14:03.6425631Z Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
-2025-07-15T19:14:03.6489291Z Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
-2025-07-15T19:14:03.6550230Z Downloading MarkupSafe-3.0.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (20 kB)
-2025-07-15T19:14:03.6608570Z Downloading paho_mqtt-2.1.0-py3-none-any.whl (67 kB)
-2025-07-15T19:14:03.6673015Z Downloading pymongo-4.13.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.2 MB)
-2025-07-15T19:14:03.6778638Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 133.4 MB/s eta 0:00:00
-2025-07-15T19:14:03.6814015Z Downloading python_dotenv-1.1.1-py3-none-any.whl (20 kB)
-2025-07-15T19:14:03.6871633Z Downloading requests-2.32.4-py3-none-any.whl (64 kB)
-2025-07-15T19:14:03.6929767Z Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
-2025-07-15T19:14:03.6990198Z Downloading werkzeug-3.1.3-py3-none-any.whl (224 kB)
-2025-07-15T19:14:03.7069758Z Downloading autodevops_cli-0.1.1-py3-none-any.whl (4.1 kB)
-2025-07-15T19:14:03.7123941Z Downloading iniconfig-2.1.0-py3-none-any.whl (6.0 kB)
-2025-07-15T19:14:03.7181069Z Downloading loguru-0.7.3-py3-none-any.whl (61 kB)
-2025-07-15T19:14:03.7236552Z Downloading markdown_it_py-3.0.0-py3-none-any.whl (87 kB)
-2025-07-15T19:14:03.7295605Z Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
-2025-07-15T19:14:03.7387417Z Downloading mongomock-4.3.0-py2.py3-none-any.whl (64 kB)
-2025-07-15T19:14:03.7445164Z Downloading packaging-25.0-py3-none-any.whl (66 kB)
-2025-07-15T19:14:03.7506125Z Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
-2025-07-15T19:14:03.7600057Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 155.5 MB/s eta 0:00:00
-2025-07-15T19:14:03.7637715Z Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
-2025-07-15T19:14:03.7714794Z Downloading rich-14.0.0-py3-none-any.whl (243 kB)
-2025-07-15T19:14:03.7786994Z Downloading sh-2.2.2-py3-none-any.whl (38 kB)
-2025-07-15T19:14:03.7842963Z Downloading typing_extensions-4.14.1-py3-none-any.whl (43 kB)
-2025-07-15T19:14:03.7897082Z Downloading exceptiongroup-1.3.0-py3-none-any.whl (16 kB)
-2025-07-15T19:14:03.7963761Z Downloading tomli-2.2.1-py3-none-any.whl (14 kB)
-2025-07-15T19:14:03.8322220Z Building wheels for collected packages: sentinels
-2025-07-15T19:14:03.8331937Z   Building wheel for sentinels (pyproject.toml): started
-2025-07-15T19:14:04.0332469Z   Building wheel for sentinels (pyproject.toml): finished with status 'done'
-2025-07-15T19:14:04.0338033Z   Created wheel for sentinels: filename=sentinels-1.0.0-py3-none-any.whl size=3229 sha256=04746337964d78d9857bb2c45fc96a7b1c3d262d6163ae422571ac33f3de19a3
-2025-07-15T19:14:04.0340282Z   Stored in directory: /home/runner/.cache/pip/wheels/26/bc/eb/67e56405e0684b3d8c011cf4d18129c41be394775fd5ba2347
-2025-07-15T19:14:04.0356046Z Successfully built sentinels
-2025-07-15T19:14:04.1112032Z Installing collected packages: sentinels, pytz, urllib3, typing-extensions, tomli, sh, python-dotenv, Pygments, pluggy, paho-mqtt, packaging, mdurl, MarkupSafe, loguru, itsdangerous, iniconfig, idna, dnspython, click, charset-normalizer, certifi, blinker, Werkzeug, requests, pymongo, mongomock, markdown-it-py, Jinja2, exceptiongroup, rich, pytest, Flask, Flask-PyMongo, autodevops-cli
-2025-07-15T19:14:06.5501301Z 
-2025-07-15T19:14:06.5562969Z Successfully installed Flask-3.1.0 Flask-PyMongo-3.0.1 Jinja2-3.1.6 MarkupSafe-3.0.2 Pygments-2.19.2 Werkzeug-3.1.3 autodevops-cli-0.1.1 blinker-1.9.0 certifi-2025.7.14 charset-normalizer-3.4.2 click-8.2.1 dnspython-2.7.0 exceptiongroup-1.3.0 idna-3.10 iniconfig-2.1.0 itsdangerous-2.2.0 loguru-0.7.3 markdown-it-py-3.0.0 mdurl-0.1.2 mongomock-4.3.0 packaging-25.0 paho-mqtt-2.1.0 pluggy-1.6.0 pymongo-4.13.2 pytest-8.2.1 python-dotenv-1.1.1 pytz-2025.2 requests-2.32.4 rich-14.0.0 sentinels-1.0.0 sh-2.2.2 tomli-2.2.1 typing-extensions-4.14.1 urllib3-2.5.0
+﻿2025-07-15T20:29:26.5806134Z ##[group]Run python -m pip install --upgrade pip
+2025-07-15T20:29:26.5806707Z [36;1mpython -m pip install --upgrade pip[0m
+2025-07-15T20:29:26.5807187Z [36;1mpip install -r requirements.txt[0m
+2025-07-15T20:29:26.5850226Z shell: /usr/bin/bash -e {0}
+2025-07-15T20:29:26.5850603Z env:
+2025-07-15T20:29:26.5850976Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-15T20:29:26.5851557Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib/pkgconfig
+2025-07-15T20:29:26.5852089Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-15T20:29:26.5852566Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-15T20:29:26.5853043Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-15T20:29:26.5853525Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib
+2025-07-15T20:29:26.5854204Z ##[endgroup]
+2025-07-15T20:29:27.2525931Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.10.18/x64/lib/python3.10/site-packages (25.1.1)
+2025-07-15T20:29:27.9501605Z Collecting Flask==3.1.0 (from -r requirements.txt (line 1))
+2025-07-15T20:29:27.9951972Z   Downloading flask-3.1.0-py3-none-any.whl.metadata (2.7 kB)
+2025-07-15T20:29:28.0138304Z Collecting Flask-PyMongo==3.0.1 (from -r requirements.txt (line 2))
+2025-07-15T20:29:28.0240518Z   Downloading flask_pymongo-3.0.1-py3-none-any.whl.metadata (3.5 kB)
+2025-07-15T20:29:28.0812937Z Collecting pytest==8.2.1 (from -r requirements.txt (line 3))
+2025-07-15T20:29:28.0901958Z   Downloading pytest-8.2.1-py3-none-any.whl.metadata (7.6 kB)
+2025-07-15T20:29:28.1089722Z Collecting blinker==1.9.0 (from -r requirements.txt (line 4))
+2025-07-15T20:29:28.1166306Z   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+2025-07-15T20:29:28.1403111Z Collecting certifi==2025.7.14 (from -r requirements.txt (line 5))
+2025-07-15T20:29:28.1475505Z   Downloading certifi-2025.7.14-py3-none-any.whl.metadata (2.4 kB)
+2025-07-15T20:29:28.2422794Z Collecting charset-normalizer==3.4.2 (from -r requirements.txt (line 6))
+2025-07-15T20:29:28.2502932Z   Downloading charset_normalizer-3.4.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (35 kB)
+2025-07-15T20:29:28.2782274Z Collecting click==8.2.1 (from -r requirements.txt (line 7))
+2025-07-15T20:29:28.2860118Z   Downloading click-8.2.1-py3-none-any.whl.metadata (2.5 kB)
+2025-07-15T20:29:28.3036307Z Collecting dnspython==2.7.0 (from -r requirements.txt (line 8))
+2025-07-15T20:29:28.3108919Z   Downloading dnspython-2.7.0-py3-none-any.whl.metadata (5.8 kB)
+2025-07-15T20:29:28.3343955Z Collecting idna==3.10 (from -r requirements.txt (line 9))
+2025-07-15T20:29:28.3416237Z   Downloading idna-3.10-py3-none-any.whl.metadata (10 kB)
+2025-07-15T20:29:28.3584596Z Collecting itsdangerous==2.2.0 (from -r requirements.txt (line 10))
+2025-07-15T20:29:28.3658096Z   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+2025-07-15T20:29:28.3862603Z Collecting Jinja2==3.1.6 (from -r requirements.txt (line 11))
+2025-07-15T20:29:28.3943163Z   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+2025-07-15T20:29:28.4566443Z Collecting MarkupSafe==3.0.2 (from -r requirements.txt (line 12))
+2025-07-15T20:29:28.4649517Z   Downloading MarkupSafe-3.0.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.0 kB)
+2025-07-15T20:29:28.4812594Z Collecting paho-mqtt==2.1.0 (from -r requirements.txt (line 13))
+2025-07-15T20:29:28.4912005Z   Downloading paho_mqtt-2.1.0-py3-none-any.whl.metadata (23 kB)
+2025-07-15T20:29:28.8426854Z Collecting pymongo==4.13.2 (from -r requirements.txt (line 14))
+2025-07-15T20:29:28.8526286Z   Downloading pymongo-4.13.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (22 kB)
+2025-07-15T20:29:28.8802123Z Collecting python-dotenv==1.1.1 (from -r requirements.txt (line 15))
+2025-07-15T20:29:28.8875880Z   Downloading python_dotenv-1.1.1-py3-none-any.whl.metadata (24 kB)
+2025-07-15T20:29:28.9206528Z Collecting requests==2.32.4 (from -r requirements.txt (line 16))
+2025-07-15T20:29:28.9281508Z   Downloading requests-2.32.4-py3-none-any.whl.metadata (4.9 kB)
+2025-07-15T20:29:28.9607036Z Collecting urllib3==2.5.0 (from -r requirements.txt (line 17))
+2025-07-15T20:29:28.9682218Z   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+2025-07-15T20:29:28.9966698Z Collecting Werkzeug==3.1.3 (from -r requirements.txt (line 18))
+2025-07-15T20:29:29.0044150Z   Downloading werkzeug-3.1.3-py3-none-any.whl.metadata (3.7 kB)
+2025-07-15T20:29:29.0193994Z Collecting autodevops-cli==0.1.1 (from -r requirements.txt (line 19))
+2025-07-15T20:29:29.0402080Z   Downloading autodevops_cli-0.1.1-py3-none-any.whl.metadata (494 bytes)
+2025-07-15T20:29:29.0539099Z Collecting iniconfig==2.1.0 (from -r requirements.txt (line 20))
+2025-07-15T20:29:29.0631062Z   Downloading iniconfig-2.1.0-py3-none-any.whl.metadata (2.7 kB)
+2025-07-15T20:29:29.0793070Z Collecting loguru==0.7.3 (from -r requirements.txt (line 21))
+2025-07-15T20:29:29.0869269Z   Downloading loguru-0.7.3-py3-none-any.whl.metadata (22 kB)
+2025-07-15T20:29:29.1150286Z Collecting markdown-it-py==3.0.0 (from -r requirements.txt (line 22))
+2025-07-15T20:29:29.1224443Z   Downloading markdown_it_py-3.0.0-py3-none-any.whl.metadata (6.9 kB)
+2025-07-15T20:29:29.1411970Z Collecting mdurl==0.1.2 (from -r requirements.txt (line 23))
+2025-07-15T20:29:29.1486844Z   Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+2025-07-15T20:29:29.1661319Z Collecting mongomock==4.3.0 (from -r requirements.txt (line 24))
+2025-07-15T20:29:29.1747116Z   Downloading mongomock-4.3.0-py2.py3-none-any.whl.metadata (12 kB)
+2025-07-15T20:29:29.1955860Z Collecting packaging==25.0 (from -r requirements.txt (line 25))
+2025-07-15T20:29:29.2029627Z   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+2025-07-15T20:29:29.2204429Z Collecting pluggy==1.6.0 (from -r requirements.txt (line 26))
+2025-07-15T20:29:29.2281145Z   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+2025-07-15T20:29:29.2531208Z Collecting Pygments==2.19.2 (from -r requirements.txt (line 27))
+2025-07-15T20:29:29.2604395Z   Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+2025-07-15T20:29:29.3047695Z Collecting pytz==2025.2 (from -r requirements.txt (line 28))
+2025-07-15T20:29:29.3125298Z   Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+2025-07-15T20:29:29.3603065Z Collecting rich==14.0.0 (from -r requirements.txt (line 29))
+2025-07-15T20:29:29.3676624Z   Downloading rich-14.0.0-py3-none-any.whl.metadata (18 kB)
+2025-07-15T20:29:29.3822135Z Collecting sentinels==1.0.0 (from -r requirements.txt (line 30))
+2025-07-15T20:29:29.3894373Z   Downloading sentinels-1.0.0.tar.gz (4.1 kB)
+2025-07-15T20:29:29.3981790Z   Installing build dependencies: started
+2025-07-15T20:29:30.3214806Z   Installing build dependencies: finished with status 'done'
+2025-07-15T20:29:30.3222752Z   Getting requirements to build wheel: started
+2025-07-15T20:29:30.6540825Z   Getting requirements to build wheel: finished with status 'done'
+2025-07-15T20:29:30.6550491Z   Preparing metadata (pyproject.toml): started
+2025-07-15T20:29:30.8361279Z   Preparing metadata (pyproject.toml): finished with status 'done'
+2025-07-15T20:29:30.8552884Z Collecting sh==2.2.2 (from -r requirements.txt (line 31))
+2025-07-15T20:29:30.8653177Z   Downloading sh-2.2.2-py3-none-any.whl.metadata (3.7 kB)
+2025-07-15T20:29:30.9132890Z Collecting exceptiongroup>=1.0.0rc8 (from pytest==8.2.1->-r requirements.txt (line 3))
+2025-07-15T20:29:30.9217600Z   Downloading exceptiongroup-1.3.0-py3-none-any.whl.metadata (6.7 kB)
+2025-07-15T20:29:30.9431691Z Collecting tomli>=1 (from pytest==8.2.1->-r requirements.txt (line 3))
+2025-07-15T20:29:30.9573574Z   Downloading tomli-2.2.1-py3-none-any.whl.metadata (10 kB)
+2025-07-15T20:29:31.0309511Z Collecting typing-extensions<5.0,>=4.0.0 (from rich==14.0.0->-r requirements.txt (line 29))
+2025-07-15T20:29:31.0386413Z   Downloading typing_extensions-4.14.1-py3-none-any.whl.metadata (3.0 kB)
+2025-07-15T20:29:31.0600935Z Downloading flask-3.1.0-py3-none-any.whl (102 kB)
+2025-07-15T20:29:31.0772588Z Downloading flask_pymongo-3.0.1-py3-none-any.whl (11 kB)
+2025-07-15T20:29:31.0936038Z Downloading pytest-8.2.1-py3-none-any.whl (339 kB)
+2025-07-15T20:29:31.1094669Z Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+2025-07-15T20:29:31.1210068Z Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+2025-07-15T20:29:31.1307219Z Downloading certifi-2025.7.14-py3-none-any.whl (162 kB)
+2025-07-15T20:29:31.1411306Z Downloading charset_normalizer-3.4.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (149 kB)
+2025-07-15T20:29:31.1508072Z Downloading click-8.2.1-py3-none-any.whl (102 kB)
+2025-07-15T20:29:31.1615501Z Downloading dnspython-2.7.0-py3-none-any.whl (313 kB)
+2025-07-15T20:29:31.1745483Z Downloading idna-3.10-py3-none-any.whl (70 kB)
+2025-07-15T20:29:31.1842393Z Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+2025-07-15T20:29:31.1936095Z Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+2025-07-15T20:29:31.2039090Z Downloading MarkupSafe-3.0.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (20 kB)
+2025-07-15T20:29:31.2142936Z Downloading paho_mqtt-2.1.0-py3-none-any.whl (67 kB)
+2025-07-15T20:29:31.2241482Z Downloading pymongo-4.13.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.2 MB)
+2025-07-15T20:29:31.2380954Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 92.2 MB/s eta 0:00:00
+2025-07-15T20:29:31.2460305Z Downloading python_dotenv-1.1.1-py3-none-any.whl (20 kB)
+2025-07-15T20:29:31.2572224Z Downloading requests-2.32.4-py3-none-any.whl (64 kB)
+2025-07-15T20:29:31.2668205Z Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+2025-07-15T20:29:31.2775335Z Downloading werkzeug-3.1.3-py3-none-any.whl (224 kB)
+2025-07-15T20:29:31.2914770Z Downloading autodevops_cli-0.1.1-py3-none-any.whl (4.1 kB)
+2025-07-15T20:29:31.3017808Z Downloading iniconfig-2.1.0-py3-none-any.whl (6.0 kB)
+2025-07-15T20:29:31.3195138Z Downloading loguru-0.7.3-py3-none-any.whl (61 kB)
+2025-07-15T20:29:31.3292070Z Downloading markdown_it_py-3.0.0-py3-none-any.whl (87 kB)
+2025-07-15T20:29:31.3405702Z Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+2025-07-15T20:29:31.3506636Z Downloading mongomock-4.3.0-py2.py3-none-any.whl (64 kB)
+2025-07-15T20:29:31.3606060Z Downloading packaging-25.0-py3-none-any.whl (66 kB)
+2025-07-15T20:29:31.3706464Z Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+2025-07-15T20:29:31.3794958Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 158.7 MB/s eta 0:00:00
+2025-07-15T20:29:31.3868529Z Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
+2025-07-15T20:29:31.3983104Z Downloading rich-14.0.0-py3-none-any.whl (243 kB)
+2025-07-15T20:29:31.4086730Z Downloading sh-2.2.2-py3-none-any.whl (38 kB)
+2025-07-15T20:29:31.4181795Z Downloading typing_extensions-4.14.1-py3-none-any.whl (43 kB)
+2025-07-15T20:29:31.4290551Z Downloading exceptiongroup-1.3.0-py3-none-any.whl (16 kB)
+2025-07-15T20:29:31.4385275Z Downloading tomli-2.2.1-py3-none-any.whl (14 kB)
+2025-07-15T20:29:31.4748408Z Building wheels for collected packages: sentinels
+2025-07-15T20:29:31.4757898Z   Building wheel for sentinels (pyproject.toml): started
+2025-07-15T20:29:31.6794832Z   Building wheel for sentinels (pyproject.toml): finished with status 'done'
+2025-07-15T20:29:31.6801566Z   Created wheel for sentinels: filename=sentinels-1.0.0-py3-none-any.whl size=3229 sha256=953e7013c958876a05e5ae125b0c31bc1a7667f1eece04bd01e6787e7da11ab6
+2025-07-15T20:29:31.6804206Z   Stored in directory: /home/runner/.cache/pip/wheels/26/bc/eb/67e56405e0684b3d8c011cf4d18129c41be394775fd5ba2347
+2025-07-15T20:29:31.6820341Z Successfully built sentinels
+2025-07-15T20:29:31.7570358Z Installing collected packages: sentinels, pytz, urllib3, typing-extensions, tomli, sh, python-dotenv, Pygments, pluggy, paho-mqtt, packaging, mdurl, MarkupSafe, loguru, itsdangerous, iniconfig, idna, dnspython, click, charset-normalizer, certifi, blinker, Werkzeug, requests, pymongo, mongomock, markdown-it-py, Jinja2, exceptiongroup, rich, pytest, Flask, Flask-PyMongo, autodevops-cli
+2025-07-15T20:29:34.1860111Z 
+2025-07-15T20:29:34.1921014Z Successfully installed Flask-3.1.0 Flask-PyMongo-3.0.1 Jinja2-3.1.6 MarkupSafe-3.0.2 Pygments-2.19.2 Werkzeug-3.1.3 autodevops-cli-0.1.1 blinker-1.9.0 certifi-2025.7.14 charset-normalizer-3.4.2 click-8.2.1 dnspython-2.7.0 exceptiongroup-1.3.0 idna-3.10 iniconfig-2.1.0 itsdangerous-2.2.0 loguru-0.7.3 markdown-it-py-3.0.0 mdurl-0.1.2 mongomock-4.3.0 packaging-25.0 paho-mqtt-2.1.0 pluggy-1.6.0 pymongo-4.13.2 pytest-8.2.1 python-dotenv-1.1.1 pytz-2025.2 requests-2.32.4 rich-14.0.0 sentinels-1.0.0 sh-2.2.2 tomli-2.2.1 typing-extensions-4.14.1 urllib3-2.5.0
