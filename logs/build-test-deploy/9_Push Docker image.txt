@@ -1,36 +1,36 @@
-﻿2025-07-15T20:29:59.4018386Z ##[group]Run docker push ***/flask-ci-cd-demo
-2025-07-15T20:29:59.4018933Z [36;1mdocker push ***/flask-ci-cd-demo[0m
-2025-07-15T20:29:59.4048010Z shell: /usr/bin/bash -e {0}
-2025-07-15T20:29:59.4048566Z env:
-2025-07-15T20:29:59.4048943Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.18/x64
-2025-07-15T20:29:59.4049510Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib/pkgconfig
-2025-07-15T20:29:59.4050052Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
-2025-07-15T20:29:59.4050545Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
-2025-07-15T20:29:59.4051030Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
-2025-07-15T20:29:59.4051511Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib
-2025-07-15T20:29:59.4051944Z ##[endgroup]
-2025-07-15T20:29:59.4205049Z Using default tag: latest
-2025-07-15T20:29:59.4220224Z The push refers to repository [docker.io/***/flask-ci-cd-demo]
-2025-07-15T20:29:59.4463607Z 2c7ca58b3f3d: Preparing
-2025-07-15T20:29:59.4464960Z 110f11d0214c: Preparing
-2025-07-15T20:29:59.4465717Z 1623581f5dd7: Preparing
-2025-07-15T20:29:59.4466475Z 8425bdaa86b9: Preparing
-2025-07-15T20:29:59.4467160Z a3421e0b1826: Preparing
-2025-07-15T20:29:59.4467603Z 31abbb538de0: Preparing
-2025-07-15T20:29:59.4468013Z a2ccf7527b3c: Preparing
-2025-07-15T20:29:59.4468423Z abd92ba2021e: Preparing
-2025-07-15T20:29:59.4468825Z 1bb35e8b4de1: Preparing
-2025-07-15T20:29:59.4469225Z 31abbb538de0: Waiting
-2025-07-15T20:29:59.4469620Z abd92ba2021e: Waiting
-2025-07-15T20:29:59.4469981Z a2ccf7527b3c: Waiting
-2025-07-15T20:29:59.4470282Z 1bb35e8b4de1: Waiting
-2025-07-15T20:30:00.5877411Z 8425bdaa86b9: Pushed
-2025-07-15T20:30:00.6917007Z 31abbb538de0: Layer already exists
-2025-07-15T20:30:00.7991073Z a2ccf7527b3c: Layer already exists
-2025-07-15T20:30:00.9184469Z abd92ba2021e: Layer already exists
-2025-07-15T20:30:01.0634902Z 1bb35e8b4de1: Layer already exists
-2025-07-15T20:30:01.5100018Z 110f11d0214c: Pushed
-2025-07-15T20:30:02.3023436Z 2c7ca58b3f3d: Pushed
-2025-07-15T20:30:04.4758282Z 1623581f5dd7: Pushed
-2025-07-15T20:30:13.9271491Z a3421e0b1826: Pushed
-2025-07-15T20:30:15.8178481Z latest: digest: sha256:38fc3d821f26aac3a6b24cd5343d59fb3a1eadde7c9ee3e93bceb6a3587d3fe7 size: 2212
+﻿2025-07-15T21:54:43.5372131Z ##[group]Run docker push ***/flask-ci-cd-demo
+2025-07-15T21:54:43.5372703Z [36;1mdocker push ***/flask-ci-cd-demo[0m
+2025-07-15T21:54:43.5402541Z shell: /usr/bin/bash -e {0}
+2025-07-15T21:54:43.5403287Z env:
+2025-07-15T21:54:43.5403665Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-15T21:54:43.5404230Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib/pkgconfig
+2025-07-15T21:54:43.5404771Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-15T21:54:43.5405254Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-15T21:54:43.5405747Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-15T21:54:43.5406261Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib
+2025-07-15T21:54:43.5406698Z ##[endgroup]
+2025-07-15T21:54:43.5563267Z Using default tag: latest
+2025-07-15T21:54:43.5577208Z The push refers to repository [docker.io/***/flask-ci-cd-demo]
+2025-07-15T21:54:43.5749213Z f155dc19693c: Preparing
+2025-07-15T21:54:43.5750019Z 880b0f797e90: Preparing
+2025-07-15T21:54:43.5750609Z e8f99dfe2682: Preparing
+2025-07-15T21:54:43.5751183Z e70f1da9c2c1: Preparing
+2025-07-15T21:54:43.5751989Z a4176a56c45f: Preparing
+2025-07-15T21:54:43.5752580Z 31abbb538de0: Preparing
+2025-07-15T21:54:43.5753408Z a2ccf7527b3c: Preparing
+2025-07-15T21:54:43.5753998Z abd92ba2021e: Preparing
+2025-07-15T21:54:43.5754546Z 1bb35e8b4de1: Preparing
+2025-07-15T21:54:43.5754977Z 31abbb538de0: Waiting
+2025-07-15T21:54:43.5755322Z a2ccf7527b3c: Waiting
+2025-07-15T21:54:43.5755641Z abd92ba2021e: Waiting
+2025-07-15T21:54:43.5755950Z 1bb35e8b4de1: Waiting
+2025-07-15T21:54:44.6400344Z e70f1da9c2c1: Pushed
+2025-07-15T21:54:44.7270914Z 31abbb538de0: Layer already exists
+2025-07-15T21:54:44.8090645Z a2ccf7527b3c: Layer already exists
+2025-07-15T21:54:44.9015394Z abd92ba2021e: Layer already exists
+2025-07-15T21:54:44.9878297Z 1bb35e8b4de1: Layer already exists
+2025-07-15T21:54:45.2749695Z 880b0f797e90: Pushed
+2025-07-15T21:54:46.3551666Z f155dc19693c: Pushed
+2025-07-15T21:54:47.8714302Z e8f99dfe2682: Pushed
+2025-07-15T21:54:58.0475576Z a4176a56c45f: Pushed
+2025-07-15T21:54:59.8375282Z latest: digest: sha256:21fceaa025c9fc95a866a86b4f3440ac0dee34a11ca3ddd2cf8f69e004dd03aa size: 2212
