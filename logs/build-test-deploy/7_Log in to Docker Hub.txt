@@ -1,0 +1,13 @@
+﻿2025-07-15T19:06:42.2438395Z ##[group]Run docker/login-action@v3
+2025-07-15T19:06:42.2438655Z with:
+2025-07-15T19:06:42.2438811Z   ecr: auto
+2025-07-15T19:06:42.2438970Z   logout: true
+2025-07-15T19:06:42.2439125Z env:
+2025-07-15T19:06:42.2439351Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-15T19:06:42.2439896Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib/pkgconfig
+2025-07-15T19:06:42.2440280Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-15T19:06:42.2440615Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-15T19:06:42.2440939Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-15T19:06:42.2441275Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib
+2025-07-15T19:06:42.2441550Z ##[endgroup]
+2025-07-15T19:06:42.5318531Z ##[error]Username and password required
