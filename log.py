@@ -18,7 +18,7 @@ WORKFLOW_FILENAME = "main.yml"
 TOKEN = os.getenv('TOKEN')
 
 # MongoDB URI
-MONGO_URI = os.getenv("MONGO_URI")
+# MONGO_URI = os.getenv("MONGO_URI")
 
 HEADERS = {
     "Authorization": f"Bearer {TOKEN}",
@@ -79,23 +79,23 @@ def print_logs():
                 print(f.read())
 
 # Save summary to MongoDB
-def save_to_mongodb(summary_text, commit_sha, branch, status, author):
-    client = MongoClient(MONGO_URI)
-    db = client["ci_cd_logs"]
-    collection = db["summaries"]
+# def save_to_mongodb(summary_text, commit_sha, branch, status, author):
+#     client = MongoClient(MONGO_URI)
+#     db = client["ci_cd_logs"]
+#     collection = db["summaries"]
 
-    doc = {
-        "summary": summary_text,
-        "commit_sha": commit_sha,
-        "branch": branch,
-        "author": author,
-        "status": status,
-        "timestamp": datetime.now(timezone.utc)
+#     doc = {
+#         "summary": summary_text,
+#         "commit_sha": commit_sha,
+#         "branch": branch,
+#         "author": author,
+#         "status": status,
+#         "timestamp": datetime.now(timezone.utc)
 
-    }
+#     }
 
-    result = collection.insert_one(doc)
-    print(f"📝 Summary stored in MongoDB with ID: {result.inserted_id}")
+#     result = collection.insert_one(doc)
+#     print(f"📝 Summary stored in MongoDB with ID: {result.inserted_id}")
 
 # Generate and save summary
 def summarize_run(run_id):
@@ -166,7 +166,7 @@ def summarize_run(run_id):
         f.write(summary)
 
     # Save to MongoDB
-    save_to_mongodb(summary, commit_sha, branch, status, actor)
+    # save_to_mongodb(summary, commit_sha, branch, status, actor)
 
     print(summary)
 
