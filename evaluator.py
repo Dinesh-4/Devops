@@ -4,7 +4,7 @@ import json
 import time
 from tabulate import tabulate
 
-summary_lines = []  # 📝 Collect summary lines here
+summary_lines = []  # 📝 Collect summary lines hered
 
 def log_summary(line=""):
     summary_lines.append(line)
