@@ -1,0 +1,1 @@
+2025-07-15 21:25:20.205 | ERROR    | autodevops_cli.cli:trigger_workflow:40 - Trigger failed: {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest","status":"401"}

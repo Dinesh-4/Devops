@@ -1,0 +1,20 @@
+﻿2025-07-15T15:56:50.8691724Z ##[group]Run export PYTHONPATH=$PYTHONPATH:$(pwd)
+2025-07-15T15:56:50.8692121Z [36;1mexport PYTHONPATH=$PYTHONPATH:$(pwd)[0m
+2025-07-15T15:56:50.8692394Z [36;1mpytest[0m
+2025-07-15T15:56:50.8720975Z shell: /usr/bin/bash -e {0}
+2025-07-15T15:56:50.8721213Z env:
+2025-07-15T15:56:50.8721454Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-15T15:56:50.8721853Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib/pkgconfig
+2025-07-15T15:56:50.8722239Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-15T15:56:50.8722583Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-15T15:56:50.8722932Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-15T15:56:50.8723278Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib
+2025-07-15T15:56:50.8723568Z ##[endgroup]
+2025-07-15T15:56:51.8263765Z ============================= test session starts ==============================
+2025-07-15T15:56:51.8264754Z platform linux -- Python 3.10.18, pytest-8.2.1, pluggy-1.6.0
+2025-07-15T15:56:51.8265873Z rootdir: /home/runner/work/testing-CI-CD/testing-CI-CD
+2025-07-15T15:56:51.8266584Z collected 1 item
+2025-07-15T15:56:51.8266861Z 
+2025-07-15T15:56:51.8493841Z test/test_main.py .                                                      [100%]
+2025-07-15T15:56:51.8494613Z 
+2025-07-15T15:56:51.8494939Z ============================== 1 passed in 0.21s ===============================

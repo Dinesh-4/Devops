@@ -1,0 +1,1638 @@
+﻿2025-07-26T03:45:50.3526069Z Current runner version: '2.326.0'
+2025-07-26T03:45:50.3549598Z ##[group]Runner Image Provisioner
+2025-07-26T03:45:50.3550441Z Hosted Compute Agent
+2025-07-26T03:45:50.3550975Z Version: 20250711.363
+2025-07-26T03:45:50.3551627Z Commit: 6785254374ce925a23743850c1cb91912ce5c14c
+2025-07-26T03:45:50.3552333Z Build Date: 2025-07-11T20:04:25Z
+2025-07-26T03:45:50.3552967Z ##[endgroup]
+2025-07-26T03:45:50.3553493Z ##[group]Operating System
+2025-07-26T03:45:50.3554067Z Ubuntu
+2025-07-26T03:45:50.3554525Z 24.04.2
+2025-07-26T03:45:50.3554954Z LTS
+2025-07-26T03:45:50.3555407Z ##[endgroup]
+2025-07-26T03:45:50.3555912Z ##[group]Runner Image
+2025-07-26T03:45:50.3556486Z Image: ubuntu-24.04
+2025-07-26T03:45:50.3556996Z Version: 20250720.1.0
+2025-07-26T03:45:50.3558006Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250720.1/images/ubuntu/Ubuntu2404-Readme.md
+2025-07-26T03:45:50.3559992Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250720.1
+2025-07-26T03:45:50.3561092Z ##[endgroup]
+2025-07-26T03:45:50.3562186Z ##[group]GITHUB_TOKEN Permissions
+2025-07-26T03:45:50.3563972Z Contents: read
+2025-07-26T03:45:50.3564589Z Metadata: read
+2025-07-26T03:45:50.3565110Z Packages: read
+2025-07-26T03:45:50.3565684Z ##[endgroup]
+2025-07-26T03:45:50.3567605Z Secret source: Actions
+2025-07-26T03:45:50.3568313Z Prepare workflow directory
+2025-07-26T03:45:50.3885262Z Prepare all required actions
+2025-07-26T03:45:50.3922824Z Getting action download info
+2025-07-26T03:45:50.7925746Z ##[group]Download immutable action package 'actions/checkout@v3'
+2025-07-26T03:45:50.7926841Z Version: 3.6.0
+2025-07-26T03:45:50.7927831Z Digest: sha256:942562b9c7d4b1f2557f1da21f4d3eb4eb4fd01f2ad78b2a6e187d1b193e0a0f
+2025-07-26T03:45:50.7929548Z Source commit SHA: f43a0e5ff2bd294095638e18286ca9a3d1956744
+2025-07-26T03:45:50.7930341Z ##[endgroup]
+2025-07-26T03:45:50.8941924Z ##[group]Download immutable action package 'actions/setup-python@v4'
+2025-07-26T03:45:50.8942825Z Version: 4.9.1
+2025-07-26T03:45:50.8943791Z Digest: sha256:f03e505388af670b5a108629e0ba26befc08d5c62b41f46146a45fe29ae509a5
+2025-07-26T03:45:50.8944774Z Source commit SHA: 7f4fc3e22c37d6ff65e88745f38bd3157c663f7c
+2025-07-26T03:45:50.8945506Z ##[endgroup]
+2025-07-26T03:45:51.0988989Z ##[group]Download immutable action package 'docker/login-action@v3'
+2025-07-26T03:45:51.0989881Z Version: 3.4.0
+2025-07-26T03:45:51.0990788Z Digest: sha256:864ebd28db095e1602e6ef999f46a4f575083ea874918fbccf0994c2a7680450
+2025-07-26T03:45:51.0991808Z Source commit SHA: 74a5d142397b4f367a81961eba4e8cd7edddf772
+2025-07-26T03:45:51.0992516Z ##[endgroup]
+2025-07-26T03:45:51.3914883Z Complete job name: build-test-deploy
+2025-07-26T03:45:51.4582887Z ##[group]Run actions/checkout@v3
+2025-07-26T03:45:51.4583743Z with:
+2025-07-26T03:45:51.4584225Z   repository: ***/testing-CI-CD
+2025-07-26T03:45:51.4584851Z   token: ***
+2025-07-26T03:45:51.4585241Z   ssh-strict: true
+2025-07-26T03:45:51.4585664Z   persist-credentials: true
+2025-07-26T03:45:51.4586128Z   clean: true
+2025-07-26T03:45:51.4586571Z   sparse-checkout-cone-mode: true
+2025-07-26T03:45:51.4587066Z   fetch-depth: 1
+2025-07-26T03:45:51.4587464Z   fetch-tags: false
+2025-07-26T03:45:51.4587866Z   lfs: false
+2025-07-26T03:45:51.4588231Z   submodules: false
+2025-07-26T03:45:51.4588827Z   set-safe-directory: true
+2025-07-26T03:45:51.4589541Z ##[endgroup]
+2025-07-26T03:45:51.5433594Z Syncing repository: ***/testing-CI-CD
+2025-07-26T03:45:51.5435337Z ##[group]Getting Git version info
+2025-07-26T03:45:51.5436132Z Working directory is '/home/runner/work/testing-CI-CD/testing-CI-CD'
+2025-07-26T03:45:51.5437146Z [command]/usr/bin/git version
+2025-07-26T03:45:51.5464099Z git version 2.50.1
+2025-07-26T03:45:51.5491194Z ##[endgroup]
+2025-07-26T03:45:51.5507292Z Temporarily overriding HOME='/home/runner/work/_temp/de77d691-dce5-42aa-aff2-5bd288f945d2' before making global git config changes
+2025-07-26T03:45:51.5510056Z Adding repository directory to the temporary git global config as a safe directory
+2025-07-26T03:45:51.5512277Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/testing-CI-CD/testing-CI-CD
+2025-07-26T03:45:51.5544082Z Deleting the contents of '/home/runner/work/testing-CI-CD/testing-CI-CD'
+2025-07-26T03:45:51.5547915Z ##[group]Initializing the repository
+2025-07-26T03:45:51.5551807Z [command]/usr/bin/git init /home/runner/work/testing-CI-CD/testing-CI-CD
+2025-07-26T03:45:51.5602192Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-07-26T03:45:51.5603906Z hint: is subject to change. To configure the initial branch name to use in all
+2025-07-26T03:45:51.5605237Z hint: of your new repositories, which will suppress this warning, call:
+2025-07-26T03:45:51.5606223Z hint:
+2025-07-26T03:45:51.5607101Z hint: 	git config --global init.defaultBranch <name>
+2025-07-26T03:45:51.5608185Z hint:
+2025-07-26T03:45:51.5609711Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-07-26T03:45:51.5611462Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-07-26T03:45:51.5612846Z hint:
+2025-07-26T03:45:51.5613508Z hint: 	git branch -m <name>
+2025-07-26T03:45:51.5614280Z hint:
+2025-07-26T03:45:51.5615372Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2025-07-26T03:45:51.5617321Z Initialized empty Git repository in /home/runner/work/testing-CI-CD/testing-CI-CD/.git/
+2025-07-26T03:45:51.5620507Z [command]/usr/bin/git remote add origin https://github.com/***/testing-CI-CD
+2025-07-26T03:45:51.5646172Z ##[endgroup]
+2025-07-26T03:45:51.5647600Z ##[group]Disabling automatic garbage collection
+2025-07-26T03:45:51.5649107Z [command]/usr/bin/git config --local gc.auto 0
+2025-07-26T03:45:51.5675164Z ##[endgroup]
+2025-07-26T03:45:51.5676431Z ##[group]Setting up auth
+2025-07-26T03:45:51.5681304Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-07-26T03:45:51.5708564Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-07-26T03:45:51.5961640Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-07-26T03:45:51.5989597Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-07-26T03:45:51.6209115Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-07-26T03:45:51.6240485Z ##[endgroup]
+2025-07-26T03:45:51.6241478Z ##[group]Fetching the repository
+2025-07-26T03:45:51.6248163Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +8ef73710fd71a2b386ad285176c833cacf9a148d:refs/remotes/origin/main
+2025-07-26T03:45:51.7716119Z remote: Enumerating objects: 7339, done.        
+2025-07-26T03:45:51.7718044Z remote: Counting objects:   0% (1/7339)        
+2025-07-26T03:45:51.7722544Z remote: Counting objects:   1% (74/7339)        
+2025-07-26T03:45:51.7723667Z remote: Counting objects:   2% (147/7339)        
+2025-07-26T03:45:51.7724638Z remote: Counting objects:   3% (221/7339)        
+2025-07-26T03:45:51.7725694Z remote: Counting objects:   4% (294/7339)        
+2025-07-26T03:45:51.7726610Z remote: Counting objects:   5% (367/7339)        
+2025-07-26T03:45:51.7727328Z remote: Counting objects:   6% (441/7339)        
+2025-07-26T03:45:51.7727940Z remote: Counting objects:   7% (514/7339)        
+2025-07-26T03:45:51.7728772Z remote: Counting objects:   8% (588/7339)        
+2025-07-26T03:45:51.7729386Z remote: Counting objects:   9% (661/7339)        
+2025-07-26T03:45:51.7729991Z remote: Counting objects:  10% (734/7339)        
+2025-07-26T03:45:51.7730598Z remote: Counting objects:  11% (808/7339)        
+2025-07-26T03:45:51.7731380Z remote: Counting objects:  12% (881/7339)        
+2025-07-26T03:45:51.7732326Z remote: Counting objects:  13% (955/7339)        
+2025-07-26T03:45:51.7733696Z remote: Counting objects:  14% (1028/7339)        
+2025-07-26T03:45:51.7734590Z remote: Counting objects:  15% (1101/7339)        
+2025-07-26T03:45:51.7735207Z remote: Counting objects:  16% (1175/7339)        
+2025-07-26T03:45:51.7735816Z remote: Counting objects:  17% (1248/7339)        
+2025-07-26T03:45:51.7736560Z remote: Counting objects:  18% (1322/7339)        
+2025-07-26T03:45:51.7737597Z remote: Counting objects:  19% (1395/7339)        
+2025-07-26T03:45:51.7738932Z remote: Counting objects:  20% (1468/7339)        
+2025-07-26T03:45:51.7739969Z remote: Counting objects:  21% (1542/7339)        
+2025-07-26T03:45:51.7740817Z remote: Counting objects:  22% (1615/7339)        
+2025-07-26T03:45:51.7741418Z remote: Counting objects:  23% (1688/7339)        
+2025-07-26T03:45:51.7742028Z remote: Counting objects:  24% (1762/7339)        
+2025-07-26T03:45:51.7742633Z remote: Counting objects:  25% (1835/7339)        
+2025-07-26T03:45:51.7743250Z remote: Counting objects:  26% (1909/7339)        
+2025-07-26T03:45:51.7743859Z remote: Counting objects:  27% (1982/7339)        
+2025-07-26T03:45:51.7744904Z remote: Counting objects:  28% (2055/7339)        
+2025-07-26T03:45:51.7745896Z remote: Counting objects:  29% (2129/7339)        
+2025-07-26T03:45:51.7747016Z remote: Counting objects:  30% (2202/7339)        
+2025-07-26T03:45:51.7747714Z remote: Counting objects:  31% (2276/7339)        
+2025-07-26T03:45:51.7748533Z remote: Counting objects:  32% (2349/7339)        
+2025-07-26T03:45:51.7749194Z remote: Counting objects:  33% (2422/7339)        
+2025-07-26T03:45:51.7749836Z remote: Counting objects:  34% (2496/7339)        
+2025-07-26T03:45:51.7750460Z remote: Counting objects:  35% (2569/7339)        
+2025-07-26T03:45:51.7751103Z remote: Counting objects:  36% (2643/7339)        
+2025-07-26T03:45:51.7751756Z remote: Counting objects:  37% (2716/7339)        
+2025-07-26T03:45:51.7752406Z remote: Counting objects:  38% (2789/7339)        
+2025-07-26T03:45:51.7753067Z remote: Counting objects:  39% (2863/7339)        
+2025-07-26T03:45:51.7753718Z remote: Counting objects:  40% (2936/7339)        
+2025-07-26T03:45:51.7754365Z remote: Counting objects:  41% (3009/7339)        
+2025-07-26T03:45:51.7755180Z remote: Counting objects:  42% (3083/7339)        
+2025-07-26T03:45:51.7756198Z remote: Counting objects:  43% (3156/7339)        
+2025-07-26T03:45:51.7756833Z remote: Counting objects:  44% (3230/7339)        
+2025-07-26T03:45:51.7757435Z remote: Counting objects:  45% (3303/7339)        
+2025-07-26T03:45:51.7758022Z remote: Counting objects:  46% (3376/7339)        
+2025-07-26T03:45:51.7759070Z remote: Counting objects:  47% (3450/7339)        
+2025-07-26T03:45:51.7759689Z remote: Counting objects:  48% (3523/7339)        
+2025-07-26T03:45:51.7760283Z remote: Counting objects:  49% (3597/7339)        
+2025-07-26T03:45:51.7760914Z remote: Counting objects:  50% (3670/7339)        
+2025-07-26T03:45:51.7761517Z remote: Counting objects:  51% (3743/7339)        
+2025-07-26T03:45:51.7762125Z remote: Counting objects:  52% (3817/7339)        
+2025-07-26T03:45:51.7762731Z remote: Counting objects:  53% (3890/7339)        
+2025-07-26T03:45:51.7763329Z remote: Counting objects:  54% (3964/7339)        
+2025-07-26T03:45:51.7763919Z remote: Counting objects:  55% (4037/7339)        
+2025-07-26T03:45:51.7764626Z remote: Counting objects:  56% (4110/7339)        
+2025-07-26T03:45:51.7765225Z remote: Counting objects:  57% (4184/7339)        
+2025-07-26T03:45:51.7765817Z remote: Counting objects:  58% (4257/7339)        
+2025-07-26T03:45:51.7766410Z remote: Counting objects:  59% (4331/7339)        
+2025-07-26T03:45:51.7767022Z remote: Counting objects:  60% (4404/7339)        
+2025-07-26T03:45:51.7767612Z remote: Counting objects:  61% (4477/7339)        
+2025-07-26T03:45:51.7768202Z remote: Counting objects:  62% (4551/7339)        
+2025-07-26T03:45:51.7768931Z remote: Counting objects:  63% (4624/7339)        
+2025-07-26T03:45:51.7769528Z remote: Counting objects:  64% (4697/7339)        
+2025-07-26T03:45:51.7770261Z remote: Counting objects:  65% (4771/7339)        
+2025-07-26T03:45:51.7770864Z remote: Counting objects:  66% (4844/7339)        
+2025-07-26T03:45:51.7771455Z remote: Counting objects:  67% (4918/7339)        
+2025-07-26T03:45:51.7772048Z remote: Counting objects:  68% (4991/7339)        
+2025-07-26T03:45:51.7772639Z remote: Counting objects:  69% (5064/7339)        
+2025-07-26T03:45:51.7773233Z remote: Counting objects:  70% (5138/7339)        
+2025-07-26T03:45:51.7773818Z remote: Counting objects:  71% (5211/7339)        
+2025-07-26T03:45:51.7774405Z remote: Counting objects:  72% (5285/7339)        
+2025-07-26T03:45:51.7775013Z remote: Counting objects:  73% (5358/7339)        
+2025-07-26T03:45:51.7775603Z remote: Counting objects:  74% (5431/7339)        
+2025-07-26T03:45:51.7776191Z remote: Counting objects:  75% (5505/7339)        
+2025-07-26T03:45:51.7776776Z remote: Counting objects:  76% (5578/7339)        
+2025-07-26T03:45:51.7777408Z remote: Counting objects:  77% (5652/7339)        
+2025-07-26T03:45:51.7778008Z remote: Counting objects:  78% (5725/7339)        
+2025-07-26T03:45:51.7778702Z remote: Counting objects:  79% (5798/7339)        
+2025-07-26T03:45:51.7779287Z remote: Counting objects:  80% (5872/7339)        
+2025-07-26T03:45:51.7779878Z remote: Counting objects:  81% (5945/7339)        
+2025-07-26T03:45:51.7780463Z remote: Counting objects:  82% (6018/7339)        
+2025-07-26T03:45:51.7781055Z remote: Counting objects:  83% (6092/7339)        
+2025-07-26T03:45:51.7781646Z remote: Counting objects:  84% (6165/7339)        
+2025-07-26T03:45:51.7782237Z remote: Counting objects:  85% (6239/7339)        
+2025-07-26T03:45:51.7782825Z remote: Counting objects:  86% (6312/7339)        
+2025-07-26T03:45:51.7783417Z remote: Counting objects:  87% (6385/7339)        
+2025-07-26T03:45:51.7784006Z remote: Counting objects:  88% (6459/7339)        
+2025-07-26T03:45:51.7784589Z remote: Counting objects:  89% (6532/7339)        
+2025-07-26T03:45:51.7785186Z remote: Counting objects:  90% (6606/7339)        
+2025-07-26T03:45:51.7785776Z remote: Counting objects:  91% (6679/7339)        
+2025-07-26T03:45:51.7786365Z remote: Counting objects:  92% (6752/7339)        
+2025-07-26T03:45:51.7786959Z remote: Counting objects:  93% (6826/7339)        
+2025-07-26T03:45:51.7787553Z remote: Counting objects:  94% (6899/7339)        
+2025-07-26T03:45:51.7788139Z remote: Counting objects:  95% (6973/7339)        
+2025-07-26T03:45:51.7788838Z remote: Counting objects:  96% (7046/7339)        
+2025-07-26T03:45:51.7789427Z remote: Counting objects:  97% (7119/7339)        
+2025-07-26T03:45:51.7790138Z remote: Counting objects:  98% (7193/7339)        
+2025-07-26T03:45:51.7790745Z remote: Counting objects:  99% (7266/7339)        
+2025-07-26T03:45:51.7791331Z remote: Counting objects: 100% (7339/7339)        
+2025-07-26T03:45:51.7791966Z remote: Counting objects: 100% (7339/7339), done.        
+2025-07-26T03:45:51.7824851Z remote: Compressing objects:   0% (1/6209)        
+2025-07-26T03:45:51.7829354Z remote: Compressing objects:   1% (63/6209)        
+2025-07-26T03:45:51.7830738Z remote: Compressing objects:   2% (125/6209)        
+2025-07-26T03:45:51.7832226Z remote: Compressing objects:   3% (187/6209)        
+2025-07-26T03:45:51.7833582Z remote: Compressing objects:   4% (249/6209)        
+2025-07-26T03:45:51.7834405Z remote: Compressing objects:   5% (311/6209)        
+2025-07-26T03:45:51.7835195Z remote: Compressing objects:   6% (373/6209)        
+2025-07-26T03:45:51.7835827Z remote: Compressing objects:   7% (435/6209)        
+2025-07-26T03:45:51.7836459Z remote: Compressing objects:   8% (497/6209)        
+2025-07-26T03:45:51.7837108Z remote: Compressing objects:   9% (559/6209)        
+2025-07-26T03:45:51.7837744Z remote: Compressing objects:  10% (621/6209)        
+2025-07-26T03:45:51.7838610Z remote: Compressing objects:  11% (683/6209)        
+2025-07-26T03:45:51.7839323Z remote: Compressing objects:  12% (746/6209)        
+2025-07-26T03:45:51.7840126Z remote: Compressing objects:  13% (808/6209)        
+2025-07-26T03:45:51.7841610Z remote: Compressing objects:  14% (870/6209)        
+2025-07-26T03:45:51.7842295Z remote: Compressing objects:  15% (932/6209)        
+2025-07-26T03:45:51.7842958Z remote: Compressing objects:  16% (994/6209)        
+2025-07-26T03:45:51.7843603Z remote: Compressing objects:  17% (1056/6209)        
+2025-07-26T03:45:51.7844250Z remote: Compressing objects:  18% (1118/6209)        
+2025-07-26T03:45:51.7844879Z remote: Compressing objects:  19% (1180/6209)        
+2025-07-26T03:45:51.7859419Z remote: Compressing objects:  20% (1242/6209)        
+2025-07-26T03:45:51.7860491Z remote: Compressing objects:  21% (1304/6209)        
+2025-07-26T03:45:51.7861165Z remote: Compressing objects:  22% (1366/6209)        
+2025-07-26T03:45:51.7861863Z remote: Compressing objects:  23% (1429/6209)        
+2025-07-26T03:45:51.7862503Z remote: Compressing objects:  24% (1491/6209)        
+2025-07-26T03:45:51.7915283Z remote: Compressing objects:  25% (1553/6209)        
+2025-07-26T03:45:51.7916012Z remote: Compressing objects:  26% (1615/6209)        
+2025-07-26T03:45:51.7916663Z remote: Compressing objects:  27% (1677/6209)        
+2025-07-26T03:45:51.7917876Z remote: Compressing objects:  28% (1739/6209)        
+2025-07-26T03:45:51.7919542Z remote: Compressing objects:  29% (1801/6209)        
+2025-07-26T03:45:51.7920507Z remote: Compressing objects:  30% (1863/6209)        
+2025-07-26T03:45:51.7921349Z remote: Compressing objects:  31% (1925/6209)        
+2025-07-26T03:45:51.7922567Z remote: Compressing objects:  32% (1987/6209)        
+2025-07-26T03:45:51.7923538Z remote: Compressing objects:  33% (2049/6209)        
+2025-07-26T03:45:51.7924657Z remote: Compressing objects:  34% (2112/6209)        
+2025-07-26T03:45:51.7925889Z remote: Compressing objects:  35% (2174/6209)        
+2025-07-26T03:45:51.7926615Z remote: Compressing objects:  36% (2236/6209)        
+2025-07-26T03:45:51.7927266Z remote: Compressing objects:  37% (2298/6209)        
+2025-07-26T03:45:51.7927917Z remote: Compressing objects:  38% (2360/6209)        
+2025-07-26T03:45:51.7928733Z remote: Compressing objects:  39% (2422/6209)        
+2025-07-26T03:45:51.7929376Z remote: Compressing objects:  40% (2484/6209)        
+2025-07-26T03:45:51.8071486Z remote: Compressing objects:  41% (2546/6209)        
+2025-07-26T03:45:52.2514904Z remote: Compressing objects:  42% (2608/6209)        
+2025-07-26T03:45:52.5219601Z remote: Compressing objects:  43% (2670/6209)        
+2025-07-26T03:45:52.6973786Z remote: Compressing objects:  44% (2732/6209)        
+2025-07-26T03:45:52.7775921Z remote: Compressing objects:  45% (2795/6209)        
+2025-07-26T03:45:52.8480155Z remote: Compressing objects:  45% (2829/6209)        
+2025-07-26T03:45:52.9786856Z remote: Compressing objects:  46% (2857/6209)        
+2025-07-26T03:45:53.0917026Z remote: Compressing objects:  47% (2919/6209)        
+2025-07-26T03:45:53.1852068Z remote: Compressing objects:  48% (2981/6209)        
+2025-07-26T03:45:53.2610235Z remote: Compressing objects:  49% (3043/6209)        
+2025-07-26T03:45:53.3344622Z remote: Compressing objects:  50% (3105/6209)        
+2025-07-26T03:45:53.4027487Z remote: Compressing objects:  51% (3167/6209)        
+2025-07-26T03:45:53.4634607Z remote: Compressing objects:  52% (3229/6209)        
+2025-07-26T03:45:53.5165673Z remote: Compressing objects:  53% (3291/6209)        
+2025-07-26T03:45:53.5599663Z remote: Compressing objects:  54% (3353/6209)        
+2025-07-26T03:45:53.5985871Z remote: Compressing objects:  55% (3415/6209)        
+2025-07-26T03:45:53.6312050Z remote: Compressing objects:  56% (3478/6209)        
+2025-07-26T03:45:53.6642624Z remote: Compressing objects:  57% (3540/6209)        
+2025-07-26T03:45:53.6935434Z remote: Compressing objects:  58% (3602/6209)        
+2025-07-26T03:45:53.7205484Z remote: Compressing objects:  59% (3664/6209)        
+2025-07-26T03:45:53.7437620Z remote: Compressing objects:  60% (3726/6209)        
+2025-07-26T03:45:53.7650490Z remote: Compressing objects:  61% (3788/6209)        
+2025-07-26T03:45:53.7750205Z remote: Compressing objects:  62% (3850/6209)        
+2025-07-26T03:45:53.7859333Z remote: Compressing objects:  62% (3880/6209)        
+2025-07-26T03:45:53.8035913Z remote: Compressing objects:  63% (3912/6209)        
+2025-07-26T03:45:53.8184457Z remote: Compressing objects:  64% (3974/6209)        
+2025-07-26T03:45:53.8344350Z remote: Compressing objects:  65% (4036/6209)        
+2025-07-26T03:45:53.8492486Z remote: Compressing objects:  66% (4098/6209)        
+2025-07-26T03:45:53.8617550Z remote: Compressing objects:  67% (4161/6209)        
+2025-07-26T03:45:53.8734649Z remote: Compressing objects:  68% (4223/6209)        
+2025-07-26T03:45:53.8835314Z remote: Compressing objects:  69% (4285/6209)        
+2025-07-26T03:45:53.8923140Z remote: Compressing objects:  70% (4347/6209)        
+2025-07-26T03:45:53.9008286Z remote: Compressing objects:  71% (4409/6209)        
+2025-07-26T03:45:53.9082312Z remote: Compressing objects:  72% (4471/6209)        
+2025-07-26T03:45:53.9147933Z remote: Compressing objects:  73% (4533/6209)        
+2025-07-26T03:45:53.9203794Z remote: Compressing objects:  74% (4595/6209)        
+2025-07-26T03:45:53.9243712Z remote: Compressing objects:  75% (4657/6209)        
+2025-07-26T03:45:53.9275720Z remote: Compressing objects:  76% (4719/6209)        
+2025-07-26T03:45:53.9306185Z remote: Compressing objects:  77% (4781/6209)        
+2025-07-26T03:45:53.9327877Z remote: Compressing objects:  78% (4844/6209)        
+2025-07-26T03:45:53.9344466Z remote: Compressing objects:  79% (4906/6209)        
+2025-07-26T03:45:53.9361212Z remote: Compressing objects:  80% (4968/6209)        
+2025-07-26T03:45:53.9382620Z remote: Compressing objects:  81% (5030/6209)        
+2025-07-26T03:45:53.9401651Z remote: Compressing objects:  82% (5092/6209)        
+2025-07-26T03:45:53.9413974Z remote: Compressing objects:  83% (5154/6209)        
+2025-07-26T03:45:53.9443515Z remote: Compressing objects:  84% (5216/6209)        
+2025-07-26T03:45:53.9451096Z remote: Compressing objects:  85% (5278/6209)        
+2025-07-26T03:45:53.9461291Z remote: Compressing objects:  86% (5340/6209)        
+2025-07-26T03:45:53.9461938Z remote: Compressing objects:  87% (5402/6209)        
+2025-07-26T03:45:53.9465636Z remote: Compressing objects:  88% (5464/6209)        
+2025-07-26T03:45:53.9470086Z remote: Compressing objects:  89% (5527/6209)        
+2025-07-26T03:45:53.9478613Z remote: Compressing objects:  90% (5589/6209)        
+2025-07-26T03:45:53.9484351Z remote: Compressing objects:  91% (5651/6209)        
+2025-07-26T03:45:53.9488866Z remote: Compressing objects:  92% (5713/6209)        
+2025-07-26T03:45:53.9493598Z remote: Compressing objects:  93% (5775/6209)        
+2025-07-26T03:45:53.9503102Z remote: Compressing objects:  94% (5837/6209)        
+2025-07-26T03:45:53.9515667Z remote: Compressing objects:  95% (5899/6209)        
+2025-07-26T03:45:53.9526395Z remote: Compressing objects:  96% (5961/6209)        
+2025-07-26T03:45:53.9530303Z remote: Compressing objects:  97% (6023/6209)        
+2025-07-26T03:45:53.9541027Z remote: Compressing objects:  98% (6085/6209)        
+2025-07-26T03:45:53.9552438Z remote: Compressing objects:  99% (6147/6209)        
+2025-07-26T03:45:53.9552915Z remote: Compressing objects: 100% (6209/6209)        
+2025-07-26T03:45:53.9553296Z remote: Compressing objects: 100% (6209/6209), done.        
+2025-07-26T03:45:53.9604886Z Receiving objects:   0% (1/7339)
+2025-07-26T03:45:53.9718263Z Receiving objects:   1% (74/7339)
+2025-07-26T03:45:53.9893681Z Receiving objects:   2% (147/7339)
+2025-07-26T03:45:54.0005837Z Receiving objects:   3% (221/7339)
+2025-07-26T03:45:54.0098503Z Receiving objects:   4% (294/7339)
+2025-07-26T03:45:54.0141646Z Receiving objects:   5% (367/7339)
+2025-07-26T03:45:54.0322073Z Receiving objects:   6% (441/7339)
+2025-07-26T03:45:54.0398725Z Receiving objects:   7% (514/7339)
+2025-07-26T03:45:54.0510442Z Receiving objects:   8% (588/7339)
+2025-07-26T03:45:54.0604796Z Receiving objects:   9% (661/7339)
+2025-07-26T03:45:54.0648538Z Receiving objects:  10% (734/7339)
+2025-07-26T03:45:54.0667981Z Receiving objects:  11% (808/7339)
+2025-07-26T03:45:54.0711495Z Receiving objects:  12% (881/7339)
+2025-07-26T03:45:54.0772165Z Receiving objects:  13% (955/7339)
+2025-07-26T03:45:54.0827612Z Receiving objects:  14% (1028/7339)
+2025-07-26T03:45:54.0877420Z Receiving objects:  15% (1101/7339)
+2025-07-26T03:45:54.0940613Z Receiving objects:  16% (1175/7339)
+2025-07-26T03:45:54.1001247Z Receiving objects:  17% (1248/7339)
+2025-07-26T03:45:54.1199453Z Receiving objects:  18% (1322/7339)
+2025-07-26T03:45:54.1257219Z Receiving objects:  19% (1395/7339)
+2025-07-26T03:45:54.1284408Z Receiving objects:  20% (1468/7339)
+2025-07-26T03:45:54.1313688Z Receiving objects:  21% (1542/7339)
+2025-07-26T03:45:54.1446608Z Receiving objects:  22% (1615/7339)
+2025-07-26T03:45:54.1475164Z Receiving objects:  23% (1688/7339)
+2025-07-26T03:45:54.1514295Z Receiving objects:  24% (1762/7339)
+2025-07-26T03:45:54.1586045Z Receiving objects:  25% (1835/7339)
+2025-07-26T03:45:54.1620680Z Receiving objects:  26% (1909/7339)
+2025-07-26T03:45:54.1652519Z Receiving objects:  27% (1982/7339)
+2025-07-26T03:45:54.1664022Z Receiving objects:  28% (2055/7339)
+2025-07-26T03:45:54.1675885Z Receiving objects:  29% (2129/7339)
+2025-07-26T03:45:54.1687012Z Receiving objects:  30% (2202/7339)
+2025-07-26T03:45:54.1697985Z Receiving objects:  31% (2276/7339)
+2025-07-26T03:45:54.1714275Z Receiving objects:  32% (2349/7339)
+2025-07-26T03:45:54.1723589Z Receiving objects:  33% (2422/7339)
+2025-07-26T03:45:54.1734870Z Receiving objects:  34% (2496/7339)
+2025-07-26T03:45:54.1746650Z Receiving objects:  35% (2569/7339)
+2025-07-26T03:45:54.1759775Z Receiving objects:  36% (2643/7339)
+2025-07-26T03:45:54.1769002Z Receiving objects:  37% (2716/7339)
+2025-07-26T03:45:54.1787013Z Receiving objects:  38% (2789/7339)
+2025-07-26T03:45:54.1796290Z Receiving objects:  39% (2863/7339)
+2025-07-26T03:45:54.1808570Z Receiving objects:  40% (2936/7339)
+2025-07-26T03:45:54.1817852Z Receiving objects:  41% (3009/7339)
+2025-07-26T03:45:54.1825722Z Receiving objects:  42% (3083/7339)
+2025-07-26T03:45:54.1887609Z Receiving objects:  43% (3156/7339)
+2025-07-26T03:45:54.1956394Z Receiving objects:  44% (3230/7339)
+2025-07-26T03:45:54.2008926Z Receiving objects:  45% (3303/7339)
+2025-07-26T03:45:54.2051449Z Receiving objects:  46% (3376/7339)
+2025-07-26T03:45:54.2112518Z Receiving objects:  47% (3450/7339)
+2025-07-26T03:45:54.2358231Z Receiving objects:  48% (3523/7339)
+2025-07-26T03:45:54.2417480Z Receiving objects:  49% (3597/7339)
+2025-07-26T03:45:54.2471375Z Receiving objects:  50% (3670/7339)
+2025-07-26T03:45:54.2580894Z Receiving objects:  51% (3743/7339)
+2025-07-26T03:45:54.2657831Z Receiving objects:  52% (3817/7339)
+2025-07-26T03:45:54.2730119Z Receiving objects:  53% (3890/7339)
+2025-07-26T03:45:54.2828877Z Receiving objects:  54% (3964/7339)
+2025-07-26T03:45:54.2891461Z Receiving objects:  55% (4037/7339)
+2025-07-26T03:45:54.2991449Z Receiving objects:  56% (4110/7339)
+2025-07-26T03:45:54.3032921Z Receiving objects:  57% (4184/7339)
+2025-07-26T03:45:54.3082427Z Receiving objects:  58% (4257/7339)
+2025-07-26T03:45:54.3151721Z Receiving objects:  59% (4331/7339)
+2025-07-26T03:45:54.3191071Z Receiving objects:  60% (4404/7339)
+2025-07-26T03:45:54.3275950Z Receiving objects:  61% (4477/7339)
+2025-07-26T03:45:54.3369586Z Receiving objects:  62% (4551/7339)
+2025-07-26T03:45:54.3476211Z Receiving objects:  63% (4624/7339)
+2025-07-26T03:45:54.4116865Z Receiving objects:  64% (4697/7339)
+2025-07-26T03:45:54.4207367Z Receiving objects:  65% (4771/7339)
+2025-07-26T03:45:54.4293340Z Receiving objects:  66% (4844/7339)
+2025-07-26T03:45:54.4398598Z Receiving objects:  67% (4918/7339)
+2025-07-26T03:45:54.4485317Z Receiving objects:  68% (4991/7339)
+2025-07-26T03:45:54.4564586Z Receiving objects:  69% (5064/7339)
+2025-07-26T03:45:54.4662793Z Receiving objects:  70% (5138/7339)
+2025-07-26T03:45:54.4724550Z Receiving objects:  71% (5211/7339), 17.30 MiB | 34.58 MiB/s
+2025-07-26T03:45:54.4753553Z Receiving objects:  72% (5285/7339), 17.30 MiB | 34.58 MiB/s
+2025-07-26T03:45:54.4783638Z Receiving objects:  73% (5358/7339), 17.30 MiB | 34.58 MiB/s
+2025-07-26T03:45:54.4891264Z Receiving objects:  74% (5431/7339), 17.30 MiB | 34.58 MiB/s
+2025-07-26T03:45:54.5003735Z Receiving objects:  75% (5505/7339), 17.30 MiB | 34.58 MiB/s
+2025-07-26T03:45:54.5044769Z Receiving objects:  76% (5578/7339), 17.30 MiB | 34.58 MiB/s
+2025-07-26T03:45:54.5072519Z Receiving objects:  77% (5652/7339), 17.30 MiB | 34.58 MiB/s
+2025-07-26T03:45:54.5084848Z Receiving objects:  78% (5725/7339), 17.30 MiB | 34.58 MiB/s
+2025-07-26T03:45:54.5095439Z Receiving objects:  79% (5798/7339), 17.30 MiB | 34.58 MiB/s
+2025-07-26T03:45:54.5105468Z Receiving objects:  80% (5872/7339), 17.30 MiB | 34.58 MiB/s
+2025-07-26T03:45:54.5113670Z Receiving objects:  81% (5945/7339), 17.30 MiB | 34.58 MiB/s
+2025-07-26T03:45:54.5138559Z Receiving objects:  82% (6018/7339), 17.30 MiB | 34.58 MiB/s
+2025-07-26T03:45:54.5156932Z Receiving objects:  83% (6092/7339), 17.30 MiB | 34.58 MiB/s
+2025-07-26T03:45:54.5200180Z Receiving objects:  84% (6165/7339), 17.30 MiB | 34.58 MiB/s
+2025-07-26T03:45:54.5264261Z Receiving objects:  85% (6239/7339), 17.30 MiB | 34.58 MiB/s
+2025-07-26T03:45:54.5383198Z Receiving objects:  86% (6312/7339), 17.30 MiB | 34.58 MiB/s
+2025-07-26T03:45:54.5424039Z Receiving objects:  87% (6385/7339), 17.30 MiB | 34.58 MiB/s
+2025-07-26T03:45:54.5464882Z Receiving objects:  88% (6459/7339), 17.30 MiB | 34.58 MiB/s
+2025-07-26T03:45:54.5523263Z Receiving objects:  89% (6532/7339), 17.30 MiB | 34.58 MiB/s
+2025-07-26T03:45:54.5575357Z Receiving objects:  90% (6606/7339), 17.30 MiB | 34.58 MiB/s
+2025-07-26T03:45:54.5611308Z Receiving objects:  91% (6679/7339), 17.30 MiB | 34.58 MiB/s
+2025-07-26T03:45:54.5664058Z Receiving objects:  92% (6752/7339), 17.30 MiB | 34.58 MiB/s
+2025-07-26T03:45:54.5761436Z Receiving objects:  93% (6826/7339), 17.30 MiB | 34.58 MiB/s
+2025-07-26T03:45:54.5814128Z Receiving objects:  94% (6899/7339), 17.30 MiB | 34.58 MiB/s
+2025-07-26T03:45:54.5862326Z Receiving objects:  95% (6973/7339), 17.30 MiB | 34.58 MiB/s
+2025-07-26T03:45:54.5906944Z Receiving objects:  96% (7046/7339), 17.30 MiB | 34.58 MiB/s
+2025-07-26T03:45:54.5966917Z Receiving objects:  97% (7119/7339), 17.30 MiB | 34.58 MiB/s
+2025-07-26T03:45:54.6054312Z Receiving objects:  98% (7193/7339), 17.30 MiB | 34.58 MiB/s
+2025-07-26T03:45:54.6117480Z Receiving objects:  99% (7266/7339), 17.30 MiB | 34.58 MiB/s
+2025-07-26T03:45:54.6118611Z remote: Total 7339 (delta 1165), reused 7000 (delta 1031), pack-reused 0 (from 0)        
+2025-07-26T03:45:54.6136325Z Receiving objects: 100% (7339/7339), 17.30 MiB | 34.58 MiB/s
+2025-07-26T03:45:54.6137231Z Receiving objects: 100% (7339/7339), 22.96 MiB | 35.04 MiB/s, done.
+2025-07-26T03:45:54.6142783Z Resolving deltas:   0% (0/1165)
+2025-07-26T03:45:54.6143592Z Resolving deltas:   1% (12/1165)
+2025-07-26T03:45:54.6144713Z Resolving deltas:   2% (24/1165)
+2025-07-26T03:45:54.6149611Z Resolving deltas:   3% (35/1165)
+2025-07-26T03:45:54.6151832Z Resolving deltas:   4% (47/1165)
+2025-07-26T03:45:54.6155160Z Resolving deltas:   5% (59/1165)
+2025-07-26T03:45:54.6157176Z Resolving deltas:   6% (70/1165)
+2025-07-26T03:45:54.6157749Z Resolving deltas:   7% (82/1165)
+2025-07-26T03:45:54.6159218Z Resolving deltas:   8% (94/1165)
+2025-07-26T03:45:54.6299591Z Resolving deltas:   9% (105/1165)
+2025-07-26T03:45:54.6305805Z Resolving deltas:  10% (117/1165)
+2025-07-26T03:45:54.6306734Z Resolving deltas:  11% (129/1165)
+2025-07-26T03:45:54.6307396Z Resolving deltas:  12% (140/1165)
+2025-07-26T03:45:54.6307884Z Resolving deltas:  13% (152/1165)
+2025-07-26T03:45:54.6308322Z Resolving deltas:  14% (164/1165)
+2025-07-26T03:45:54.6317041Z Resolving deltas:  15% (175/1165)
+2025-07-26T03:45:54.6317492Z Resolving deltas:  16% (187/1165)
+2025-07-26T03:45:54.6317923Z Resolving deltas:  17% (199/1165)
+2025-07-26T03:45:54.6321356Z Resolving deltas:  18% (210/1165)
+2025-07-26T03:45:54.6325562Z Resolving deltas:  19% (222/1165)
+2025-07-26T03:45:54.6330674Z Resolving deltas:  20% (233/1165)
+2025-07-26T03:45:54.6339250Z Resolving deltas:  21% (245/1165)
+2025-07-26T03:45:54.6349094Z Resolving deltas:  22% (257/1165)
+2025-07-26T03:45:54.6357074Z Resolving deltas:  23% (268/1165)
+2025-07-26T03:45:54.6360515Z Resolving deltas:  24% (280/1165)
+2025-07-26T03:45:54.6362939Z Resolving deltas:  25% (292/1165)
+2025-07-26T03:45:54.6364099Z Resolving deltas:  26% (303/1165)
+2025-07-26T03:45:54.6365947Z Resolving deltas:  27% (315/1165)
+2025-07-26T03:45:54.6366795Z Resolving deltas:  28% (328/1165)
+2025-07-26T03:45:54.6369765Z Resolving deltas:  29% (338/1165)
+2025-07-26T03:45:54.6373374Z Resolving deltas:  30% (351/1165)
+2025-07-26T03:45:54.6373962Z Resolving deltas:  31% (363/1165)
+2025-07-26T03:45:54.6374594Z Resolving deltas:  32% (373/1165)
+2025-07-26T03:45:54.6377264Z Resolving deltas:  33% (385/1165)
+2025-07-26T03:45:54.6378197Z Resolving deltas:  34% (397/1165)
+2025-07-26T03:45:54.6379981Z Resolving deltas:  35% (408/1165)
+2025-07-26T03:45:54.6382513Z Resolving deltas:  36% (420/1165)
+2025-07-26T03:45:54.6383346Z Resolving deltas:  37% (432/1165)
+2025-07-26T03:45:54.6385568Z Resolving deltas:  38% (443/1165)
+2025-07-26T03:45:54.6386122Z Resolving deltas:  39% (456/1165)
+2025-07-26T03:45:54.6387422Z Resolving deltas:  40% (467/1165)
+2025-07-26T03:45:54.6388794Z Resolving deltas:  41% (478/1165)
+2025-07-26T03:45:54.6391906Z Resolving deltas:  42% (490/1165)
+2025-07-26T03:45:54.6395007Z Resolving deltas:  43% (501/1165)
+2025-07-26T03:45:54.6397301Z Resolving deltas:  44% (513/1165)
+2025-07-26T03:45:54.6398858Z Resolving deltas:  45% (526/1165)
+2025-07-26T03:45:54.6401868Z Resolving deltas:  46% (536/1165)
+2025-07-26T03:45:54.6404864Z Resolving deltas:  47% (549/1165)
+2025-07-26T03:45:54.6407658Z Resolving deltas:  48% (560/1165)
+2025-07-26T03:45:54.6410427Z Resolving deltas:  49% (572/1165)
+2025-07-26T03:45:54.6412557Z Resolving deltas:  50% (583/1165)
+2025-07-26T03:45:54.6415461Z Resolving deltas:  51% (595/1165)
+2025-07-26T03:45:54.6416587Z Resolving deltas:  52% (607/1165)
+2025-07-26T03:45:54.6417552Z Resolving deltas:  53% (618/1165)
+2025-07-26T03:45:54.6421071Z Resolving deltas:  54% (630/1165)
+2025-07-26T03:45:54.6422432Z Resolving deltas:  55% (641/1165)
+2025-07-26T03:45:54.6423152Z Resolving deltas:  56% (653/1165)
+2025-07-26T03:45:54.6424092Z Resolving deltas:  57% (665/1165)
+2025-07-26T03:45:54.6429048Z Resolving deltas:  58% (676/1165)
+2025-07-26T03:45:54.6438633Z Resolving deltas:  59% (688/1165)
+2025-07-26T03:45:54.6444334Z Resolving deltas:  60% (699/1165)
+2025-07-26T03:45:54.6456084Z Resolving deltas:  61% (711/1165)
+2025-07-26T03:45:54.6459260Z Resolving deltas:  62% (724/1165)
+2025-07-26T03:45:54.6470950Z Resolving deltas:  63% (734/1165)
+2025-07-26T03:45:54.6499671Z Resolving deltas:  64% (747/1165)
+2025-07-26T03:45:54.6504730Z Resolving deltas:  65% (758/1165)
+2025-07-26T03:45:54.6514193Z Resolving deltas:  66% (769/1165)
+2025-07-26T03:45:54.6524434Z Resolving deltas:  67% (781/1165)
+2025-07-26T03:45:54.6533499Z Resolving deltas:  68% (793/1165)
+2025-07-26T03:45:54.6543758Z Resolving deltas:  69% (804/1165)
+2025-07-26T03:45:54.6559495Z Resolving deltas:  70% (816/1165)
+2025-07-26T03:45:54.6569155Z Resolving deltas:  71% (828/1165)
+2025-07-26T03:45:54.6580084Z Resolving deltas:  72% (839/1165)
+2025-07-26T03:45:54.6589385Z Resolving deltas:  73% (852/1165)
+2025-07-26T03:45:54.6596438Z Resolving deltas:  74% (863/1165)
+2025-07-26T03:45:54.6618769Z Resolving deltas:  75% (874/1165)
+2025-07-26T03:45:54.6628881Z Resolving deltas:  76% (886/1165)
+2025-07-26T03:45:54.6640941Z Resolving deltas:  77% (898/1165)
+2025-07-26T03:45:54.6653966Z Resolving deltas:  78% (909/1165)
+2025-07-26T03:45:54.6659640Z Resolving deltas:  79% (921/1165)
+2025-07-26T03:45:54.6668817Z Resolving deltas:  80% (932/1165)
+2025-07-26T03:45:54.6677598Z Resolving deltas:  81% (944/1165)
+2025-07-26T03:45:54.6683081Z Resolving deltas:  82% (956/1165)
+2025-07-26T03:45:54.6694432Z Resolving deltas:  83% (967/1165)
+2025-07-26T03:45:54.6711995Z Resolving deltas:  84% (979/1165)
+2025-07-26T03:45:54.6722032Z Resolving deltas:  85% (991/1165)
+2025-07-26T03:45:54.6726111Z Resolving deltas:  86% (1002/1165)
+2025-07-26T03:45:54.6730209Z Resolving deltas:  87% (1014/1165)
+2025-07-26T03:45:54.6737450Z Resolving deltas:  88% (1026/1165)
+2025-07-26T03:45:54.6770722Z Resolving deltas:  89% (1037/1165)
+2025-07-26T03:45:54.6785649Z Resolving deltas:  90% (1049/1165)
+2025-07-26T03:45:54.6801410Z Resolving deltas:  91% (1061/1165)
+2025-07-26T03:45:54.6820116Z Resolving deltas:  92% (1072/1165)
+2025-07-26T03:45:54.6825103Z Resolving deltas:  93% (1084/1165)
+2025-07-26T03:45:54.6828319Z Resolving deltas:  94% (1097/1165)
+2025-07-26T03:45:54.6829821Z Resolving deltas:  95% (1108/1165)
+2025-07-26T03:45:54.6830257Z Resolving deltas:  96% (1119/1165)
+2025-07-26T03:45:54.6831782Z Resolving deltas:  97% (1131/1165)
+2025-07-26T03:45:54.6835414Z Resolving deltas:  98% (1142/1165)
+2025-07-26T03:45:54.6845374Z Resolving deltas:  99% (1154/1165)
+2025-07-26T03:45:54.6846520Z Resolving deltas: 100% (1165/1165)
+2025-07-26T03:45:54.6846808Z Resolving deltas: 100% (1165/1165), done.
+2025-07-26T03:45:54.7081539Z From https://github.com/***/testing-CI-CD
+2025-07-26T03:45:54.7082015Z  * [new ref]         8ef73710fd71a2b386ad285176c833cacf9a148d -> origin/main
+2025-07-26T03:45:54.7107063Z ##[endgroup]
+2025-07-26T03:45:54.7107717Z ##[group]Determining the checkout info
+2025-07-26T03:45:54.7110259Z ##[endgroup]
+2025-07-26T03:45:54.7110862Z ##[group]Checking out the ref
+2025-07-26T03:45:54.7114830Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2025-07-26T03:45:55.2804945Z Switched to a new branch 'main'
+2025-07-26T03:45:55.2806281Z branch 'main' set up to track 'origin/main'.
+2025-07-26T03:45:55.2831270Z ##[endgroup]
+2025-07-26T03:45:55.2870483Z [command]/usr/bin/git log -1 --format='%H'
+2025-07-26T03:45:55.2891734Z '8ef73710fd71a2b386ad285176c833cacf9a148d'
+2025-07-26T03:45:55.3105501Z ##[group]Run actions/setup-python@v4
+2025-07-26T03:45:55.3105788Z with:
+2025-07-26T03:45:55.3105980Z   python-version: 3.10
+2025-07-26T03:45:55.3106206Z   check-latest: false
+2025-07-26T03:45:55.3106554Z   token: ***
+2025-07-26T03:45:55.3106769Z   update-environment: true
+2025-07-26T03:45:55.3107005Z   allow-prereleases: false
+2025-07-26T03:45:55.3107216Z ##[endgroup]
+2025-07-26T03:45:55.4754831Z ##[group]Installed versions
+2025-07-26T03:45:55.4835726Z Successfully set up CPython (3.10.18)
+2025-07-26T03:45:55.4836548Z ##[endgroup]
+2025-07-26T03:45:55.4948700Z ##[group]Run python -m pip install --upgrade pip
+2025-07-26T03:45:55.4949299Z [36;1mpython -m pip install --upgrade pip[0m
+2025-07-26T03:45:55.4949624Z [36;1mpip install -r requirements.txt[0m
+2025-07-26T03:45:55.4988178Z shell: /usr/bin/bash -e {0}
+2025-07-26T03:45:55.4988918Z env:
+2025-07-26T03:45:55.4989193Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-26T03:45:55.4989622Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib/pkgconfig
+2025-07-26T03:45:55.4990052Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-26T03:45:55.4990412Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-26T03:45:55.4990788Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-26T03:45:55.4991142Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib
+2025-07-26T03:45:55.4991449Z ##[endgroup]
+2025-07-26T03:45:55.9983114Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.10.18/x64/lib/python3.10/site-packages (25.1.1)
+2025-07-26T03:45:56.6372766Z Collecting annotated-types==0.7.0 (from -r requirements.txt (line 1))
+2025-07-26T03:45:56.6700987Z   Downloading annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+2025-07-26T03:45:56.6929741Z Collecting anyio==4.9.0 (from -r requirements.txt (line 2))
+2025-07-26T03:45:56.6963546Z   Downloading anyio-4.9.0-py3-none-any.whl.metadata (4.7 kB)
+2025-07-26T03:45:56.7252316Z Collecting autodevops-cli==5.1 (from -r requirements.txt (line 3))
+2025-07-26T03:45:56.7317273Z   Downloading autodevops_cli-5.1-py3-none-any.whl.metadata (543 bytes)
+2025-07-26T03:45:56.7433785Z Collecting blinker==1.9.0 (from -r requirements.txt (line 4))
+2025-07-26T03:45:56.7467311Z   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+2025-07-26T03:45:56.7661037Z Collecting certifi==2025.7.14 (from -r requirements.txt (line 5))
+2025-07-26T03:45:56.7694751Z   Downloading certifi-2025.7.14-py3-none-any.whl.metadata (2.4 kB)
+2025-07-26T03:45:56.8589001Z Collecting charset-normalizer==3.4.2 (from -r requirements.txt (line 6))
+2025-07-26T03:45:56.8623746Z   Downloading charset_normalizer-3.4.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (35 kB)
+2025-07-26T03:45:56.8832185Z Collecting click==8.2.1 (from -r requirements.txt (line 7))
+2025-07-26T03:45:56.8867680Z   Downloading click-8.2.1-py3-none-any.whl.metadata (2.5 kB)
+2025-07-26T03:45:56.8980353Z Collecting distro==1.9.0 (from -r requirements.txt (line 8))
+2025-07-26T03:45:56.9015184Z   Downloading distro-1.9.0-py3-none-any.whl.metadata (6.8 kB)
+2025-07-26T03:45:56.9153794Z Collecting dnspython==2.7.0 (from -r requirements.txt (line 9))
+2025-07-26T03:45:56.9188077Z   Downloading dnspython-2.7.0-py3-none-any.whl.metadata (5.8 kB)
+2025-07-26T03:45:56.9324997Z Collecting dotenv==0.9.9 (from -r requirements.txt (line 10))
+2025-07-26T03:45:56.9370236Z   Downloading dotenv-0.9.9-py2.py3-none-any.whl.metadata (279 bytes)
+2025-07-26T03:45:56.9543082Z Collecting Flask==3.1.0 (from -r requirements.txt (line 11))
+2025-07-26T03:45:56.9578085Z   Downloading flask-3.1.0-py3-none-any.whl.metadata (2.7 kB)
+2025-07-26T03:45:56.9716044Z Collecting Flask-PyMongo==3.0.1 (from -r requirements.txt (line 12))
+2025-07-26T03:45:56.9759938Z   Downloading flask_pymongo-3.0.1-py3-none-any.whl.metadata (3.5 kB)
+2025-07-26T03:45:56.9868591Z Collecting h11==0.16.0 (from -r requirements.txt (line 13))
+2025-07-26T03:45:56.9902932Z   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+2025-07-26T03:45:57.0095608Z Collecting httpcore==1.0.9 (from -r requirements.txt (line 14))
+2025-07-26T03:45:57.0131082Z   Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+2025-07-26T03:45:57.0344521Z Collecting httpx==0.28.1 (from -r requirements.txt (line 15))
+2025-07-26T03:45:57.0380131Z   Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+2025-07-26T03:45:57.0540920Z Collecting idna==3.10 (from -r requirements.txt (line 16))
+2025-07-26T03:45:57.0577095Z   Downloading idna-3.10-py3-none-any.whl.metadata (10 kB)
+2025-07-26T03:45:57.0687467Z Collecting iniconfig==2.1.0 (from -r requirements.txt (line 17))
+2025-07-26T03:45:57.0728104Z   Downloading iniconfig-2.1.0-py3-none-any.whl.metadata (2.7 kB)
+2025-07-26T03:45:57.0842213Z Collecting itsdangerous==2.2.0 (from -r requirements.txt (line 18))
+2025-07-26T03:45:57.0876202Z   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+2025-07-26T03:45:57.1033278Z Collecting Jinja2==3.1.6 (from -r requirements.txt (line 19))
+2025-07-26T03:45:57.1067556Z   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+2025-07-26T03:45:57.1760740Z Collecting jiter==0.10.0 (from -r requirements.txt (line 20))
+2025-07-26T03:45:57.1796769Z   Downloading jiter-0.10.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.2 kB)
+2025-07-26T03:45:57.1924264Z Collecting loguru==0.7.3 (from -r requirements.txt (line 21))
+2025-07-26T03:45:57.1959653Z   Downloading loguru-0.7.3-py3-none-any.whl.metadata (22 kB)
+2025-07-26T03:45:57.2200980Z Collecting markdown-it-py==3.0.0 (from -r requirements.txt (line 22))
+2025-07-26T03:45:57.2237547Z   Downloading markdown_it_py-3.0.0-py3-none-any.whl.metadata (6.9 kB)
+2025-07-26T03:45:57.2867626Z Collecting MarkupSafe==3.0.2 (from -r requirements.txt (line 23))
+2025-07-26T03:45:57.2905645Z   Downloading MarkupSafe-3.0.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.0 kB)
+2025-07-26T03:45:57.3003802Z Collecting mdurl==0.1.2 (from -r requirements.txt (line 24))
+2025-07-26T03:45:57.3039751Z   Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+2025-07-26T03:45:57.3172580Z Collecting mongomock==4.3.0 (from -r requirements.txt (line 25))
+2025-07-26T03:45:57.3208144Z   Downloading mongomock-4.3.0-py2.py3-none-any.whl.metadata (12 kB)
+2025-07-26T03:45:57.3749372Z Collecting openai==1.96.1 (from -r requirements.txt (line 26))
+2025-07-26T03:45:57.3790950Z   Downloading openai-1.96.1-py3-none-any.whl.metadata (29 kB)
+2025-07-26T03:45:57.3989907Z Collecting packaging==25.0 (from -r requirements.txt (line 27))
+2025-07-26T03:45:57.4026454Z   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+2025-07-26T03:45:57.4132191Z Collecting paho-mqtt==2.1.0 (from -r requirements.txt (line 28))
+2025-07-26T03:45:57.4185376Z   Downloading paho_mqtt-2.1.0-py3-none-any.whl.metadata (23 kB)
+2025-07-26T03:45:57.4319718Z Collecting pluggy==1.6.0 (from -r requirements.txt (line 29))
+2025-07-26T03:45:57.4354504Z   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+2025-07-26T03:45:57.5771048Z Collecting pydantic==2.11.7 (from -r requirements.txt (line 30))
+2025-07-26T03:45:57.5811033Z   Downloading pydantic-2.11.7-py3-none-any.whl.metadata (67 kB)
+2025-07-26T03:45:58.3315012Z Collecting pydantic_core==2.33.2 (from -r requirements.txt (line 31))
+2025-07-26T03:45:58.3353233Z   Downloading pydantic_core-2.33.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.8 kB)
+2025-07-26T03:45:58.3559354Z Collecting Pygments==2.19.2 (from -r requirements.txt (line 32))
+2025-07-26T03:45:58.3596861Z   Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+2025-07-26T03:45:58.7010492Z Collecting pymongo==4.13.2 (from -r requirements.txt (line 33))
+2025-07-26T03:45:58.7051286Z   Downloading pymongo-4.13.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (22 kB)
+2025-07-26T03:45:58.7470939Z Collecting pytest==8.2.1 (from -r requirements.txt (line 34))
+2025-07-26T03:45:58.7505613Z   Downloading pytest-8.2.1-py3-none-any.whl.metadata (7.6 kB)
+2025-07-26T03:45:58.7691105Z Collecting python-dotenv==1.1.1 (from -r requirements.txt (line 35))
+2025-07-26T03:45:58.7730363Z   Downloading python_dotenv-1.1.1-py3-none-any.whl.metadata (24 kB)
+2025-07-26T03:45:58.8130270Z Collecting pytz==2025.2 (from -r requirements.txt (line 36))
+2025-07-26T03:45:58.8163166Z   Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+2025-07-26T03:45:58.8440238Z Collecting requests==2.32.4 (from -r requirements.txt (line 37))
+2025-07-26T03:45:58.8494823Z   Downloading requests-2.32.4-py3-none-any.whl.metadata (4.9 kB)
+2025-07-26T03:45:58.8915395Z Collecting rich==14.0.0 (from -r requirements.txt (line 38))
+2025-07-26T03:45:58.8951578Z   Downloading rich-14.0.0-py3-none-any.whl.metadata (18 kB)
+2025-07-26T03:45:58.9058984Z Collecting sentinels==1.0.0 (from -r requirements.txt (line 39))
+2025-07-26T03:45:58.9096205Z   Downloading sentinels-1.0.0.tar.gz (4.1 kB)
+2025-07-26T03:45:58.9182801Z   Installing build dependencies: started
+2025-07-26T03:45:59.7529143Z   Installing build dependencies: finished with status 'done'
+2025-07-26T03:45:59.7537116Z   Getting requirements to build wheel: started
+2025-07-26T03:46:00.0793193Z   Getting requirements to build wheel: finished with status 'done'
+2025-07-26T03:46:00.0802709Z   Preparing metadata (pyproject.toml): started
+2025-07-26T03:46:00.2554969Z   Preparing metadata (pyproject.toml): finished with status 'done'
+2025-07-26T03:46:00.3764693Z Collecting setuptools==80.9.0 (from -r requirements.txt (line 40))
+2025-07-26T03:46:00.3781519Z   Using cached setuptools-80.9.0-py3-none-any.whl.metadata (6.6 kB)
+2025-07-26T03:46:00.4055790Z Collecting sh==2.2.2 (from -r requirements.txt (line 41))
+2025-07-26T03:46:00.4091729Z   Downloading sh-2.2.2-py3-none-any.whl.metadata (3.7 kB)
+2025-07-26T03:46:00.4194122Z Collecting sniffio==1.3.1 (from -r requirements.txt (line 42))
+2025-07-26T03:46:00.4228813Z   Downloading sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+2025-07-26T03:46:00.4347908Z Collecting tabulate==0.9.0 (from -r requirements.txt (line 43))
+2025-07-26T03:46:00.4381872Z   Downloading tabulate-0.9.0-py3-none-any.whl.metadata (34 kB)
+2025-07-26T03:46:00.4739018Z Collecting tqdm==4.67.1 (from -r requirements.txt (line 44))
+2025-07-26T03:46:00.4775285Z   Downloading tqdm-4.67.1-py3-none-any.whl.metadata (57 kB)
+2025-07-26T03:46:00.4911707Z Collecting typing-inspection==0.4.1 (from -r requirements.txt (line 45))
+2025-07-26T03:46:00.4948556Z   Downloading typing_inspection-0.4.1-py3-none-any.whl.metadata (2.6 kB)
+2025-07-26T03:46:00.5118736Z Collecting typing_extensions==4.14.1 (from -r requirements.txt (line 46))
+2025-07-26T03:46:00.5154155Z   Downloading typing_extensions-4.14.1-py3-none-any.whl.metadata (3.0 kB)
+2025-07-26T03:46:00.5404083Z Collecting urllib3==2.5.0 (from -r requirements.txt (line 47))
+2025-07-26T03:46:00.5439832Z   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+2025-07-26T03:46:00.6115387Z Collecting Werkzeug==3.1.3 (from -r requirements.txt (line 48))
+2025-07-26T03:46:00.6153954Z   Downloading werkzeug-3.1.3-py3-none-any.whl.metadata (3.7 kB)
+2025-07-26T03:46:00.6314752Z Collecting exceptiongroup>=1.0.2 (from anyio==4.9.0->-r requirements.txt (line 2))
+2025-07-26T03:46:00.6351902Z   Downloading exceptiongroup-1.3.0-py3-none-any.whl.metadata (6.7 kB)
+2025-07-26T03:46:00.7787597Z Collecting tomli>=1 (from pytest==8.2.1->-r requirements.txt (line 34))
+2025-07-26T03:46:00.7821780Z   Downloading tomli-2.2.1-py3-none-any.whl.metadata (10 kB)
+2025-07-26T03:46:00.8475456Z Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
+2025-07-26T03:46:00.8528243Z Downloading anyio-4.9.0-py3-none-any.whl (100 kB)
+2025-07-26T03:46:00.8593846Z Downloading autodevops_cli-5.1-py3-none-any.whl (10 kB)
+2025-07-26T03:46:00.8651096Z Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+2025-07-26T03:46:00.8701877Z Downloading certifi-2025.7.14-py3-none-any.whl (162 kB)
+2025-07-26T03:46:00.8759437Z Downloading charset_normalizer-3.4.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (149 kB)
+2025-07-26T03:46:00.8815500Z Downloading click-8.2.1-py3-none-any.whl (102 kB)
+2025-07-26T03:46:00.8874420Z Downloading distro-1.9.0-py3-none-any.whl (20 kB)
+2025-07-26T03:46:00.8931591Z Downloading dnspython-2.7.0-py3-none-any.whl (313 kB)
+2025-07-26T03:46:00.9006988Z Downloading dotenv-0.9.9-py2.py3-none-any.whl (1.9 kB)
+2025-07-26T03:46:00.9060380Z Downloading flask-3.1.0-py3-none-any.whl (102 kB)
+2025-07-26T03:46:00.9121145Z Downloading flask_pymongo-3.0.1-py3-none-any.whl (11 kB)
+2025-07-26T03:46:00.9174415Z Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+2025-07-26T03:46:00.9229459Z Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+2025-07-26T03:46:00.9284941Z Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+2025-07-26T03:46:00.9341730Z Downloading idna-3.10-py3-none-any.whl (70 kB)
+2025-07-26T03:46:00.9396523Z Downloading iniconfig-2.1.0-py3-none-any.whl (6.0 kB)
+2025-07-26T03:46:00.9453223Z Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+2025-07-26T03:46:00.9507141Z Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+2025-07-26T03:46:00.9573019Z Downloading jiter-0.10.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (352 kB)
+2025-07-26T03:46:00.9642920Z Downloading loguru-0.7.3-py3-none-any.whl (61 kB)
+2025-07-26T03:46:00.9700422Z Downloading markdown_it_py-3.0.0-py3-none-any.whl (87 kB)
+2025-07-26T03:46:00.9756930Z Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+2025-07-26T03:46:00.9811303Z Downloading MarkupSafe-3.0.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (20 kB)
+2025-07-26T03:46:00.9867427Z Downloading mongomock-4.3.0-py2.py3-none-any.whl (64 kB)
+2025-07-26T03:46:00.9948824Z Downloading openai-1.96.1-py3-none-any.whl (757 kB)
+2025-07-26T03:46:01.0027963Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 757.5/757.5 kB 121.0 MB/s eta 0:00:00
+2025-07-26T03:46:01.0075357Z Downloading pydantic-2.11.7-py3-none-any.whl (444 kB)
+2025-07-26T03:46:01.0147984Z Downloading typing_extensions-4.14.1-py3-none-any.whl (43 kB)
+2025-07-26T03:46:01.0204915Z Downloading packaging-25.0-py3-none-any.whl (66 kB)
+2025-07-26T03:46:01.0296089Z Downloading paho_mqtt-2.1.0-py3-none-any.whl (67 kB)
+2025-07-26T03:46:01.0355013Z Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+2025-07-26T03:46:01.0421574Z Downloading pydantic_core-2.33.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.0 MB)
+2025-07-26T03:46:01.0543399Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 191.8 MB/s eta 0:00:00
+2025-07-26T03:46:01.0578605Z Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+2025-07-26T03:46:01.0670915Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 158.2 MB/s eta 0:00:00
+2025-07-26T03:46:01.0708815Z Downloading pymongo-4.13.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.2 MB)
+2025-07-26T03:46:01.0804970Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 142.4 MB/s eta 0:00:00
+2025-07-26T03:46:01.0878634Z Downloading pytest-8.2.1-py3-none-any.whl (339 kB)
+2025-07-26T03:46:01.0972664Z Downloading python_dotenv-1.1.1-py3-none-any.whl (20 kB)
+2025-07-26T03:46:01.1031977Z Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
+2025-07-26T03:46:01.1108975Z Downloading requests-2.32.4-py3-none-any.whl (64 kB)
+2025-07-26T03:46:01.1168948Z Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+2025-07-26T03:46:01.1228935Z Downloading rich-14.0.0-py3-none-any.whl (243 kB)
+2025-07-26T03:46:01.1271535Z Using cached setuptools-80.9.0-py3-none-any.whl (1.2 MB)
+2025-07-26T03:46:01.1315453Z Downloading sh-2.2.2-py3-none-any.whl (38 kB)
+2025-07-26T03:46:01.1369825Z Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+2025-07-26T03:46:01.1422881Z Downloading tabulate-0.9.0-py3-none-any.whl (35 kB)
+2025-07-26T03:46:01.1477292Z Downloading tqdm-4.67.1-py3-none-any.whl (78 kB)
+2025-07-26T03:46:01.1533609Z Downloading typing_inspection-0.4.1-py3-none-any.whl (14 kB)
+2025-07-26T03:46:01.1585580Z Downloading werkzeug-3.1.3-py3-none-any.whl (224 kB)
+2025-07-26T03:46:01.1645277Z Downloading exceptiongroup-1.3.0-py3-none-any.whl (16 kB)
+2025-07-26T03:46:01.1697848Z Downloading tomli-2.2.1-py3-none-any.whl (14 kB)
+2025-07-26T03:46:01.2248248Z Building wheels for collected packages: sentinels
+2025-07-26T03:46:01.2257921Z   Building wheel for sentinels (pyproject.toml): started
+2025-07-26T03:46:01.4363461Z   Building wheel for sentinels (pyproject.toml): finished with status 'done'
+2025-07-26T03:46:01.4369574Z   Created wheel for sentinels: filename=sentinels-1.0.0-py3-none-any.whl size=3229 sha256=e6ca8c93013216782075523b3602459365d831819316c475dbaf579e87967dff
+2025-07-26T03:46:01.4372165Z   Stored in directory: /home/runner/.cache/pip/wheels/26/bc/eb/67e56405e0684b3d8c011cf4d18129c41be394775fd5ba2347
+2025-07-26T03:46:01.4387878Z Successfully built sentinels
+2025-07-26T03:46:01.5620659Z Installing collected packages: sentinels, pytz, urllib3, typing_extensions, tqdm, tomli, tabulate, sniffio, sh, setuptools, python-dotenv, Pygments, pluggy, paho-mqtt, packaging, mdurl, MarkupSafe, loguru, jiter, itsdangerous, iniconfig, idna, h11, dnspython, distro, click, charset-normalizer, certifi, blinker, annotated-types, Werkzeug, typing-inspection, requests, pymongo, pydantic_core, mongomock, markdown-it-py, Jinja2, httpcore, exceptiongroup, dotenv, rich, pytest, pydantic, Flask, anyio, httpx, Flask-PyMongo, openai, autodevops-cli
+2025-07-26T03:46:01.8533626Z   Attempting uninstall: setuptools
+2025-07-26T03:46:01.8540036Z     Found existing installation: setuptools 65.5.0
+2025-07-26T03:46:01.9005058Z     Uninstalling setuptools-65.5.0:
+2025-07-26T03:46:01.9150635Z       Successfully uninstalled setuptools-65.5.0
+2025-07-26T03:46:05.8412836Z 
+2025-07-26T03:46:05.8495677Z Successfully installed Flask-3.1.0 Flask-PyMongo-3.0.1 Jinja2-3.1.6 MarkupSafe-3.0.2 Pygments-2.19.2 Werkzeug-3.1.3 annotated-types-0.7.0 anyio-4.9.0 autodevops-cli-5.1 blinker-1.9.0 certifi-2025.7.14 charset-normalizer-3.4.2 click-8.2.1 distro-1.9.0 dnspython-2.7.0 dotenv-0.9.9 exceptiongroup-1.3.0 h11-0.16.0 httpcore-1.0.9 httpx-0.28.1 idna-3.10 iniconfig-2.1.0 itsdangerous-2.2.0 jiter-0.10.0 loguru-0.7.3 markdown-it-py-3.0.0 mdurl-0.1.2 mongomock-4.3.0 openai-1.96.1 packaging-25.0 paho-mqtt-2.1.0 pluggy-1.6.0 pydantic-2.11.7 pydantic_core-2.33.2 pymongo-4.13.2 pytest-8.2.1 python-dotenv-1.1.1 pytz-2025.2 requests-2.32.4 rich-14.0.0 sentinels-1.0.0 setuptools-80.9.0 sh-2.2.2 sniffio-1.3.1 tabulate-0.9.0 tomli-2.2.1 tqdm-4.67.1 typing-inspection-0.4.1 typing_extensions-4.14.1 urllib3-2.5.0
+2025-07-26T03:46:06.1918769Z ##[group]Run export PYTHONPATH=.
+2025-07-26T03:46:06.1919093Z [36;1mexport PYTHONPATH=.[0m
+2025-07-26T03:46:06.1919343Z [36;1mpytest test_main.py -v[0m
+2025-07-26T03:46:06.1947166Z shell: /usr/bin/bash -e {0}
+2025-07-26T03:46:06.1947398Z env:
+2025-07-26T03:46:06.1947659Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-26T03:46:06.1948086Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib/pkgconfig
+2025-07-26T03:46:06.1948606Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-26T03:46:06.1948968Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-26T03:46:06.1949331Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-26T03:46:06.1949683Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib
+2025-07-26T03:46:06.1949982Z ##[endgroup]
+2025-07-26T03:46:06.5409640Z ============================= test session starts ==============================
+2025-07-26T03:46:06.5410392Z platform linux -- Python 3.10.18, pytest-8.2.1, pluggy-1.6.0 -- /opt/hostedtoolcache/Python/3.10.18/x64/bin/python
+2025-07-26T03:46:06.5410928Z cachedir: .pytest_cache
+2025-07-26T03:46:06.5411234Z rootdir: /home/runner/work/testing-CI-CD/testing-CI-CD
+2025-07-26T03:46:06.5411575Z plugins: anyio-4.9.0
+2025-07-26T03:46:06.7033819Z collecting ... collected 5 items
+2025-07-26T03:46:06.7034118Z 
+2025-07-26T03:46:07.0498819Z test_main.py::test_home_page PASSED                                      [ 20%]
+2025-07-26T03:46:07.0591723Z test_main.py::test_admin_dashboard PASSED                                [ 40%]
+2025-07-26T03:46:07.0674791Z test_main.py::test_student_dashboard PASSED                              [ 60%]
+2025-07-26T03:46:07.0738963Z test_main.py::test_generate_attendance_no_input PASSED                   [ 80%]
+2025-07-26T03:46:07.0816986Z test_main.py::test_receive_rfid_missing PASSED                           [100%]
+2025-07-26T03:46:07.0817529Z 
+2025-07-26T03:46:07.0817788Z ============================== 5 passed in 0.54s ===============================
+2025-07-26T03:46:07.1402907Z ##[group]Run docker/login-action@v3
+2025-07-26T03:46:07.1403195Z with:
+2025-07-26T03:46:07.1403445Z   username: ***
+2025-07-26T03:46:07.1403699Z   password: ***
+2025-07-26T03:46:07.1403888Z   ecr: auto
+2025-07-26T03:46:07.1404054Z   logout: true
+2025-07-26T03:46:07.1404231Z env:
+2025-07-26T03:46:07.1404478Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-26T03:46:07.1404898Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib/pkgconfig
+2025-07-26T03:46:07.1405309Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-26T03:46:07.1405669Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-26T03:46:07.1406026Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-26T03:46:07.1406382Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib
+2025-07-26T03:46:07.1406684Z ##[endgroup]
+2025-07-26T03:46:07.4247593Z Logging into Docker Hub...
+2025-07-26T03:46:07.6230611Z Login Succeeded!
+2025-07-26T03:46:07.6370684Z ##[group]Run docker build -t ***/flask-ci-cd-demo .
+2025-07-26T03:46:07.6371123Z [36;1mdocker build -t ***/flask-ci-cd-demo .[0m
+2025-07-26T03:46:07.6399169Z shell: /usr/bin/bash -e {0}
+2025-07-26T03:46:07.6399401Z env:
+2025-07-26T03:46:07.6399658Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-26T03:46:07.6400086Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib/pkgconfig
+2025-07-26T03:46:07.6400506Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-26T03:46:07.6400871Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-26T03:46:07.6401231Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-26T03:46:07.6401586Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib
+2025-07-26T03:46:07.6401887Z ##[endgroup]
+2025-07-26T03:46:10.2937706Z #0 building with "default" instance using docker driver
+2025-07-26T03:46:10.2938249Z 
+2025-07-26T03:46:10.2938693Z #1 [internal] load build definition from Dockerfile
+2025-07-26T03:46:10.2939079Z #1 transferring dockerfile: 1.23kB done
+2025-07-26T03:46:10.2939361Z #1 DONE 0.0s
+2025-07-26T03:46:10.2939478Z 
+2025-07-26T03:46:10.2939653Z #2 [auth] library/python:pull token for registry-1.docker.io
+2025-07-26T03:46:10.2940007Z #2 DONE 0.0s
+2025-07-26T03:46:10.2940123Z 
+2025-07-26T03:46:10.2940309Z #3 [internal] load metadata for docker.io/library/python:3.10-slim
+2025-07-26T03:46:10.5242549Z #3 DONE 0.4s
+2025-07-26T03:46:10.6425441Z 
+2025-07-26T03:46:10.6426915Z #4 [internal] load .dockerignore
+2025-07-26T03:46:10.6429140Z #4 transferring context: 2B done
+2025-07-26T03:46:10.6429783Z #4 DONE 0.0s
+2025-07-26T03:46:10.6430493Z 
+2025-07-26T03:46:10.6439496Z #5 [1/7] FROM docker.io/library/python:3.10-slim@sha256:81f1cdb3770d54ecfdbddcc52c2125fce674c14a1d976dfd8f65dc0734f9c3c5
+2025-07-26T03:46:10.6440969Z #5 resolve docker.io/library/python:3.10-slim@sha256:81f1cdb3770d54ecfdbddcc52c2125fce674c14a1d976dfd8f65dc0734f9c3c5 done
+2025-07-26T03:46:10.7460697Z #5 sha256:81f1cdb3770d54ecfdbddcc52c2125fce674c14a1d976dfd8f65dc0734f9c3c5 9.13kB / 9.13kB done
+2025-07-26T03:46:10.7462095Z #5 sha256:5b73bbad254f55db4a64a6d5b4f237327f8be74d0b3caa953c59be1f9d21151f 1.75kB / 1.75kB done
+2025-07-26T03:46:10.7475122Z #5 sha256:13839a48c354366e5535d8d9d6b5540b5d06814ca2befbee62af385cd0d121a4 5.37kB / 5.37kB done
+2025-07-26T03:46:10.7476267Z #5 sha256:59e22667830bf04fb35e15ed9c70023e9d121719bb87f0db7f3159ee7c7e0b8d 0B / 28.23MB 0.2s
+2025-07-26T03:46:10.7477411Z #5 sha256:12b8240e46e9f448e7eba19870e233d03c7160ca9b1777ab3ec2eeddf4349fa8 3.51MB / 3.51MB 0.1s done
+2025-07-26T03:46:10.7478757Z #5 sha256:3fa1124e7cf3ed5061a51b47c3e7a138e1b25dce3c94e9967a6b2a9acfe36402 7.34MB / 15.65MB 0.2s
+2025-07-26T03:46:10.7479830Z #5 sha256:00aa2453f38062a311a828d4d0790d1911a81372ad928c8856387ceccc7a6c12 0B / 250B 0.2s
+2025-07-26T03:46:10.9462693Z #5 sha256:59e22667830bf04fb35e15ed9c70023e9d121719bb87f0db7f3159ee7c7e0b8d 10.49MB / 28.23MB 0.3s
+2025-07-26T03:46:10.9463970Z #5 sha256:3fa1124e7cf3ed5061a51b47c3e7a138e1b25dce3c94e9967a6b2a9acfe36402 15.65MB / 15.65MB 0.3s done
+2025-07-26T03:46:10.9465890Z #5 sha256:00aa2453f38062a311a828d4d0790d1911a81372ad928c8856387ceccc7a6c12 250B / 250B 0.2s done
+2025-07-26T03:46:11.1176968Z #5 sha256:59e22667830bf04fb35e15ed9c70023e9d121719bb87f0db7f3159ee7c7e0b8d 28.23MB / 28.23MB 0.5s
+2025-07-26T03:46:11.1186562Z #5 extracting sha256:59e22667830bf04fb35e15ed9c70023e9d121719bb87f0db7f3159ee7c7e0b8d
+2025-07-26T03:46:11.2454557Z #5 sha256:59e22667830bf04fb35e15ed9c70023e9d121719bb87f0db7f3159ee7c7e0b8d 28.23MB / 28.23MB 0.5s done
+2025-07-26T03:46:11.5519471Z #5 ...
+2025-07-26T03:46:11.5520091Z 
+2025-07-26T03:46:11.5520415Z #6 [internal] load build context
+2025-07-26T03:46:11.5520884Z #6 transferring context: 103.26MB 1.0s done
+2025-07-26T03:46:11.5521308Z #6 DONE 1.0s
+2025-07-26T03:46:11.5521701Z 
+2025-07-26T03:46:11.5522294Z #5 [1/7] FROM docker.io/library/python:3.10-slim@sha256:81f1cdb3770d54ecfdbddcc52c2125fce674c14a1d976dfd8f65dc0734f9c3c5
+2025-07-26T03:46:12.3319264Z #5 extracting sha256:59e22667830bf04fb35e15ed9c70023e9d121719bb87f0db7f3159ee7c7e0b8d 1.2s done
+2025-07-26T03:46:12.4671420Z #5 extracting sha256:12b8240e46e9f448e7eba19870e233d03c7160ca9b1777ab3ec2eeddf4349fa8 0.1s
+2025-07-26T03:46:12.6224402Z #5 extracting sha256:12b8240e46e9f448e7eba19870e233d03c7160ca9b1777ab3ec2eeddf4349fa8 0.1s done
+2025-07-26T03:46:13.2129837Z #5 extracting sha256:3fa1124e7cf3ed5061a51b47c3e7a138e1b25dce3c94e9967a6b2a9acfe36402
+2025-07-26T03:46:13.8791076Z #5 extracting sha256:3fa1124e7cf3ed5061a51b47c3e7a138e1b25dce3c94e9967a6b2a9acfe36402 0.6s done
+2025-07-26T03:46:13.8792252Z #5 extracting sha256:00aa2453f38062a311a828d4d0790d1911a81372ad928c8856387ceccc7a6c12
+2025-07-26T03:46:14.0488182Z #5 extracting sha256:00aa2453f38062a311a828d4d0790d1911a81372ad928c8856387ceccc7a6c12 done
+2025-07-26T03:46:14.0488898Z #5 DONE 3.4s
+2025-07-26T03:46:14.0489025Z 
+2025-07-26T03:46:14.0489624Z #7 [2/7] RUN apt-get update && apt-get install -y --no-install-recommends     build-essential     python3-dev     curl     nano     git     && rm -rf /var/lib/apt/lists/*
+2025-07-26T03:46:14.1268786Z #7 0.228 Get:1 http://deb.debian.org/debian bookworm InRelease [151 kB]
+2025-07-26T03:46:14.2401152Z #7 0.237 Get:2 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
+2025-07-26T03:46:14.2402407Z #7 0.237 Get:3 http://deb.debian.org/debian-security bookworm-security InRelease [48.0 kB]
+2025-07-26T03:46:14.2403494Z #7 0.291 Get:4 http://deb.debian.org/debian bookworm/main amd64 Packages [8793 kB]
+2025-07-26T03:46:14.2404278Z #7 0.342 Get:5 http://deb.debian.org/debian bookworm-updates/main amd64 Packages [756 B]
+2025-07-26T03:46:14.4348623Z #7 0.386 Get:6 http://deb.debian.org/debian-security bookworm-security/main amd64 Packages [272 kB]
+2025-07-26T03:46:14.9796913Z #7 1.082 Fetched 9320 kB in 1s (10.7 MB/s)
+2025-07-26T03:46:15.3547907Z #7 1.082 Reading package lists...
+2025-07-26T03:46:15.7493013Z #7 1.472 Reading package lists...
+2025-07-26T03:46:15.9216873Z #7 1.861 Building dependency tree...
+2025-07-26T03:46:15.9219683Z #7 1.934 Reading state information...
+2025-07-26T03:46:15.9221039Z #7 2.023 The following additional packages will be installed:
+2025-07-26T03:46:15.9221804Z #7 2.023   binutils binutils-common binutils-x86-64-linux-gnu bzip2 cpp cpp-12 dpkg-dev
+2025-07-26T03:46:16.0732998Z #7 2.023   g++ g++-12 gcc gcc-12 git-man libasan8 libatomic1 libbinutils libbrotli1
+2025-07-26T03:46:16.0733860Z #7 2.023   libc-dev-bin libc6-dev libcc1-0 libcrypt-dev libctf-nobfd0 libctf0
+2025-07-26T03:46:16.0734743Z #7 2.023   libcurl3-gnutls libcurl4 libdpkg-perl liberror-perl libexpat1 libexpat1-dev
+2025-07-26T03:46:16.0735630Z #7 2.023   libgcc-12-dev libgdbm-compat4 libgomp1 libgprofng0 libisl23 libitm1
+2025-07-26T03:46:16.0736483Z #7 2.023   libjansson4 libjs-jquery libjs-sphinxdoc libjs-underscore libldap-2.5-0
+2025-07-26T03:46:16.0737360Z #7 2.023   liblsan0 libmpc3 libmpfr6 libnghttp2-14 libnsl-dev libperl5.36 libpsl5
+2025-07-26T03:46:16.0738246Z #7 2.024   libpython3-dev libpython3-stdlib libpython3.11 libpython3.11-dev
+2025-07-26T03:46:16.0739335Z #7 2.024   libpython3.11-minimal libpython3.11-stdlib libquadmath0 librtmp1 libsasl2-2
+2025-07-26T03:46:16.0740221Z #7 2.024   libsasl2-modules-db libssh2-1 libstdc++-12-dev libtirpc-dev libtsan2
+2025-07-26T03:46:16.0741073Z #7 2.024   libubsan1 linux-libc-dev make media-types patch perl perl-modules-5.36
+2025-07-26T03:46:16.0741920Z #7 2.024   python3 python3-distutils python3-lib2to3 python3-minimal python3.11
+2025-07-26T03:46:16.0742725Z #7 2.024   python3.11-dev python3.11-minimal rpcsvc-proto xz-utils zlib1g-dev
+2025-07-26T03:46:16.0743345Z #7 2.025 Suggested packages:
+2025-07-26T03:46:16.0743949Z #7 2.025   binutils-doc bzip2-doc cpp-doc gcc-12-locales cpp-12-doc debian-keyring
+2025-07-26T03:46:16.0744796Z #7 2.025   g++-multilib g++-12-multilib gcc-12-doc gcc-multilib manpages-dev autoconf
+2025-07-26T03:46:16.0745639Z #7 2.025   automake libtool flex bison gdb gcc-doc gcc-12-multilib gettext-base
+2025-07-26T03:46:16.0746843Z #7 2.025   git-daemon-run | git-daemon-sysvinit git-doc git-email git-gui gitk gitweb
+2025-07-26T03:46:16.0747751Z #7 2.025   git-cvs git-mediawiki git-svn glibc-doc gnupg | sq | sqop | pgpainless-cli
+2025-07-26T03:46:16.0748755Z #7 2.025   sensible-utils bzr libstdc++-12-doc make-doc hunspell ed diffutils-doc
+2025-07-26T03:46:16.0749597Z #7 2.025   perl-doc libterm-readline-gnu-perl | libterm-readline-perl-perl
+2025-07-26T03:46:16.0750419Z #7 2.025   libtap-harness-archive-perl python3-doc python3-tk python3-venv
+2025-07-26T03:46:16.0751118Z #7 2.025   python3.11-venv python3.11-doc binfmt-support
+2025-07-26T03:46:16.0751628Z #7 2.025 Recommended packages:
+2025-07-26T03:46:16.0752226Z #7 2.025   fakeroot gnupg | sq | sqop | pgpainless-cli libalgorithm-merge-perl less
+2025-07-26T03:46:16.0753066Z #7 2.025   ssh-client manpages manpages-dev libc-devtools libfile-fcntllock-perl
+2025-07-26T03:46:16.0753931Z #7 2.025   liblocale-gettext-perl javascript-common libldap-common publicsuffix
+2025-07-26T03:46:16.0754793Z #7 2.025   libsasl2-modules
+2025-07-26T03:46:16.3257563Z #7 2.427 The following NEW packages will be installed:
+2025-07-26T03:46:16.3258798Z #7 2.427   binutils binutils-common binutils-x86-64-linux-gnu build-essential bzip2 cpp
+2025-07-26T03:46:16.4262151Z #7 2.428   cpp-12 curl dpkg-dev g++ g++-12 gcc gcc-12 git git-man libasan8 libatomic1
+2025-07-26T03:46:16.4263400Z #7 2.428   libbinutils libbrotli1 libc-dev-bin libc6-dev libcc1-0 libcrypt-dev
+2025-07-26T03:46:16.4264596Z #7 2.428   libctf-nobfd0 libctf0 libcurl3-gnutls libcurl4 libdpkg-perl liberror-perl
+2025-07-26T03:46:16.4265534Z #7 2.428   libexpat1 libexpat1-dev libgcc-12-dev libgdbm-compat4 libgomp1 libgprofng0
+2025-07-26T03:46:16.4266437Z #7 2.428   libisl23 libitm1 libjansson4 libjs-jquery libjs-sphinxdoc libjs-underscore
+2025-07-26T03:46:16.4267487Z #7 2.428   libldap-2.5-0 liblsan0 libmpc3 libmpfr6 libnghttp2-14 libnsl-dev libperl5.36
+2025-07-26T03:46:16.4268603Z #7 2.428   libpsl5 libpython3-dev libpython3-stdlib libpython3.11 libpython3.11-dev
+2025-07-26T03:46:16.4270497Z #7 2.428   libpython3.11-minimal libpython3.11-stdlib libquadmath0 librtmp1 libsasl2-2
+2025-07-26T03:46:16.4271896Z #7 2.428   libsasl2-modules-db libssh2-1 libstdc++-12-dev libtirpc-dev libtsan2
+2025-07-26T03:46:16.4273431Z #7 2.428   libubsan1 linux-libc-dev make media-types nano patch perl perl-modules-5.36
+2025-07-26T03:46:16.4274592Z #7 2.428   python3 python3-dev python3-distutils python3-lib2to3 python3-minimal
+2025-07-26T03:46:16.4275698Z #7 2.428   python3.11 python3.11-dev python3.11-minimal rpcsvc-proto xz-utils
+2025-07-26T03:46:16.4277589Z #7 2.428   zlib1g-dev
+2025-07-26T03:46:16.4278575Z #7 2.456 0 upgraded, 82 newly installed, 0 to remove and 0 not upgraded.
+2025-07-26T03:46:16.4278968Z #7 2.456 Need to get 100 MB of archives.
+2025-07-26T03:46:16.4279371Z #7 2.456 After this operation, 431 MB of additional disk space will be used.
+2025-07-26T03:46:16.4279971Z #7 2.456 Get:1 http://deb.debian.org/debian bookworm/main amd64 perl-modules-5.36 all 5.36.0-7+deb12u2 [2815 kB]
+2025-07-26T03:46:16.4280713Z #7 2.472 Get:2 http://deb.debian.org/debian bookworm/main amd64 libgdbm-compat4 amd64 1.23-3 [48.2 kB]
+2025-07-26T03:46:16.4281408Z #7 2.473 Get:3 http://deb.debian.org/debian bookworm/main amd64 libperl5.36 amd64 5.36.0-7+deb12u2 [4207 kB]
+2025-07-26T03:46:16.4282793Z #7 2.488 Get:4 http://deb.debian.org/debian bookworm/main amd64 perl amd64 5.36.0-7+deb12u2 [239 kB]
+2025-07-26T03:46:16.4283968Z #7 2.489 Get:5 http://deb.debian.org/debian bookworm/main amd64 libpython3.11-minimal amd64 3.11.2-6+deb12u6 [817 kB]
+2025-07-26T03:46:16.4284728Z #7 2.493 Get:6 http://deb.debian.org/debian bookworm/main amd64 libexpat1 amd64 2.5.0-1+deb12u1 [98.9 kB]
+2025-07-26T03:46:16.4285353Z #7 2.493 Get:7 http://deb.debian.org/debian bookworm/main amd64 python3.11-minimal amd64 3.11.2-6+deb12u6 [2064 kB]
+2025-07-26T03:46:16.4285974Z #7 2.501 Get:8 http://deb.debian.org/debian bookworm/main amd64 python3-minimal amd64 3.11.2-1+b1 [26.3 kB]
+2025-07-26T03:46:16.4287168Z #7 2.501 Get:9 http://deb.debian.org/debian bookworm/main amd64 media-types all 10.0.0 [26.1 kB]
+2025-07-26T03:46:16.4287832Z #7 2.501 Get:10 http://deb.debian.org/debian bookworm/main amd64 libpython3.11-stdlib amd64 3.11.2-6+deb12u6 [1798 kB]
+2025-07-26T03:46:16.4289526Z #7 2.508 Get:11 http://deb.debian.org/debian bookworm/main amd64 python3.11 amd64 3.11.2-6+deb12u6 [573 kB]
+2025-07-26T03:46:16.4290419Z #7 2.511 Get:12 http://deb.debian.org/debian bookworm/main amd64 libpython3-stdlib amd64 3.11.2-1+b1 [9312 B]
+2025-07-26T03:46:16.4291388Z #7 2.511 Get:13 http://deb.debian.org/debian bookworm/main amd64 python3 amd64 3.11.2-1+b1 [26.3 kB]
+2025-07-26T03:46:16.4292608Z #7 2.511 Get:14 http://deb.debian.org/debian bookworm/main amd64 nano amd64 7.2-1+deb12u1 [690 kB]
+2025-07-26T03:46:16.4293379Z #7 2.514 Get:15 http://deb.debian.org/debian bookworm/main amd64 bzip2 amd64 1.0.8-5+b1 [49.8 kB]
+2025-07-26T03:46:16.4293907Z #7 2.515 Get:16 http://deb.debian.org/debian bookworm/main amd64 xz-utils amd64 5.4.1-1 [471 kB]
+2025-07-26T03:46:16.4294654Z #7 2.517 Get:17 http://deb.debian.org/debian bookworm/main amd64 binutils-common amd64 2.40-2 [2487 kB]
+2025-07-26T03:46:16.4295218Z #7 2.526 Get:18 http://deb.debian.org/debian bookworm/main amd64 libbinutils amd64 2.40-2 [572 kB]
+2025-07-26T03:46:16.4295914Z #7 2.528 Get:19 http://deb.debian.org/debian bookworm/main amd64 libctf-nobfd0 amd64 2.40-2 [153 kB]
+2025-07-26T03:46:16.5305527Z #7 2.529 Get:20 http://deb.debian.org/debian bookworm/main amd64 libctf0 amd64 2.40-2 [89.8 kB]
+2025-07-26T03:46:16.5306663Z #7 2.530 Get:21 http://deb.debian.org/debian bookworm/main amd64 libgprofng0 amd64 2.40-2 [812 kB]
+2025-07-26T03:46:16.5307856Z #7 2.533 Get:22 http://deb.debian.org/debian bookworm/main amd64 libjansson4 amd64 2.14-2 [40.8 kB]
+2025-07-26T03:46:16.5309202Z #7 2.533 Get:23 http://deb.debian.org/debian bookworm/main amd64 binutils-x86-64-linux-gnu amd64 2.40-2 [2246 kB]
+2025-07-26T03:46:16.5310206Z #7 2.541 Get:24 http://deb.debian.org/debian bookworm/main amd64 binutils amd64 2.40-2 [65.0 kB]
+2025-07-26T03:46:16.5310877Z #7 2.542 Get:25 http://deb.debian.org/debian bookworm/main amd64 libc-dev-bin amd64 2.36-9+deb12u10 [47.1 kB]
+2025-07-26T03:46:16.5311559Z #7 2.543 Get:26 http://deb.debian.org/debian-security bookworm-security/main amd64 linux-libc-dev amd64 6.1.140-1 [2145 kB]
+2025-07-26T03:46:16.5312213Z #7 2.546 Get:27 http://deb.debian.org/debian bookworm/main amd64 libcrypt-dev amd64 1:4.4.33-2 [118 kB]
+2025-07-26T03:46:16.5312827Z #7 2.547 Get:28 http://deb.debian.org/debian bookworm/main amd64 libtirpc-dev amd64 1.3.3+ds-1 [191 kB]
+2025-07-26T03:46:16.5313463Z #7 2.548 Get:29 http://deb.debian.org/debian bookworm/main amd64 libnsl-dev amd64 1.3.0-2 [66.4 kB]
+2025-07-26T03:46:16.5314302Z #7 2.549 Get:30 http://deb.debian.org/debian bookworm/main amd64 rpcsvc-proto amd64 1.4.3-1 [63.3 kB]
+2025-07-26T03:46:16.5315137Z #7 2.549 Get:31 http://deb.debian.org/debian bookworm/main amd64 libc6-dev amd64 2.36-9+deb12u10 [1903 kB]
+2025-07-26T03:46:16.5315933Z #7 2.556 Get:32 http://deb.debian.org/debian bookworm/main amd64 libisl23 amd64 0.25-1.1 [683 kB]
+2025-07-26T03:46:16.5316501Z #7 2.559 Get:33 http://deb.debian.org/debian bookworm/main amd64 libmpfr6 amd64 4.2.0-1 [701 kB]
+2025-07-26T03:46:16.5317376Z #7 2.562 Get:34 http://deb.debian.org/debian bookworm/main amd64 libmpc3 amd64 1.3.1-1 [51.5 kB]
+2025-07-26T03:46:16.5318179Z #7 2.562 Get:35 http://deb.debian.org/debian bookworm/main amd64 cpp-12 amd64 12.2.0-14+deb12u1 [9768 kB]
+2025-07-26T03:46:16.5319256Z #7 2.597 Get:36 http://deb.debian.org/debian bookworm/main amd64 cpp amd64 4:12.2.0-3 [6836 B]
+2025-07-26T03:46:16.5319912Z #7 2.597 Get:37 http://deb.debian.org/debian bookworm/main amd64 libcc1-0 amd64 12.2.0-14+deb12u1 [41.7 kB]
+2025-07-26T03:46:16.5320505Z #7 2.598 Get:38 http://deb.debian.org/debian bookworm/main amd64 libgomp1 amd64 12.2.0-14+deb12u1 [116 kB]
+2025-07-26T03:46:16.5321302Z #7 2.598 Get:39 http://deb.debian.org/debian bookworm/main amd64 libitm1 amd64 12.2.0-14+deb12u1 [26.1 kB]
+2025-07-26T03:46:16.5322330Z #7 2.599 Get:40 http://deb.debian.org/debian bookworm/main amd64 libatomic1 amd64 12.2.0-14+deb12u1 [9376 B]
+2025-07-26T03:46:16.5323226Z #7 2.599 Get:41 http://deb.debian.org/debian bookworm/main amd64 libasan8 amd64 12.2.0-14+deb12u1 [2193 kB]
+2025-07-26T03:46:16.5323804Z #7 2.607 Get:42 http://deb.debian.org/debian bookworm/main amd64 liblsan0 amd64 12.2.0-14+deb12u1 [969 kB]
+2025-07-26T03:46:16.5324380Z #7 2.611 Get:43 http://deb.debian.org/debian bookworm/main amd64 libtsan2 amd64 12.2.0-14+deb12u1 [2197 kB]
+2025-07-26T03:46:16.5324957Z #7 2.619 Get:44 http://deb.debian.org/debian bookworm/main amd64 libubsan1 amd64 12.2.0-14+deb12u1 [883 kB]
+2025-07-26T03:46:16.5325552Z #7 2.622 Get:45 http://deb.debian.org/debian bookworm/main amd64 libquadmath0 amd64 12.2.0-14+deb12u1 [145 kB]
+2025-07-26T03:46:16.5326158Z #7 2.623 Get:46 http://deb.debian.org/debian bookworm/main amd64 libgcc-12-dev amd64 12.2.0-14+deb12u1 [2437 kB]
+2025-07-26T03:46:16.5326753Z #7 2.632 Get:47 http://deb.debian.org/debian bookworm/main amd64 gcc-12 amd64 12.2.0-14+deb12u1 [19.3 MB]
+2025-07-26T03:46:16.6446462Z #7 2.700 Get:48 http://deb.debian.org/debian bookworm/main amd64 gcc amd64 4:12.2.0-3 [5216 B]
+2025-07-26T03:46:16.6448140Z #7 2.701 Get:49 http://deb.debian.org/debian bookworm/main amd64 libstdc++-12-dev amd64 12.2.0-14+deb12u1 [2047 kB]
+2025-07-26T03:46:16.6449499Z #7 2.709 Get:50 http://deb.debian.org/debian bookworm/main amd64 g++-12 amd64 12.2.0-14+deb12u1 [10.7 MB]
+2025-07-26T03:46:16.6450477Z #7 2.746 Get:51 http://deb.debian.org/debian bookworm/main amd64 g++ amd64 4:12.2.0-3 [1356 B]
+2025-07-26T03:46:16.8300567Z #7 2.747 Get:52 http://deb.debian.org/debian bookworm/main amd64 make amd64 4.3-4.1 [396 kB]
+2025-07-26T03:46:16.8301870Z #7 2.749 Get:53 http://deb.debian.org/debian bookworm/main amd64 libdpkg-perl all 1.21.22 [603 kB]
+2025-07-26T03:46:16.8302923Z #7 2.751 Get:54 http://deb.debian.org/debian bookworm/main amd64 patch amd64 2.7.6-7 [128 kB]
+2025-07-26T03:46:16.8303702Z #7 2.752 Get:55 http://deb.debian.org/debian bookworm/main amd64 dpkg-dev all 1.21.22 [1353 kB]
+2025-07-26T03:46:16.8304530Z #7 2.757 Get:56 http://deb.debian.org/debian bookworm/main amd64 build-essential amd64 12.9 [7704 B]
+2025-07-26T03:46:16.8305262Z #7 2.757 Get:57 http://deb.debian.org/debian bookworm/main amd64 libbrotli1 amd64 1.0.9-2+b6 [275 kB]
+2025-07-26T03:46:16.8305958Z #7 2.758 Get:58 http://deb.debian.org/debian bookworm/main amd64 libsasl2-modules-db amd64 2.1.28+dfsg-10 [20.3 kB]
+2025-07-26T03:46:16.8306658Z #7 2.758 Get:59 http://deb.debian.org/debian bookworm/main amd64 libsasl2-2 amd64 2.1.28+dfsg-10 [59.7 kB]
+2025-07-26T03:46:16.8307333Z #7 2.759 Get:60 http://deb.debian.org/debian bookworm/main amd64 libldap-2.5-0 amd64 2.5.13+dfsg-5 [183 kB]
+2025-07-26T03:46:16.8308025Z #7 2.760 Get:61 http://deb.debian.org/debian bookworm/main amd64 libnghttp2-14 amd64 1.52.0-1+deb12u2 [73.0 kB]
+2025-07-26T03:46:16.8308853Z #7 2.760 Get:62 http://deb.debian.org/debian bookworm/main amd64 libpsl5 amd64 0.21.2-1 [58.7 kB]
+2025-07-26T03:46:16.8309543Z #7 2.761 Get:63 http://deb.debian.org/debian bookworm/main amd64 librtmp1 amd64 2.4+20151223.gitfa8646d.1-2+b2 [60.8 kB]
+2025-07-26T03:46:16.8310239Z #7 2.761 Get:64 http://deb.debian.org/debian bookworm/main amd64 libssh2-1 amd64 1.10.0-3+b1 [179 kB]
+2025-07-26T03:46:16.8311261Z #7 2.762 Get:65 http://deb.debian.org/debian bookworm/main amd64 libcurl4 amd64 7.88.1-10+deb12u12 [391 kB]
+2025-07-26T03:46:16.8312253Z #7 2.764 Get:66 http://deb.debian.org/debian bookworm/main amd64 curl amd64 7.88.1-10+deb12u12 [315 kB]
+2025-07-26T03:46:16.8312939Z #7 2.765 Get:67 http://deb.debian.org/debian bookworm/main amd64 libcurl3-gnutls amd64 7.88.1-10+deb12u12 [386 kB]
+2025-07-26T03:46:16.8313622Z #7 2.767 Get:68 http://deb.debian.org/debian bookworm/main amd64 liberror-perl all 0.17029-2 [29.0 kB]
+2025-07-26T03:46:16.8314271Z #7 2.767 Get:69 http://deb.debian.org/debian bookworm/main amd64 git-man all 1:2.39.5-0+deb12u2 [2053 kB]
+2025-07-26T03:46:16.8314924Z #7 2.775 Get:70 http://deb.debian.org/debian bookworm/main amd64 git amd64 1:2.39.5-0+deb12u2 [7260 kB]
+2025-07-26T03:46:16.8315813Z #7 2.801 Get:71 http://deb.debian.org/debian bookworm/main amd64 libexpat1-dev amd64 2.5.0-1+deb12u1 [150 kB]
+2025-07-26T03:46:16.8316423Z #7 2.802 Get:72 http://deb.debian.org/debian bookworm/main amd64 libjs-jquery all 3.6.1+dfsg+~3.5.14-1 [326 kB]
+2025-07-26T03:46:16.8317067Z #7 2.803 Get:73 http://deb.debian.org/debian bookworm/main amd64 libjs-underscore all 1.13.4~dfsg+~1.11.4-3 [116 kB]
+2025-07-26T03:46:16.8317660Z #7 2.804 Get:74 http://deb.debian.org/debian bookworm/main amd64 libjs-sphinxdoc all 5.3.0-4 [130 kB]
+2025-07-26T03:46:16.8318263Z #7 2.805 Get:75 http://deb.debian.org/debian bookworm/main amd64 libpython3.11 amd64 3.11.2-6+deb12u6 [1987 kB]
+2025-07-26T03:46:16.8319076Z #7 2.812 Get:76 http://deb.debian.org/debian bookworm/main amd64 zlib1g-dev amd64 1:1.2.13.dfsg-1 [916 kB]
+2025-07-26T03:46:16.8319682Z #7 2.816 Get:77 http://deb.debian.org/debian bookworm/main amd64 libpython3.11-dev amd64 3.11.2-6+deb12u6 [4742 kB]
+2025-07-26T03:46:16.8320440Z #7 2.833 Get:78 http://deb.debian.org/debian bookworm/main amd64 libpython3-dev amd64 3.11.2-1+b1 [9572 B]
+2025-07-26T03:46:16.8321047Z #7 2.833 Get:79 http://deb.debian.org/debian bookworm/main amd64 python3.11-dev amd64 3.11.2-6+deb12u6 [615 kB]
+2025-07-26T03:46:16.8321645Z #7 2.835 Get:80 http://deb.debian.org/debian bookworm/main amd64 python3-lib2to3 all 3.11.2-3 [76.3 kB]
+2025-07-26T03:46:16.8322217Z #7 2.836 Get:81 http://deb.debian.org/debian bookworm/main amd64 python3-distutils all 3.11.2-3 [131 kB]
+2025-07-26T03:46:16.8322801Z #7 2.837 Get:82 http://deb.debian.org/debian bookworm/main amd64 python3-dev amd64 3.11.2-1+b1 [26.2 kB]
+2025-07-26T03:46:16.8323336Z #7 2.932 debconf: delaying package configuration, since apt-utils is not installed
+2025-07-26T03:46:17.0170251Z #7 2.950 Fetched 100 MB in 0s (250 MB/s)
+2025-07-26T03:46:17.0170933Z #7 2.962 Selecting previously unselected package perl-modules-5.36.
+2025-07-26T03:46:17.0171563Z #7 2.962 (Reading database ... 
+2025-07-26T03:46:17.0172002Z (Reading database ... 5%
+2025-07-26T03:46:17.0172395Z (Reading database ... 10%
+2025-07-26T03:46:17.0172770Z (Reading database ... 15%
+2025-07-26T03:46:17.0173126Z (Reading database ... 20%
+2025-07-26T03:46:17.0173496Z (Reading database ... 25%
+2025-07-26T03:46:17.0173850Z (Reading database ... 30%
+2025-07-26T03:46:17.0174201Z (Reading database ... 35%
+2025-07-26T03:46:17.0174573Z (Reading database ... 40%
+2025-07-26T03:46:17.0174914Z (Reading database ... 45%
+2025-07-26T03:46:17.0175274Z (Reading database ... 50%
+2025-07-26T03:46:17.0175638Z (Reading database ... 55%
+2025-07-26T03:46:17.0175979Z (Reading database ... 60%
+2025-07-26T03:46:17.0176360Z (Reading database ... 65%
+2025-07-26T03:46:17.0176707Z (Reading database ... 70%
+2025-07-26T03:46:17.0177055Z (Reading database ... 75%
+2025-07-26T03:46:17.0177420Z (Reading database ... 80%
+2025-07-26T03:46:17.0177767Z (Reading database ... 85%
+2025-07-26T03:46:17.0178132Z (Reading database ... 90%
+2025-07-26T03:46:17.0178755Z (Reading database ... 95%
+2025-07-26T03:46:17.0179180Z (Reading database ... 100%
+2025-07-26T03:46:17.0179736Z (Reading database ... 6688 files and directories currently installed.)
+2025-07-26T03:46:17.0180526Z #7 2.968 Preparing to unpack .../0-perl-modules-5.36_5.36.0-7+deb12u2_all.deb ...
+2025-07-26T03:46:17.0181264Z #7 2.968 Unpacking perl-modules-5.36 (5.36.0-7+deb12u2) ...
+2025-07-26T03:46:17.1476320Z #7 3.249 Selecting previously unselected package libgdbm-compat4:amd64.
+2025-07-26T03:46:17.3198703Z #7 3.251 Preparing to unpack .../1-libgdbm-compat4_1.23-3_amd64.deb ...
+2025-07-26T03:46:17.3199734Z #7 3.252 Unpacking libgdbm-compat4:amd64 (1.23-3) ...
+2025-07-26T03:46:17.3200603Z #7 3.269 Selecting previously unselected package libperl5.36:amd64.
+2025-07-26T03:46:17.3202520Z #7 3.271 Preparing to unpack .../2-libperl5.36_5.36.0-7+deb12u2_amd64.deb ...
+2025-07-26T03:46:17.3203210Z #7 3.271 Unpacking libperl5.36:amd64 (5.36.0-7+deb12u2) ...
+2025-07-26T03:46:17.4561101Z #7 3.558 Selecting previously unselected package perl.
+2025-07-26T03:46:17.5719542Z #7 3.559 Preparing to unpack .../3-perl_5.36.0-7+deb12u2_amd64.deb ...
+2025-07-26T03:46:17.5720177Z #7 3.564 Unpacking perl (5.36.0-7+deb12u2) ...
+2025-07-26T03:46:17.5720784Z #7 3.592 Selecting previously unselected package libpython3.11-minimal:amd64.
+2025-07-26T03:46:17.5721554Z #7 3.593 Preparing to unpack .../4-libpython3.11-minimal_3.11.2-6+deb12u6_amd64.deb ...
+2025-07-26T03:46:17.5722244Z #7 3.594 Unpacking libpython3.11-minimal:amd64 (3.11.2-6+deb12u6) ...
+2025-07-26T03:46:17.5722855Z #7 3.674 Selecting previously unselected package libexpat1:amd64.
+2025-07-26T03:46:17.7342932Z #7 3.675 Preparing to unpack .../5-libexpat1_2.5.0-1+deb12u1_amd64.deb ...
+2025-07-26T03:46:17.7343558Z #7 3.676 Unpacking libexpat1:amd64 (2.5.0-1+deb12u1) ...
+2025-07-26T03:46:17.7344084Z #7 3.695 Selecting previously unselected package python3.11-minimal.
+2025-07-26T03:46:17.7344633Z #7 3.696 Preparing to unpack .../6-python3.11-minimal_3.11.2-6+deb12u6_amd64.deb ...
+2025-07-26T03:46:17.7345365Z #7 3.700 Unpacking python3.11-minimal (3.11.2-6+deb12u6) ...
+2025-07-26T03:46:17.7345741Z #7 3.836 Setting up libpython3.11-minimal:amd64 (3.11.2-6+deb12u6) ...
+2025-07-26T03:46:17.8919482Z #7 3.840 Setting up libexpat1:amd64 (2.5.0-1+deb12u1) ...
+2025-07-26T03:46:17.8920221Z #7 3.843 Setting up python3.11-minimal (3.11.2-6+deb12u6) ...
+2025-07-26T03:46:18.2781018Z #7 4.380 Selecting previously unselected package python3-minimal.
+2025-07-26T03:46:18.4570521Z #7 4.380 (Reading database ... 
+2025-07-26T03:46:18.4570960Z (Reading database ... 5%
+2025-07-26T03:46:18.4571293Z (Reading database ... 10%
+2025-07-26T03:46:18.4571537Z (Reading database ... 15%
+2025-07-26T03:46:18.4571762Z (Reading database ... 20%
+2025-07-26T03:46:18.4571968Z (Reading database ... 25%
+2025-07-26T03:46:18.4572178Z (Reading database ... 30%
+2025-07-26T03:46:18.4572390Z (Reading database ... 35%
+2025-07-26T03:46:18.4572590Z (Reading database ... 40%
+2025-07-26T03:46:18.4572793Z (Reading database ... 45%
+2025-07-26T03:46:18.4573018Z (Reading database ... 50%
+2025-07-26T03:46:18.4573234Z (Reading database ... 55%
+2025-07-26T03:46:18.4573444Z (Reading database ... 60%
+2025-07-26T03:46:18.4573650Z (Reading database ... 65%
+2025-07-26T03:46:18.4573851Z (Reading database ... 70%
+2025-07-26T03:46:18.4574075Z (Reading database ... 75%
+2025-07-26T03:46:18.4574292Z (Reading database ... 80%
+2025-07-26T03:46:18.4574493Z (Reading database ... 85%
+2025-07-26T03:46:18.4574702Z (Reading database ... 90%
+2025-07-26T03:46:18.4574911Z (Reading database ... 95%
+2025-07-26T03:46:18.4575114Z (Reading database ... 100%
+2025-07-26T03:46:18.4575426Z (Reading database ... 9003 files and directories currently installed.)
+2025-07-26T03:46:18.4575881Z #7 4.386 Preparing to unpack .../python3-minimal_3.11.2-1+b1_amd64.deb ...
+2025-07-26T03:46:18.4576279Z #7 4.387 Unpacking python3-minimal (3.11.2-1+b1) ...
+2025-07-26T03:46:18.4576639Z #7 4.404 Selecting previously unselected package media-types.
+2025-07-26T03:46:18.4577008Z #7 4.404 Preparing to unpack .../media-types_10.0.0_all.deb ...
+2025-07-26T03:46:18.4577345Z #7 4.405 Unpacking media-types (10.0.0) ...
+2025-07-26T03:46:18.4577706Z #7 4.420 Selecting previously unselected package libpython3.11-stdlib:amd64.
+2025-07-26T03:46:18.4578175Z #7 4.421 Preparing to unpack .../libpython3.11-stdlib_3.11.2-6+deb12u6_amd64.deb ...
+2025-07-26T03:46:18.4578847Z #7 4.421 Unpacking libpython3.11-stdlib:amd64 (3.11.2-6+deb12u6) ...
+2025-07-26T03:46:18.4579230Z #7 4.559 Selecting previously unselected package python3.11.
+2025-07-26T03:46:18.6130261Z #7 4.560 Preparing to unpack .../python3.11_3.11.2-6+deb12u6_amd64.deb ...
+2025-07-26T03:46:18.6130963Z #7 4.561 Unpacking python3.11 (3.11.2-6+deb12u6) ...
+2025-07-26T03:46:18.6131639Z #7 4.584 Selecting previously unselected package libpython3-stdlib:amd64.
+2025-07-26T03:46:18.6132231Z #7 4.585 Preparing to unpack .../libpython3-stdlib_3.11.2-1+b1_amd64.deb ...
+2025-07-26T03:46:18.6132642Z #7 4.586 Unpacking libpython3-stdlib:amd64 (3.11.2-1+b1) ...
+2025-07-26T03:46:18.6133097Z #7 4.600 Setting up python3-minimal (3.11.2-1+b1) ...
+2025-07-26T03:46:18.6133723Z #7 4.715 Selecting previously unselected package python3.
+2025-07-26T03:46:18.7186809Z #7 4.715 (Reading database ... 
+2025-07-26T03:46:18.7187244Z (Reading database ... 5%
+2025-07-26T03:46:18.7187608Z (Reading database ... 10%
+2025-07-26T03:46:18.7187972Z (Reading database ... 15%
+2025-07-26T03:46:18.7188317Z (Reading database ... 20%
+2025-07-26T03:46:18.7188885Z (Reading database ... 25%
+2025-07-26T03:46:18.7189235Z (Reading database ... 30%
+2025-07-26T03:46:18.7189577Z (Reading database ... 35%
+2025-07-26T03:46:18.7189923Z (Reading database ... 40%
+2025-07-26T03:46:18.7190277Z (Reading database ... 45%
+2025-07-26T03:46:18.7190621Z (Reading database ... 50%
+2025-07-26T03:46:18.7190991Z (Reading database ... 55%
+2025-07-26T03:46:18.7191333Z (Reading database ... 60%
+2025-07-26T03:46:18.7191684Z (Reading database ... 65%
+2025-07-26T03:46:18.7192040Z (Reading database ... 70%
+2025-07-26T03:46:18.7192384Z (Reading database ... 75%
+2025-07-26T03:46:18.7193021Z (Reading database ... 80%
+2025-07-26T03:46:18.7193369Z (Reading database ... 85%
+2025-07-26T03:46:18.7193711Z (Reading database ... 90%
+2025-07-26T03:46:18.7194058Z (Reading database ... 95%
+2025-07-26T03:46:18.7194413Z (Reading database ... 100%
+2025-07-26T03:46:18.7194935Z (Reading database ... 9413 files and directories currently installed.)
+2025-07-26T03:46:18.7195664Z #7 4.721 Preparing to unpack .../00-python3_3.11.2-1+b1_amd64.deb ...
+2025-07-26T03:46:18.7196261Z #7 4.724 Unpacking python3 (3.11.2-1+b1) ...
+2025-07-26T03:46:18.7196809Z #7 4.743 Selecting previously unselected package nano.
+2025-07-26T03:46:18.7198180Z #7 4.743 Preparing to unpack .../01-nano_7.2-1+deb12u1_amd64.deb ...
+2025-07-26T03:46:18.7199320Z #7 4.744 Unpacking nano (7.2-1+deb12u1) ...
+2025-07-26T03:46:18.7199855Z #7 4.801 Selecting previously unselected package bzip2.
+2025-07-26T03:46:18.7200405Z #7 4.802 Preparing to unpack .../02-bzip2_1.0.8-5+b1_amd64.deb ...
+2025-07-26T03:46:18.7200831Z #7 4.803 Unpacking bzip2 (1.0.8-5+b1) ...
+2025-07-26T03:46:18.7201308Z #7 4.821 Selecting previously unselected package xz-utils.
+2025-07-26T03:46:18.9200071Z #7 4.822 Preparing to unpack .../03-xz-utils_5.4.1-1_amd64.deb ...
+2025-07-26T03:46:18.9200670Z #7 4.823 Unpacking xz-utils (5.4.1-1) ...
+2025-07-26T03:46:18.9201073Z #7 4.870 Selecting previously unselected package binutils-common:amd64.
+2025-07-26T03:46:18.9201538Z #7 4.871 Preparing to unpack .../04-binutils-common_2.40-2_amd64.deb ...
+2025-07-26T03:46:18.9202044Z #7 4.871 Unpacking binutils-common:amd64 (2.40-2) ...
+2025-07-26T03:46:18.9391611Z #7 5.041 Selecting previously unselected package libbinutils:amd64.
+2025-07-26T03:46:19.0400921Z #7 5.042 Preparing to unpack .../05-libbinutils_2.40-2_amd64.deb ...
+2025-07-26T03:46:19.0401594Z #7 5.043 Unpacking libbinutils:amd64 (2.40-2) ...
+2025-07-26T03:46:19.0402226Z #7 5.094 Selecting previously unselected package libctf-nobfd0:amd64.
+2025-07-26T03:46:19.0402826Z #7 5.096 Preparing to unpack .../06-libctf-nobfd0_2.40-2_amd64.deb ...
+2025-07-26T03:46:19.0403246Z #7 5.096 Unpacking libctf-nobfd0:amd64 (2.40-2) ...
+2025-07-26T03:46:19.0403699Z #7 5.119 Selecting previously unselected package libctf0:amd64.
+2025-07-26T03:46:19.0404104Z #7 5.120 Preparing to unpack .../07-libctf0_2.40-2_amd64.deb ...
+2025-07-26T03:46:19.0404521Z #7 5.121 Unpacking libctf0:amd64 (2.40-2) ...
+2025-07-26T03:46:19.0404855Z #7 5.140 Selecting previously unselected package libgprofng0:amd64.
+2025-07-26T03:46:19.0405412Z #7 5.141 Preparing to unpack .../08-libgprofng0_2.40-2_amd64.deb ...
+2025-07-26T03:46:19.0405832Z #7 5.142 Unpacking libgprofng0:amd64 (2.40-2) ...
+2025-07-26T03:46:19.2750834Z #7 5.207 Selecting previously unselected package libjansson4:amd64.
+2025-07-26T03:46:19.2751348Z #7 5.209 Preparing to unpack .../09-libjansson4_2.14-2_amd64.deb ...
+2025-07-26T03:46:19.2751754Z #7 5.210 Unpacking libjansson4:amd64 (2.14-2) ...
+2025-07-26T03:46:19.2752168Z #7 5.225 Selecting previously unselected package binutils-x86-64-linux-gnu.
+2025-07-26T03:46:19.2752957Z #7 5.226 Preparing to unpack .../10-binutils-x86-64-linux-gnu_2.40-2_amd64.deb ...
+2025-07-26T03:46:19.2753393Z #7 5.226 Unpacking binutils-x86-64-linux-gnu (2.40-2) ...
+2025-07-26T03:46:19.2901255Z #7 5.392 Selecting previously unselected package binutils.
+2025-07-26T03:46:19.4831296Z #7 5.393 Preparing to unpack .../11-binutils_2.40-2_amd64.deb ...
+2025-07-26T03:46:19.4831795Z #7 5.394 Unpacking binutils (2.40-2) ...
+2025-07-26T03:46:19.4832310Z #7 5.415 Selecting previously unselected package libc-dev-bin.
+2025-07-26T03:46:19.4832751Z #7 5.416 Preparing to unpack .../12-libc-dev-bin_2.36-9+deb12u10_amd64.deb ...
+2025-07-26T03:46:19.4833140Z #7 5.417 Unpacking libc-dev-bin (2.36-9+deb12u10) ...
+2025-07-26T03:46:19.4833627Z #7 5.433 Selecting previously unselected package linux-libc-dev:amd64.
+2025-07-26T03:46:19.4834069Z #7 5.434 Preparing to unpack .../13-linux-libc-dev_6.1.140-1_amd64.deb ...
+2025-07-26T03:46:19.4834455Z #7 5.434 Unpacking linux-libc-dev:amd64 (6.1.140-1) ...
+2025-07-26T03:46:19.5344054Z #7 5.636 Selecting previously unselected package libcrypt-dev:amd64.
+2025-07-26T03:46:19.7825352Z #7 5.638 Preparing to unpack .../14-libcrypt-dev_1%3a4.4.33-2_amd64.deb ...
+2025-07-26T03:46:19.7826030Z #7 5.643 Unpacking libcrypt-dev:amd64 (1:4.4.33-2) ...
+2025-07-26T03:46:19.7826446Z #7 5.664 Selecting previously unselected package libtirpc-dev:amd64.
+2025-07-26T03:46:19.7826872Z #7 5.665 Preparing to unpack .../15-libtirpc-dev_1.3.3+ds-1_amd64.deb ...
+2025-07-26T03:46:19.7827249Z #7 5.666 Unpacking libtirpc-dev:amd64 (1.3.3+ds-1) ...
+2025-07-26T03:46:19.7827609Z #7 5.691 Selecting previously unselected package libnsl-dev:amd64.
+2025-07-26T03:46:19.7827998Z #7 5.692 Preparing to unpack .../16-libnsl-dev_1.3.0-2_amd64.deb ...
+2025-07-26T03:46:19.7828497Z #7 5.693 Unpacking libnsl-dev:amd64 (1.3.0-2) ...
+2025-07-26T03:46:19.7828926Z #7 5.711 Selecting previously unselected package rpcsvc-proto.
+2025-07-26T03:46:19.7829337Z #7 5.712 Preparing to unpack .../17-rpcsvc-proto_1.4.3-1_amd64.deb ...
+2025-07-26T03:46:19.7829720Z #7 5.712 Unpacking rpcsvc-proto (1.4.3-1) ...
+2025-07-26T03:46:19.7830057Z #7 5.732 Selecting previously unselected package libc6-dev:amd64.
+2025-07-26T03:46:19.7830473Z #7 5.733 Preparing to unpack .../18-libc6-dev_2.36-9+deb12u10_amd64.deb ...
+2025-07-26T03:46:19.7830854Z #7 5.734 Unpacking libc6-dev:amd64 (2.36-9+deb12u10) ...
+2025-07-26T03:46:19.7831211Z #7 5.884 Selecting previously unselected package libisl23:amd64.
+2025-07-26T03:46:19.8829886Z #7 5.886 Preparing to unpack .../19-libisl23_0.25-1.1_amd64.deb ...
+2025-07-26T03:46:19.8830574Z #7 5.887 Unpacking libisl23:amd64 (0.25-1.1) ...
+2025-07-26T03:46:19.8831153Z #7 5.943 Selecting previously unselected package libmpfr6:amd64.
+2025-07-26T03:46:19.8831805Z #7 5.945 Preparing to unpack .../20-libmpfr6_4.2.0-1_amd64.deb ...
+2025-07-26T03:46:19.8832341Z #7 5.945 Unpacking libmpfr6:amd64 (4.2.0-1) ...
+2025-07-26T03:46:19.8832703Z #7 5.983 Selecting previously unselected package libmpc3:amd64.
+2025-07-26T03:46:19.8833310Z #7 5.985 Preparing to unpack .../21-libmpc3_1.3.1-1_amd64.deb ...
+2025-07-26T03:46:20.0533510Z #7 5.986 Unpacking libmpc3:amd64 (1.3.1-1) ...
+2025-07-26T03:46:20.0534142Z #7 6.002 Selecting previously unselected package cpp-12.
+2025-07-26T03:46:20.0534829Z #7 6.004 Preparing to unpack .../22-cpp-12_12.2.0-14+deb12u1_amd64.deb ...
+2025-07-26T03:46:20.0535484Z #7 6.005 Unpacking cpp-12 (12.2.0-14+deb12u1) ...
+2025-07-26T03:46:20.3869298Z #7 6.489 Selecting previously unselected package cpp.
+2025-07-26T03:46:20.6282729Z #7 6.490 Preparing to unpack .../23-cpp_4%3a12.2.0-3_amd64.deb ...
+2025-07-26T03:46:20.6283382Z #7 6.491 Unpacking cpp (4:12.2.0-3) ...
+2025-07-26T03:46:20.6283936Z #7 6.507 Selecting previously unselected package libcc1-0:amd64.
+2025-07-26T03:46:20.6284636Z #7 6.508 Preparing to unpack .../24-libcc1-0_12.2.0-14+deb12u1_amd64.deb ...
+2025-07-26T03:46:20.6285290Z #7 6.508 Unpacking libcc1-0:amd64 (12.2.0-14+deb12u1) ...
+2025-07-26T03:46:20.6285826Z #7 6.525 Selecting previously unselected package libgomp1:amd64.
+2025-07-26T03:46:20.6286542Z #7 6.526 Preparing to unpack .../25-libgomp1_12.2.0-14+deb12u1_amd64.deb ...
+2025-07-26T03:46:20.6286945Z #7 6.527 Unpacking libgomp1:amd64 (12.2.0-14+deb12u1) ...
+2025-07-26T03:46:20.6287304Z #7 6.547 Selecting previously unselected package libitm1:amd64.
+2025-07-26T03:46:20.6287709Z #7 6.548 Preparing to unpack .../26-libitm1_12.2.0-14+deb12u1_amd64.deb ...
+2025-07-26T03:46:20.6288103Z #7 6.549 Unpacking libitm1:amd64 (12.2.0-14+deb12u1) ...
+2025-07-26T03:46:20.6288761Z #7 6.565 Selecting previously unselected package libatomic1:amd64.
+2025-07-26T03:46:20.6289367Z #7 6.566 Preparing to unpack .../27-libatomic1_12.2.0-14+deb12u1_amd64.deb ...
+2025-07-26T03:46:20.6289758Z #7 6.567 Unpacking libatomic1:amd64 (12.2.0-14+deb12u1) ...
+2025-07-26T03:46:20.6290118Z #7 6.581 Selecting previously unselected package libasan8:amd64.
+2025-07-26T03:46:20.6290506Z #7 6.582 Preparing to unpack .../28-libasan8_12.2.0-14+deb12u1_amd64.deb ...
+2025-07-26T03:46:20.6291042Z #7 6.583 Unpacking libasan8:amd64 (12.2.0-14+deb12u1) ...
+2025-07-26T03:46:20.6291395Z #7 6.730 Selecting previously unselected package liblsan0:amd64.
+2025-07-26T03:46:20.8559258Z #7 6.732 Preparing to unpack .../29-liblsan0_12.2.0-14+deb12u1_amd64.deb ...
+2025-07-26T03:46:20.8559817Z #7 6.733 Unpacking liblsan0:amd64 (12.2.0-14+deb12u1) ...
+2025-07-26T03:46:20.8560330Z #7 6.805 Selecting previously unselected package libtsan2:amd64.
+2025-07-26T03:46:20.8560763Z #7 6.806 Preparing to unpack .../30-libtsan2_12.2.0-14+deb12u1_amd64.deb ...
+2025-07-26T03:46:20.8561277Z #7 6.807 Unpacking libtsan2:amd64 (12.2.0-14+deb12u1) ...
+2025-07-26T03:46:20.8584585Z #7 6.960 Selecting previously unselected package libubsan1:amd64.
+2025-07-26T03:46:21.1001666Z #7 6.962 Preparing to unpack .../31-libubsan1_12.2.0-14+deb12u1_amd64.deb ...
+2025-07-26T03:46:21.1002766Z #7 6.963 Unpacking libubsan1:amd64 (12.2.0-14+deb12u1) ...
+2025-07-26T03:46:21.1003673Z #7 7.030 Selecting previously unselected package libquadmath0:amd64.
+2025-07-26T03:46:21.1004223Z #7 7.032 Preparing to unpack .../32-libquadmath0_12.2.0-14+deb12u1_amd64.deb ...
+2025-07-26T03:46:21.1004659Z #7 7.033 Unpacking libquadmath0:amd64 (12.2.0-14+deb12u1) ...
+2025-07-26T03:46:21.1005059Z #7 7.054 Selecting previously unselected package libgcc-12-dev:amd64.
+2025-07-26T03:46:21.1005493Z #7 7.055 Preparing to unpack .../33-libgcc-12-dev_12.2.0-14+deb12u1_amd64.deb ...
+2025-07-26T03:46:21.1005913Z #7 7.056 Unpacking libgcc-12-dev:amd64 (12.2.0-14+deb12u1) ...
+2025-07-26T03:46:21.1006262Z #7 7.202 Selecting previously unselected package gcc-12.
+2025-07-26T03:46:21.2535320Z #7 7.204 Preparing to unpack .../34-gcc-12_12.2.0-14+deb12u1_amd64.deb ...
+2025-07-26T03:46:21.2540152Z #7 7.205 Unpacking gcc-12 (12.2.0-14+deb12u1) ...
+2025-07-26T03:46:21.7478127Z #7 7.850 Selecting previously unselected package gcc.
+2025-07-26T03:46:21.9201410Z #7 7.851 Preparing to unpack .../35-gcc_4%3a12.2.0-3_amd64.deb ...
+2025-07-26T03:46:21.9202083Z #7 7.852 Unpacking gcc (4:12.2.0-3) ...
+2025-07-26T03:46:21.9202740Z #7 7.870 Selecting previously unselected package libstdc++-12-dev:amd64.
+2025-07-26T03:46:21.9203585Z #7 7.871 Preparing to unpack .../36-libstdc++-12-dev_12.2.0-14+deb12u1_amd64.deb ...
+2025-07-26T03:46:21.9204354Z #7 7.872 Unpacking libstdc++-12-dev:amd64 (12.2.0-14+deb12u1) ...
+2025-07-26T03:46:21.9852618Z #7 8.087 Selecting previously unselected package g++-12.
+2025-07-26T03:46:22.1387082Z #7 8.089 Preparing to unpack .../37-g++-12_12.2.0-14+deb12u1_amd64.deb ...
+2025-07-26T03:46:22.1387800Z #7 8.090 Unpacking g++-12 (12.2.0-14+deb12u1) ...
+2025-07-26T03:46:22.4961632Z #7 8.598 Selecting previously unselected package g++.
+2025-07-26T03:46:22.6092792Z #7 8.600 Preparing to unpack .../38-g++_4%3a12.2.0-3_amd64.deb ...
+2025-07-26T03:46:22.6093199Z #7 8.600 Unpacking g++ (4:12.2.0-3) ...
+2025-07-26T03:46:22.6093603Z #7 8.613 Selecting previously unselected package make.
+2025-07-26T03:46:22.6093977Z #7 8.614 Preparing to unpack .../39-make_4.3-4.1_amd64.deb ...
+2025-07-26T03:46:22.6094391Z #7 8.615 Unpacking make (4.3-4.1) ...
+2025-07-26T03:46:22.6094958Z #7 8.654 Selecting previously unselected package libdpkg-perl.
+2025-07-26T03:46:22.6095478Z #7 8.655 Preparing to unpack .../40-libdpkg-perl_1.21.22_all.deb ...
+2025-07-26T03:46:22.6095822Z #7 8.656 Unpacking libdpkg-perl (1.21.22) ...
+2025-07-26T03:46:22.6096232Z #7 8.711 Selecting previously unselected package patch.
+2025-07-26T03:46:22.7208078Z #7 8.713 Preparing to unpack .../41-patch_2.7.6-7_amd64.deb ...
+2025-07-26T03:46:22.7208803Z #7 8.713 Unpacking patch (2.7.6-7) ...
+2025-07-26T03:46:22.7209306Z #7 8.734 Selecting previously unselected package dpkg-dev.
+2025-07-26T03:46:22.7209911Z #7 8.735 Preparing to unpack .../42-dpkg-dev_1.21.22_all.deb ...
+2025-07-26T03:46:22.7210442Z #7 8.736 Unpacking dpkg-dev (1.21.22) ...
+2025-07-26T03:46:22.7210994Z #7 8.823 Selecting previously unselected package build-essential.
+2025-07-26T03:46:22.8362279Z #7 8.824 Preparing to unpack .../43-build-essential_12.9_amd64.deb ...
+2025-07-26T03:46:22.8363381Z #7 8.825 Unpacking build-essential (12.9) ...
+2025-07-26T03:46:22.8364174Z #7 8.840 Selecting previously unselected package libbrotli1:amd64.
+2025-07-26T03:46:22.8364789Z #7 8.841 Preparing to unpack .../44-libbrotli1_1.0.9-2+b6_amd64.deb ...
+2025-07-26T03:46:22.8365371Z #7 8.842 Unpacking libbrotli1:amd64 (1.0.9-2+b6) ...
+2025-07-26T03:46:22.8365954Z #7 8.872 Selecting previously unselected package libsasl2-modules-db:amd64.
+2025-07-26T03:46:22.8366657Z #7 8.873 Preparing to unpack .../45-libsasl2-modules-db_2.1.28+dfsg-10_amd64.deb ...
+2025-07-26T03:46:22.8367281Z #7 8.874 Unpacking libsasl2-modules-db:amd64 (2.1.28+dfsg-10) ...
+2025-07-26T03:46:22.8367680Z #7 8.890 Selecting previously unselected package libsasl2-2:amd64.
+2025-07-26T03:46:22.8368104Z #7 8.891 Preparing to unpack .../46-libsasl2-2_2.1.28+dfsg-10_amd64.deb ...
+2025-07-26T03:46:22.8368683Z #7 8.892 Unpacking libsasl2-2:amd64 (2.1.28+dfsg-10) ...
+2025-07-26T03:46:22.8369066Z #7 8.910 Selecting previously unselected package libldap-2.5-0:amd64.
+2025-07-26T03:46:22.8369515Z #7 8.911 Preparing to unpack .../47-libldap-2.5-0_2.5.13+dfsg-5_amd64.deb ...
+2025-07-26T03:46:22.8369897Z #7 8.912 Unpacking libldap-2.5-0:amd64 (2.5.13+dfsg-5) ...
+2025-07-26T03:46:22.8370268Z #7 8.938 Selecting previously unselected package libnghttp2-14:amd64.
+2025-07-26T03:46:22.9583550Z #7 8.939 Preparing to unpack .../48-libnghttp2-14_1.52.0-1+deb12u2_amd64.deb ...
+2025-07-26T03:46:22.9584283Z #7 8.940 Unpacking libnghttp2-14:amd64 (1.52.0-1+deb12u2) ...
+2025-07-26T03:46:22.9584696Z #7 8.959 Selecting previously unselected package libpsl5:amd64.
+2025-07-26T03:46:22.9585108Z #7 8.960 Preparing to unpack .../49-libpsl5_0.21.2-1_amd64.deb ...
+2025-07-26T03:46:22.9585454Z #7 8.961 Unpacking libpsl5:amd64 (0.21.2-1) ...
+2025-07-26T03:46:22.9585792Z #7 8.979 Selecting previously unselected package librtmp1:amd64.
+2025-07-26T03:46:22.9586233Z #7 8.980 Preparing to unpack .../50-librtmp1_2.4+20151223.gitfa8646d.1-2+b2_amd64.deb ...
+2025-07-26T03:46:22.9586681Z #7 8.981 Unpacking librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2+b2) ...
+2025-07-26T03:46:22.9587104Z #7 8.999 Selecting previously unselected package libssh2-1:amd64.
+2025-07-26T03:46:22.9587513Z #7 9.000 Preparing to unpack .../51-libssh2-1_1.10.0-3+b1_amd64.deb ...
+2025-07-26T03:46:22.9587872Z #7 9.001 Unpacking libssh2-1:amd64 (1.10.0-3+b1) ...
+2025-07-26T03:46:22.9588223Z #7 9.025 Selecting previously unselected package libcurl4:amd64.
+2025-07-26T03:46:22.9588981Z #7 9.026 Preparing to unpack .../52-libcurl4_7.88.1-10+deb12u12_amd64.deb ...
+2025-07-26T03:46:22.9589372Z #7 9.027 Unpacking libcurl4:amd64 (7.88.1-10+deb12u12) ...
+2025-07-26T03:46:22.9589704Z #7 9.060 Selecting previously unselected package curl.
+2025-07-26T03:46:23.1263892Z #7 9.061 Preparing to unpack .../53-curl_7.88.1-10+deb12u12_amd64.deb ...
+2025-07-26T03:46:23.1264558Z #7 9.062 Unpacking curl (7.88.1-10+deb12u12) ...
+2025-07-26T03:46:23.1265026Z #7 9.091 Selecting previously unselected package libcurl3-gnutls:amd64.
+2025-07-26T03:46:23.1265769Z #7 9.092 Preparing to unpack .../54-libcurl3-gnutls_7.88.1-10+deb12u12_amd64.deb ...
+2025-07-26T03:46:23.1266226Z #7 9.093 Unpacking libcurl3-gnutls:amd64 (7.88.1-10+deb12u12) ...
+2025-07-26T03:46:23.1266619Z #7 9.126 Selecting previously unselected package liberror-perl.
+2025-07-26T03:46:23.1267045Z #7 9.127 Preparing to unpack .../55-liberror-perl_0.17029-2_all.deb ...
+2025-07-26T03:46:23.1267403Z #7 9.128 Unpacking liberror-perl (0.17029-2) ...
+2025-07-26T03:46:23.1267729Z #7 9.144 Selecting previously unselected package git-man.
+2025-07-26T03:46:23.1268117Z #7 9.145 Preparing to unpack .../56-git-man_1%3a2.39.5-0+deb12u2_all.deb ...
+2025-07-26T03:46:23.1268755Z #7 9.146 Unpacking git-man (1:2.39.5-0+deb12u2) ...
+2025-07-26T03:46:23.1269069Z #7 9.228 Selecting previously unselected package git.
+2025-07-26T03:46:23.2834155Z #7 9.230 Preparing to unpack .../57-git_1%3a2.39.5-0+deb12u2_amd64.deb ...
+2025-07-26T03:46:23.2840908Z #7 9.235 Unpacking git (1:2.39.5-0+deb12u2) ...
+2025-07-26T03:46:23.4335523Z #7 9.535 Selecting previously unselected package libexpat1-dev:amd64.
+2025-07-26T03:46:23.5454965Z #7 9.537 Preparing to unpack .../58-libexpat1-dev_2.5.0-1+deb12u1_amd64.deb ...
+2025-07-26T03:46:23.5455715Z #7 9.538 Unpacking libexpat1-dev:amd64 (2.5.0-1+deb12u1) ...
+2025-07-26T03:46:23.5456110Z #7 9.563 Selecting previously unselected package libjs-jquery.
+2025-07-26T03:46:23.5456543Z #7 9.564 Preparing to unpack .../59-libjs-jquery_3.6.1+dfsg+~3.5.14-1_all.deb ...
+2025-07-26T03:46:23.5456962Z #7 9.569 Unpacking libjs-jquery (3.6.1+dfsg+~3.5.14-1) ...
+2025-07-26T03:46:23.5457333Z #7 9.599 Selecting previously unselected package libjs-underscore.
+2025-07-26T03:46:23.5457773Z #7 9.601 Preparing to unpack .../60-libjs-underscore_1.13.4~dfsg+~1.11.4-3_all.deb ...
+2025-07-26T03:46:23.5458193Z #7 9.601 Unpacking libjs-underscore (1.13.4~dfsg+~1.11.4-3) ...
+2025-07-26T03:46:23.5458780Z #7 9.622 Selecting previously unselected package libjs-sphinxdoc.
+2025-07-26T03:46:23.5459195Z #7 9.623 Preparing to unpack .../61-libjs-sphinxdoc_5.3.0-4_all.deb ...
+2025-07-26T03:46:23.5459566Z #7 9.624 Unpacking libjs-sphinxdoc (5.3.0-4) ...
+2025-07-26T03:46:23.5459936Z #7 9.647 Selecting previously unselected package libpython3.11:amd64.
+2025-07-26T03:46:23.6811503Z #7 9.649 Preparing to unpack .../62-libpython3.11_3.11.2-6+deb12u6_amd64.deb ...
+2025-07-26T03:46:23.6812158Z #7 9.649 Unpacking libpython3.11:amd64 (3.11.2-6+deb12u6) ...
+2025-07-26T03:46:23.6812573Z #7 9.783 Selecting previously unselected package zlib1g-dev:amd64.
+2025-07-26T03:46:23.8680571Z #7 9.785 Preparing to unpack .../63-zlib1g-dev_1%3a1.2.13.dfsg-1_amd64.deb ...
+2025-07-26T03:46:23.8681299Z #7 9.786 Unpacking zlib1g-dev:amd64 (1:1.2.13.dfsg-1) ...
+2025-07-26T03:46:23.8681963Z #7 9.817 Selecting previously unselected package libpython3.11-dev:amd64.
+2025-07-26T03:46:23.8682753Z #7 9.819 Preparing to unpack .../64-libpython3.11-dev_3.11.2-6+deb12u6_amd64.deb ...
+2025-07-26T03:46:23.8683401Z #7 9.819 Unpacking libpython3.11-dev:amd64 (3.11.2-6+deb12u6) ...
+2025-07-26T03:46:24.0344837Z #7 10.14 Selecting previously unselected package libpython3-dev:amd64.
+2025-07-26T03:46:24.1350806Z #7 10.14 Preparing to unpack .../65-libpython3-dev_3.11.2-1+b1_amd64.deb ...
+2025-07-26T03:46:24.1351529Z #7 10.14 Unpacking libpython3-dev:amd64 (3.11.2-1+b1) ...
+2025-07-26T03:46:24.1352148Z #7 10.15 Selecting previously unselected package python3.11-dev.
+2025-07-26T03:46:24.1352862Z #7 10.16 Preparing to unpack .../66-python3.11-dev_3.11.2-6+deb12u6_amd64.deb ...
+2025-07-26T03:46:24.1353520Z #7 10.16 Unpacking python3.11-dev (3.11.2-6+deb12u6) ...
+2025-07-26T03:46:24.1354117Z #7 10.18 Selecting previously unselected package python3-lib2to3.
+2025-07-26T03:46:24.1354584Z #7 10.18 Preparing to unpack .../67-python3-lib2to3_3.11.2-3_all.deb ...
+2025-07-26T03:46:24.1354971Z #7 10.18 Unpacking python3-lib2to3 (3.11.2-3) ...
+2025-07-26T03:46:24.1355333Z #7 10.21 Selecting previously unselected package python3-distutils.
+2025-07-26T03:46:24.1355752Z #7 10.21 Preparing to unpack .../68-python3-distutils_3.11.2-3_all.deb ...
+2025-07-26T03:46:24.1356379Z #7 10.21 Unpacking python3-distutils (3.11.2-3) ...
+2025-07-26T03:46:24.1356723Z #7 10.24 Selecting previously unselected package python3-dev.
+2025-07-26T03:46:24.2354176Z #7 10.24 Preparing to unpack .../69-python3-dev_3.11.2-1+b1_amd64.deb ...
+2025-07-26T03:46:24.2354847Z #7 10.24 Unpacking python3-dev (3.11.2-1+b1) ...
+2025-07-26T03:46:24.2355374Z #7 10.27 Setting up media-types (10.0.0) ...
+2025-07-26T03:46:24.2355695Z #7 10.27 Setting up libpsl5:amd64 (0.21.2-1) ...
+2025-07-26T03:46:24.2356063Z #7 10.27 Setting up libpython3.11-stdlib:amd64 (3.11.2-6+deb12u6) ...
+2025-07-26T03:46:24.2356435Z #7 10.27 Setting up libbrotli1:amd64 (1.0.9-2+b6) ...
+2025-07-26T03:46:24.2356915Z #7 10.28 Setting up binutils-common:amd64 (2.40-2) ...
+2025-07-26T03:46:24.2357254Z #7 10.28 Setting up libnghttp2-14:amd64 (1.52.0-1+deb12u2) ...
+2025-07-26T03:46:24.2357597Z #7 10.28 Setting up linux-libc-dev:amd64 (6.1.140-1) ...
+2025-07-26T03:46:24.2358063Z #7 10.28 Setting up libctf-nobfd0:amd64 (2.40-2) ...
+2025-07-26T03:46:24.2359139Z #7 10.29 Setting up libgomp1:amd64 (12.2.0-14+deb12u1) ...
+2025-07-26T03:46:24.2359662Z #7 10.29 Setting up bzip2 (1.0.8-5+b1) ...
+2025-07-26T03:46:24.2360144Z #7 10.29 Setting up libjansson4:amd64 (2.14-2) ...
+2025-07-26T03:46:24.2360732Z #7 10.29 Setting up libsasl2-modules-db:amd64 (2.1.28+dfsg-10) ...
+2025-07-26T03:46:24.2361363Z #7 10.30 Setting up perl-modules-5.36 (5.36.0-7+deb12u2) ...
+2025-07-26T03:46:24.2361720Z #7 10.30 Setting up libtirpc-dev:amd64 (1.3.3+ds-1) ...
+2025-07-26T03:46:24.2362019Z #7 10.30 Setting up rpcsvc-proto (1.4.3-1) ...
+2025-07-26T03:46:24.2362291Z #7 10.30 Setting up make (4.3-4.1) ...
+2025-07-26T03:46:24.2362563Z #7 10.30 Setting up libmpfr6:amd64 (4.2.0-1) ...
+2025-07-26T03:46:24.2362898Z #7 10.31 Setting up librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2+b2) ...
+2025-07-26T03:46:24.2363227Z #7 10.31 Setting up xz-utils (5.4.1-1) ...
+2025-07-26T03:46:24.2363627Z #7 10.31 update-alternatives: using /usr/bin/xz to provide /usr/bin/lzma (lzma) in auto mode
+2025-07-26T03:46:24.2364446Z #7 10.31 update-alternatives: warning: skip creation of /usr/share/man/man1/lzma.1.gz because associated file /usr/share/man/man1/xz.1.gz (of link group lzma) doesn't exist
+2025-07-26T03:46:24.2365547Z #7 10.31 update-alternatives: warning: skip creation of /usr/share/man/man1/unlzma.1.gz because associated file /usr/share/man/man1/unxz.1.gz (of link group lzma) doesn't exist
+2025-07-26T03:46:24.2366713Z #7 10.31 update-alternatives: warning: skip creation of /usr/share/man/man1/lzcat.1.gz because associated file /usr/share/man/man1/xzcat.1.gz (of link group lzma) doesn't exist
+2025-07-26T03:46:24.2367792Z #7 10.31 update-alternatives: warning: skip creation of /usr/share/man/man1/lzmore.1.gz because associated file /usr/share/man/man1/xzmore.1.gz (of link group lzma) doesn't exist
+2025-07-26T03:46:24.2369107Z #7 10.31 update-alternatives: warning: skip creation of /usr/share/man/man1/lzless.1.gz because associated file /usr/share/man/man1/xzless.1.gz (of link group lzma) doesn't exist
+2025-07-26T03:46:24.2370179Z #7 10.31 update-alternatives: warning: skip creation of /usr/share/man/man1/lzdiff.1.gz because associated file /usr/share/man/man1/xzdiff.1.gz (of link group lzma) doesn't exist
+2025-07-26T03:46:24.2371233Z #7 10.31 update-alternatives: warning: skip creation of /usr/share/man/man1/lzcmp.1.gz because associated file /usr/share/man/man1/xzcmp.1.gz (of link group lzma) doesn't exist
+2025-07-26T03:46:24.2372934Z #7 10.31 update-alternatives: warning: skip creation of /usr/share/man/man1/lzgrep.1.gz because associated file /usr/share/man/man1/xzgrep.1.gz (of link group lzma) doesn't exist
+2025-07-26T03:46:24.2374993Z #7 10.31 update-alternatives: warning: skip creation of /usr/share/man/man1/lzegrep.1.gz because associated file /usr/share/man/man1/xzegrep.1.gz (of link group lzma) doesn't exist
+2025-07-26T03:46:24.2377207Z #7 10.31 update-alternatives: warning: skip creation of /usr/share/man/man1/lzfgrep.1.gz because associated file /usr/share/man/man1/xzfgrep.1.gz (of link group lzma) doesn't exist
+2025-07-26T03:46:24.2379014Z #7 10.32 Setting up libquadmath0:amd64 (12.2.0-14+deb12u1) ...
+2025-07-26T03:46:24.2379435Z #7 10.32 Setting up libmpc3:amd64 (1.3.1-1) ...
+2025-07-26T03:46:24.2379784Z #7 10.32 Setting up libatomic1:amd64 (12.2.0-14+deb12u1) ...
+2025-07-26T03:46:24.2380160Z #7 10.32 Setting up patch (2.7.6-7) ...
+2025-07-26T03:46:24.2380451Z #7 10.33 Setting up libgdbm-compat4:amd64 (1.23-3) ...
+2025-07-26T03:46:24.2380869Z #7 10.33 Setting up libsasl2-2:amd64 (2.1.28+dfsg-10) ...
+2025-07-26T03:46:24.2381190Z #7 10.33 Setting up libubsan1:amd64 (12.2.0-14+deb12u1) ...
+2025-07-26T03:46:24.2381582Z #7 10.33 Setting up nano (7.2-1+deb12u1) ...
+2025-07-26T03:46:24.2382002Z #7 10.34 update-alternatives: using /bin/nano to provide /usr/bin/editor (editor) in auto mode
+2025-07-26T03:46:24.4390150Z #7 10.34 update-alternatives: warning: skip creation of /usr/share/man/man1/editor.1.gz because associated file /usr/share/man/man1/nano.1.gz (of link group editor) doesn't exist
+2025-07-26T03:46:24.4392060Z #7 10.34 update-alternatives: using /bin/nano to provide /usr/bin/pico (pico) in auto mode
+2025-07-26T03:46:24.4393559Z #7 10.34 update-alternatives: warning: skip creation of /usr/share/man/man1/pico.1.gz because associated file /usr/share/man/man1/nano.1.gz (of link group pico) doesn't exist
+2025-07-26T03:46:24.4394829Z #7 10.34 Setting up libnsl-dev:amd64 (1.3.0-2) ...
+2025-07-26T03:46:24.4395425Z #7 10.34 Setting up libcrypt-dev:amd64 (1:4.4.33-2) ...
+2025-07-26T03:46:24.4396003Z #7 10.35 Setting up libasan8:amd64 (12.2.0-14+deb12u1) ...
+2025-07-26T03:46:24.4396569Z #7 10.35 Setting up git-man (1:2.39.5-0+deb12u2) ...
+2025-07-26T03:46:24.4397109Z #7 10.36 Setting up libssh2-1:amd64 (1.10.0-3+b1) ...
+2025-07-26T03:46:24.4397853Z #7 10.36 Setting up libtsan2:amd64 (12.2.0-14+deb12u1) ...
+2025-07-26T03:46:24.4398673Z #7 10.36 Setting up libjs-jquery (3.6.1+dfsg+~3.5.14-1) ...
+2025-07-26T03:46:24.4399252Z #7 10.37 Setting up libbinutils:amd64 (2.40-2) ...
+2025-07-26T03:46:24.4399799Z #7 10.37 Setting up libisl23:amd64 (0.25-1.1) ...
+2025-07-26T03:46:24.4400337Z #7 10.37 Setting up libc-dev-bin (2.36-9+deb12u10) ...
+2025-07-26T03:46:24.4400904Z #7 10.37 Setting up libcc1-0:amd64 (12.2.0-14+deb12u1) ...
+2025-07-26T03:46:24.4401476Z #7 10.38 Setting up libperl5.36:amd64 (5.36.0-7+deb12u2) ...
+2025-07-26T03:46:24.4402064Z #7 10.38 Setting up liblsan0:amd64 (12.2.0-14+deb12u1) ...
+2025-07-26T03:46:24.4402659Z #7 10.38 Setting up libitm1:amd64 (12.2.0-14+deb12u1) ...
+2025-07-26T03:46:24.4403276Z #7 10.38 Setting up libpython3-stdlib:amd64 (3.11.2-1+b1) ...
+2025-07-26T03:46:24.4403916Z #7 10.39 Setting up libjs-underscore (1.13.4~dfsg+~1.11.4-3) ...
+2025-07-26T03:46:24.4404503Z #7 10.39 Setting up libctf0:amd64 (2.40-2) ...
+2025-07-26T03:46:24.4405033Z #7 10.39 Setting up python3.11 (3.11.2-6+deb12u6) ...
+2025-07-26T03:46:24.8723587Z #7 10.97 Setting up cpp-12 (12.2.0-14+deb12u1) ...
+2025-07-26T03:46:24.9726953Z #7 10.98 Setting up libpython3.11:amd64 (3.11.2-6+deb12u6) ...
+2025-07-26T03:46:24.9727618Z #7 10.98 Setting up python3 (3.11.2-1+b1) ...
+2025-07-26T03:46:24.9728166Z #7 10.99 running python rtupdate hooks for python3.11...
+2025-07-26T03:46:24.9728958Z #7 10.99 running python post-rtupdate hooks for python3.11...
+2025-07-26T03:46:24.9729403Z #7 11.05 Setting up libldap-2.5-0:amd64 (2.5.13+dfsg-5) ...
+2025-07-26T03:46:24.9729734Z #7 11.06 Setting up perl (5.36.0-7+deb12u2) ...
+2025-07-26T03:46:24.9730032Z #7 11.07 Setting up libgprofng0:amd64 (2.40-2) ...
+2025-07-26T03:46:24.9730375Z #7 11.07 Setting up libgcc-12-dev:amd64 (12.2.0-14+deb12u1) ...
+2025-07-26T03:46:24.9730707Z #7 11.07 Setting up libjs-sphinxdoc (5.3.0-4) ...
+2025-07-26T03:46:24.9731012Z #7 11.07 Setting up libdpkg-perl (1.21.22) ...
+2025-07-26T03:46:24.9731294Z #7 11.07 Setting up cpp (4:12.2.0-3) ...
+2025-07-26T03:46:25.1700150Z #7 11.08 Setting up libcurl4:amd64 (7.88.1-10+deb12u12) ...
+2025-07-26T03:46:25.1700797Z #7 11.08 Setting up libc6-dev:amd64 (2.36-9+deb12u10) ...
+2025-07-26T03:46:25.1701343Z #7 11.08 Setting up curl (7.88.1-10+deb12u12) ...
+2025-07-26T03:46:25.1701974Z #7 11.09 Setting up python3-lib2to3 (3.11.2-3) ...
+2025-07-26T03:46:25.1702342Z #7 11.17 Setting up binutils-x86-64-linux-gnu (2.40-2) ...
+2025-07-26T03:46:25.1702846Z #7 11.17 Setting up python3-distutils (3.11.2-3) ...
+2025-07-26T03:46:25.1703198Z #7 11.27 Setting up libstdc++-12-dev:amd64 (12.2.0-14+deb12u1) ...
+2025-07-26T03:46:25.3762264Z #7 11.27 Setting up libcurl3-gnutls:amd64 (7.88.1-10+deb12u12) ...
+2025-07-26T03:46:25.3762886Z #7 11.28 Setting up binutils (2.40-2) ...
+2025-07-26T03:46:25.3763215Z #7 11.28 Setting up dpkg-dev (1.21.22) ...
+2025-07-26T03:46:25.3763537Z #7 11.28 Setting up liberror-perl (0.17029-2) ...
+2025-07-26T03:46:25.3763920Z #7 11.29 Setting up libexpat1-dev:amd64 (2.5.0-1+deb12u1) ...
+2025-07-26T03:46:25.3764275Z #7 11.29 Setting up gcc-12 (12.2.0-14+deb12u1) ...
+2025-07-26T03:46:25.3764584Z #7 11.29 Setting up git (1:2.39.5-0+deb12u2) ...
+2025-07-26T03:46:25.3765053Z #7 11.30 Setting up zlib1g-dev:amd64 (1:1.2.13.dfsg-1) ...
+2025-07-26T03:46:25.3766201Z #7 11.30 Setting up g++-12 (12.2.0-14+deb12u1) ...
+2025-07-26T03:46:25.3766686Z #7 11.30 Setting up gcc (4:12.2.0-3) ...
+2025-07-26T03:46:25.3767240Z #7 11.31 Setting up libpython3.11-dev:amd64 (3.11.2-6+deb12u6) ...
+2025-07-26T03:46:25.3767804Z #7 11.31 Setting up g++ (4:12.2.0-3) ...
+2025-07-26T03:46:25.3768681Z #7 11.32 update-alternatives: using /usr/bin/g++ to provide /usr/bin/c++ (c++) in auto mode
+2025-07-26T03:46:25.3769430Z #7 11.32 Setting up build-essential (12.9) ...
+2025-07-26T03:46:25.3769972Z #7 11.32 Setting up libpython3-dev:amd64 (3.11.2-1+b1) ...
+2025-07-26T03:46:25.3770649Z #7 11.32 Setting up python3.11-dev (3.11.2-6+deb12u6) ...
+2025-07-26T03:46:25.3771187Z #7 11.32 Setting up python3-dev (3.11.2-1+b1) ...
+2025-07-26T03:46:25.3771837Z #7 11.33 Processing triggers for libc-bin (2.36-9+deb12u10) ...
+2025-07-26T03:46:26.0625343Z #7 DONE 12.2s
+2025-07-26T03:46:26.2301337Z 
+2025-07-26T03:46:26.2301758Z #8 [3/7] WORKDIR /app
+2025-07-26T03:46:26.2302052Z #8 DONE 0.0s
+2025-07-26T03:46:26.2302185Z 
+2025-07-26T03:46:26.2302295Z #9 [4/7] COPY requirements.txt .
+2025-07-26T03:46:26.2302550Z #9 DONE 0.0s
+2025-07-26T03:46:26.2302671Z 
+2025-07-26T03:46:26.2302933Z #10 [5/7] RUN pip install --upgrade pip && pip install --no-cache-dir -r requirements.txt
+2025-07-26T03:46:27.3146753Z #10 1.235 Requirement already satisfied: pip in /usr/local/lib/python3.10/site-packages (23.0.1)
+2025-07-26T03:46:27.4177035Z #10 1.338 Collecting pip
+2025-07-26T03:46:27.5569486Z #10 1.378   Downloading pip-25.1.1-py3-none-any.whl (1.8 MB)
+2025-07-26T03:46:27.5570749Z #10 1.434      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 33.9 MB/s eta 0:00:00
+2025-07-26T03:46:27.5571478Z #10 1.477 Installing collected packages: pip
+2025-07-26T03:46:27.7083044Z #10 1.478   Attempting uninstall: pip
+2025-07-26T03:46:27.7083548Z #10 1.478     Found existing installation: pip 23.0.1
+2025-07-26T03:46:27.7334891Z #10 1.654     Uninstalling pip-23.0.1:
+2025-07-26T03:46:27.8939272Z #10 1.664       Successfully uninstalled pip-23.0.1
+2025-07-26T03:46:28.5326120Z #10 2.453 Successfully installed pip-25.1.1
+2025-07-26T03:46:28.6833612Z #10 2.453 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+2025-07-26T03:46:29.4011838Z #10 3.321 Collecting annotated-types==0.7.0 (from -r requirements.txt (line 1))
+2025-07-26T03:46:29.5087624Z #10 3.356   Downloading annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+2025-07-26T03:46:29.5088843Z #10 3.380 Collecting anyio==4.9.0 (from -r requirements.txt (line 2))
+2025-07-26T03:46:29.5089636Z #10 3.383   Downloading anyio-4.9.0-py3-none-any.whl.metadata (4.7 kB)
+2025-07-26T03:46:29.5090480Z #10 3.400 Collecting autodevops-cli==5.1 (from -r requirements.txt (line 3))
+2025-07-26T03:46:29.5091355Z #10 3.405   Downloading autodevops_cli-5.1-py3-none-any.whl.metadata (543 bytes)
+2025-07-26T03:46:29.5100583Z #10 3.412 Collecting blinker==1.9.0 (from -r requirements.txt (line 4))
+2025-07-26T03:46:29.5101156Z #10 3.416   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+2025-07-26T03:46:29.5101621Z #10 3.429 Collecting certifi==2025.7.14 (from -r requirements.txt (line 5))
+2025-07-26T03:46:29.6111527Z #10 3.433   Downloading certifi-2025.7.14-py3-none-any.whl.metadata (2.4 kB)
+2025-07-26T03:46:29.6112659Z #10 3.510 Collecting charset-normalizer==3.4.2 (from -r requirements.txt (line 6))
+2025-07-26T03:46:29.6113720Z #10 3.513   Downloading charset_normalizer-3.4.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (35 kB)
+2025-07-26T03:46:29.6114471Z #10 3.528 Collecting click==8.2.1 (from -r requirements.txt (line 7))
+2025-07-26T03:46:29.6114941Z #10 3.532   Downloading click-8.2.1-py3-none-any.whl.metadata (2.5 kB)
+2025-07-26T03:46:29.7189756Z #10 3.539 Collecting distro==1.9.0 (from -r requirements.txt (line 8))
+2025-07-26T03:46:29.7190534Z #10 3.542   Downloading distro-1.9.0-py3-none-any.whl.metadata (6.8 kB)
+2025-07-26T03:46:29.7191355Z #10 3.551 Collecting dnspython==2.7.0 (from -r requirements.txt (line 9))
+2025-07-26T03:46:29.7191877Z #10 3.554   Downloading dnspython-2.7.0-py3-none-any.whl.metadata (5.8 kB)
+2025-07-26T03:46:29.7192382Z #10 3.563 Collecting dotenv==0.9.9 (from -r requirements.txt (line 10))
+2025-07-26T03:46:29.7192895Z #10 3.566   Downloading dotenv-0.9.9-py2.py3-none-any.whl.metadata (279 bytes)
+2025-07-26T03:46:29.7193397Z #10 3.578 Collecting Flask==3.1.0 (from -r requirements.txt (line 11))
+2025-07-26T03:46:29.7193859Z #10 3.582   Downloading flask-3.1.0-py3-none-any.whl.metadata (2.7 kB)
+2025-07-26T03:46:29.7194348Z #10 3.592 Collecting Flask-PyMongo==3.0.1 (from -r requirements.txt (line 12))
+2025-07-26T03:46:29.7194870Z #10 3.597   Downloading flask_pymongo-3.0.1-py3-none-any.whl.metadata (3.5 kB)
+2025-07-26T03:46:29.7195358Z #10 3.603 Collecting h11==0.16.0 (from -r requirements.txt (line 13))
+2025-07-26T03:46:29.7195816Z #10 3.606   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+2025-07-26T03:46:29.7196411Z #10 3.619 Collecting httpcore==1.0.9 (from -r requirements.txt (line 14))
+2025-07-26T03:46:29.8290898Z #10 3.622   Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+2025-07-26T03:46:29.8291804Z #10 3.639 Collecting httpx==0.28.1 (from -r requirements.txt (line 15))
+2025-07-26T03:46:29.8292477Z #10 3.643   Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+2025-07-26T03:46:29.8293116Z #10 3.654 Collecting idna==3.10 (from -r requirements.txt (line 16))
+2025-07-26T03:46:29.8293722Z #10 3.657   Downloading idna-3.10-py3-none-any.whl.metadata (10 kB)
+2025-07-26T03:46:29.8294346Z #10 3.664 Collecting iniconfig==2.1.0 (from -r requirements.txt (line 17))
+2025-07-26T03:46:29.8295038Z #10 3.667   Downloading iniconfig-2.1.0-py3-none-any.whl.metadata (2.7 kB)
+2025-07-26T03:46:29.8295733Z #10 3.674 Collecting itsdangerous==2.2.0 (from -r requirements.txt (line 18))
+2025-07-26T03:46:29.8296434Z #10 3.677   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+2025-07-26T03:46:29.8297131Z #10 3.688 Collecting Jinja2==3.1.6 (from -r requirements.txt (line 19))
+2025-07-26T03:46:29.8297765Z #10 3.691   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+2025-07-26T03:46:29.8298563Z #10 3.749 Collecting jiter==0.10.0 (from -r requirements.txt (line 20))
+2025-07-26T03:46:29.9316796Z #10 3.754   Downloading jiter-0.10.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.2 kB)
+2025-07-26T03:46:29.9317936Z #10 3.762 Collecting loguru==0.7.3 (from -r requirements.txt (line 21))
+2025-07-26T03:46:29.9319050Z #10 3.765   Downloading loguru-0.7.3-py3-none-any.whl.metadata (22 kB)
+2025-07-26T03:46:29.9319991Z #10 3.784 Collecting markdown-it-py==3.0.0 (from -r requirements.txt (line 22))
+2025-07-26T03:46:29.9320742Z #10 3.787   Downloading markdown_it_py-3.0.0-py3-none-any.whl.metadata (6.9 kB)
+2025-07-26T03:46:29.9321355Z #10 3.840 Collecting MarkupSafe==3.0.2 (from -r requirements.txt (line 23))
+2025-07-26T03:46:29.9322333Z #10 3.844   Downloading MarkupSafe-3.0.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.0 kB)
+2025-07-26T03:46:29.9323070Z #10 3.849 Collecting mdurl==0.1.2 (from -r requirements.txt (line 24))
+2025-07-26T03:46:29.9323613Z #10 3.852   Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+2025-07-26T03:46:30.0362708Z #10 3.861 Collecting mongomock==4.3.0 (from -r requirements.txt (line 25))
+2025-07-26T03:46:30.0364182Z #10 3.865   Downloading mongomock-4.3.0-py2.py3-none-any.whl.metadata (12 kB)
+2025-07-26T03:46:30.0365011Z #10 3.911 Collecting openai==1.96.1 (from -r requirements.txt (line 26))
+2025-07-26T03:46:30.0365777Z #10 3.915   Downloading openai-1.96.1-py3-none-any.whl.metadata (29 kB)
+2025-07-26T03:46:30.0366543Z #10 3.929 Collecting packaging==25.0 (from -r requirements.txt (line 27))
+2025-07-26T03:46:30.0367225Z #10 3.932   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+2025-07-26T03:46:30.0367740Z #10 3.940 Collecting paho-mqtt==2.1.0 (from -r requirements.txt (line 28))
+2025-07-26T03:46:30.0368833Z #10 3.945   Downloading paho_mqtt-2.1.0-py3-none-any.whl.metadata (23 kB)
+2025-07-26T03:46:30.0369346Z #10 3.957 Collecting pluggy==1.6.0 (from -r requirements.txt (line 29))
+2025-07-26T03:46:30.1753017Z #10 3.960   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+2025-07-26T03:46:30.1753605Z #10 4.095 Collecting pydantic==2.11.7 (from -r requirements.txt (line 30))
+2025-07-26T03:46:30.3296394Z #10 4.099   Downloading pydantic-2.11.7-py3-none-any.whl.metadata (67 kB)
+2025-07-26T03:46:30.8623892Z #10 4.782 Collecting pydantic_core==2.33.2 (from -r requirements.txt (line 31))
+2025-07-26T03:46:31.0357268Z #10 4.786   Downloading pydantic_core-2.33.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.8 kB)
+2025-07-26T03:46:31.0357955Z #10 4.802 Collecting Pygments==2.19.2 (from -r requirements.txt (line 32))
+2025-07-26T03:46:31.0358628Z #10 4.805   Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+2025-07-26T03:46:31.1988293Z #10 5.119 Collecting pymongo==4.13.2 (from -r requirements.txt (line 33))
+2025-07-26T03:46:31.3173016Z #10 5.124   Downloading pymongo-4.13.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (22 kB)
+2025-07-26T03:46:31.3174271Z #10 5.158 Collecting pytest==8.2.1 (from -r requirements.txt (line 34))
+2025-07-26T03:46:31.3175187Z #10 5.162   Downloading pytest-8.2.1-py3-none-any.whl.metadata (7.6 kB)
+2025-07-26T03:46:31.3176102Z #10 5.175 Collecting python-dotenv==1.1.1 (from -r requirements.txt (line 35))
+2025-07-26T03:46:31.3176862Z #10 5.179   Downloading python_dotenv-1.1.1-py3-none-any.whl.metadata (24 kB)
+2025-07-26T03:46:31.3177593Z #10 5.212 Collecting pytz==2025.2 (from -r requirements.txt (line 36))
+2025-07-26T03:46:31.3178608Z #10 5.216   Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+2025-07-26T03:46:31.3179493Z #10 5.238 Collecting requests==2.32.4 (from -r requirements.txt (line 37))
+2025-07-26T03:46:31.5302950Z #10 5.242   Downloading requests-2.32.4-py3-none-any.whl.metadata (4.9 kB)
+2025-07-26T03:46:31.5303700Z #10 5.276 Collecting rich==14.0.0 (from -r requirements.txt (line 38))
+2025-07-26T03:46:31.5304162Z #10 5.284   Downloading rich-14.0.0-py3-none-any.whl.metadata (18 kB)
+2025-07-26T03:46:31.5304621Z #10 5.290 Collecting sentinels==1.0.0 (from -r requirements.txt (line 39))
+2025-07-26T03:46:31.5305032Z #10 5.294   Downloading sentinels-1.0.0.tar.gz (4.1 kB)
+2025-07-26T03:46:31.5305351Z #10 5.300   Preparing metadata (setup.py): started
+2025-07-26T03:46:32.0069262Z #10 5.927   Preparing metadata (setup.py): finished with status 'done'
+2025-07-26T03:46:32.1181824Z #10 6.038 Collecting setuptools==80.9.0 (from -r requirements.txt (line 40))
+2025-07-26T03:46:32.2280249Z #10 6.042   Downloading setuptools-80.9.0-py3-none-any.whl.metadata (6.6 kB)
+2025-07-26T03:46:32.2281319Z #10 6.065 Collecting sh==2.2.2 (from -r requirements.txt (line 41))
+2025-07-26T03:46:32.2282014Z #10 6.070   Downloading sh-2.2.2-py3-none-any.whl.metadata (3.7 kB)
+2025-07-26T03:46:32.2282854Z #10 6.075 Collecting sniffio==1.3.1 (from -r requirements.txt (line 42))
+2025-07-26T03:46:32.2283443Z #10 6.079   Downloading sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+2025-07-26T03:46:32.2283915Z #10 6.086 Collecting tabulate==0.9.0 (from -r requirements.txt (line 43))
+2025-07-26T03:46:32.2284374Z #10 6.090   Downloading tabulate-0.9.0-py3-none-any.whl.metadata (34 kB)
+2025-07-26T03:46:32.2284818Z #10 6.120 Collecting tqdm==4.67.1 (from -r requirements.txt (line 44))
+2025-07-26T03:46:32.2285239Z #10 6.123   Downloading tqdm-4.67.1-py3-none-any.whl.metadata (57 kB)
+2025-07-26T03:46:32.2285711Z #10 6.133 Collecting typing-inspection==0.4.1 (from -r requirements.txt (line 45))
+2025-07-26T03:46:32.2286325Z #10 6.136   Downloading typing_inspection-0.4.1-py3-none-any.whl.metadata (2.6 kB)
+2025-07-26T03:46:32.2286845Z #10 6.148 Collecting typing_extensions==4.14.1 (from -r requirements.txt (line 46))
+2025-07-26T03:46:32.3330543Z #10 6.152   Downloading typing_extensions-4.14.1-py3-none-any.whl.metadata (3.0 kB)
+2025-07-26T03:46:32.3331803Z #10 6.171 Collecting urllib3==2.5.0 (from -r requirements.txt (line 47))
+2025-07-26T03:46:32.3332393Z #10 6.174   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+2025-07-26T03:46:32.3332889Z #10 6.239 Collecting Werkzeug==3.1.3 (from -r requirements.txt (line 48))
+2025-07-26T03:46:32.3333381Z #10 6.243   Downloading werkzeug-3.1.3-py3-none-any.whl.metadata (3.7 kB)
+2025-07-26T03:46:32.3333927Z #10 6.253 Collecting exceptiongroup>=1.0.2 (from anyio==4.9.0->-r requirements.txt (line 2))
+2025-07-26T03:46:32.4658149Z #10 6.257   Downloading exceptiongroup-1.3.0-py3-none-any.whl.metadata (6.7 kB)
+2025-07-26T03:46:32.4659387Z #10 6.386 Collecting tomli>=1 (from pytest==8.2.1->-r requirements.txt (line 34))
+2025-07-26T03:46:32.5765153Z #10 6.390   Downloading tomli-2.2.1-py3-none-any.whl.metadata (10 kB)
+2025-07-26T03:46:32.5766845Z #10 6.447 Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
+2025-07-26T03:46:32.5767651Z #10 6.451 Downloading anyio-4.9.0-py3-none-any.whl (100 kB)
+2025-07-26T03:46:32.5768203Z #10 6.455 Downloading autodevops_cli-5.1-py3-none-any.whl (10 kB)
+2025-07-26T03:46:32.5769013Z #10 6.459 Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+2025-07-26T03:46:32.5769500Z #10 6.463 Downloading certifi-2025.7.14-py3-none-any.whl (162 kB)
+2025-07-26T03:46:32.5770216Z #10 6.467 Downloading charset_normalizer-3.4.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (149 kB)
+2025-07-26T03:46:32.5770773Z #10 6.486 Downloading click-8.2.1-py3-none-any.whl (102 kB)
+2025-07-26T03:46:32.5771134Z #10 6.497 Downloading distro-1.9.0-py3-none-any.whl (20 kB)
+2025-07-26T03:46:32.6777744Z #10 6.500 Downloading dnspython-2.7.0-py3-none-any.whl (313 kB)
+2025-07-26T03:46:32.6779434Z #10 6.505 Downloading dotenv-0.9.9-py2.py3-none-any.whl (1.9 kB)
+2025-07-26T03:46:32.6780290Z #10 6.508 Downloading flask-3.1.0-py3-none-any.whl (102 kB)
+2025-07-26T03:46:32.6780993Z #10 6.512 Downloading flask_pymongo-3.0.1-py3-none-any.whl (11 kB)
+2025-07-26T03:46:32.6781700Z #10 6.515 Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+2025-07-26T03:46:32.6782351Z #10 6.518 Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+2025-07-26T03:46:32.6783001Z #10 6.521 Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+2025-07-26T03:46:32.6783618Z #10 6.525 Downloading idna-3.10-py3-none-any.whl (70 kB)
+2025-07-26T03:46:32.6784270Z #10 6.528 Downloading iniconfig-2.1.0-py3-none-any.whl (6.0 kB)
+2025-07-26T03:46:32.6784984Z #10 6.531 Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+2025-07-26T03:46:32.6785670Z #10 6.535 Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+2025-07-26T03:46:32.6786219Z #10 6.539 Downloading jiter-0.10.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (352 kB)
+2025-07-26T03:46:32.6786715Z #10 6.543 Downloading loguru-0.7.3-py3-none-any.whl (61 kB)
+2025-07-26T03:46:32.6787103Z #10 6.547 Downloading markdown_it_py-3.0.0-py3-none-any.whl (87 kB)
+2025-07-26T03:46:32.6787475Z #10 6.551 Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+2025-07-26T03:46:32.6788181Z #10 6.554 Downloading MarkupSafe-3.0.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (20 kB)
+2025-07-26T03:46:32.6788988Z #10 6.557 Downloading mongomock-4.3.0-py2.py3-none-any.whl (64 kB)
+2025-07-26T03:46:32.6789370Z #10 6.561 Downloading openai-1.96.1-py3-none-any.whl (757 kB)
+2025-07-26T03:46:32.6790011Z #10 6.568    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 757.5/757.5 kB 135.6 MB/s eta 0:00:00
+2025-07-26T03:46:32.6790398Z #10 6.572 Downloading pydantic-2.11.7-py3-none-any.whl (444 kB)
+2025-07-26T03:46:32.6790810Z #10 6.576 Downloading typing_extensions-4.14.1-py3-none-any.whl (43 kB)
+2025-07-26T03:46:32.6791203Z #10 6.580 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+2025-07-26T03:46:32.6791562Z #10 6.584 Downloading paho_mqtt-2.1.0-py3-none-any.whl (67 kB)
+2025-07-26T03:46:32.6791916Z #10 6.588 Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+2025-07-26T03:46:32.6792405Z #10 6.591 Downloading pydantic_core-2.33.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.0 MB)
+2025-07-26T03:46:32.8114010Z #10 6.598    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 400.0 MB/s eta 0:00:00
+2025-07-26T03:46:32.8116504Z #10 6.602 Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+2025-07-26T03:46:32.8117444Z #10 6.607    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 493.7 MB/s eta 0:00:00
+2025-07-26T03:46:32.8118320Z #10 6.610 Downloading pymongo-4.13.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.2 MB)
+2025-07-26T03:46:32.8119721Z #10 6.618    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 201.3 MB/s eta 0:00:00
+2025-07-26T03:46:32.8120396Z #10 6.621 Downloading pytest-8.2.1-py3-none-any.whl (339 kB)
+2025-07-26T03:46:32.8121083Z #10 6.627 Downloading python_dotenv-1.1.1-py3-none-any.whl (20 kB)
+2025-07-26T03:46:32.8121810Z #10 6.630 Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
+2025-07-26T03:46:32.8122878Z #10 6.634 Downloading requests-2.32.4-py3-none-any.whl (64 kB)
+2025-07-26T03:46:32.8123599Z #10 6.638 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+2025-07-26T03:46:32.8124238Z #10 6.642 Downloading rich-14.0.0-py3-none-any.whl (243 kB)
+2025-07-26T03:46:32.8124895Z #10 6.645 Downloading setuptools-80.9.0-py3-none-any.whl (1.2 MB)
+2025-07-26T03:46:32.8125714Z #10 6.650    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 475.1 MB/s eta 0:00:00
+2025-07-26T03:46:32.8126291Z #10 6.654 Downloading sh-2.2.2-py3-none-any.whl (38 kB)
+2025-07-26T03:46:32.8126849Z #10 6.658 Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+2025-07-26T03:46:32.8127426Z #10 6.661 Downloading tabulate-0.9.0-py3-none-any.whl (35 kB)
+2025-07-26T03:46:32.8127929Z #10 6.664 Downloading tqdm-4.67.1-py3-none-any.whl (78 kB)
+2025-07-26T03:46:32.8128722Z #10 6.668 Downloading typing_inspection-0.4.1-py3-none-any.whl (14 kB)
+2025-07-26T03:46:32.8129134Z #10 6.671 Downloading werkzeug-3.1.3-py3-none-any.whl (224 kB)
+2025-07-26T03:46:32.8129526Z #10 6.675 Downloading exceptiongroup-1.3.0-py3-none-any.whl (16 kB)
+2025-07-26T03:46:32.8129952Z #10 6.678 Downloading tomli-2.2.1-py3-none-any.whl (14 kB)
+2025-07-26T03:46:32.8130295Z #10 6.732 Building wheels for collected packages: sentinels
+2025-07-26T03:46:32.9632465Z #10 6.733   DEPRECATION: Building 'sentinels' using the legacy setup.py bdist_wheel mechanism, which will be removed in a future version. pip 25.3 will enforce this behaviour change. A possible replacement is to use the standardized build interface by setting the `--use-pep517` option, (possibly combined with `--no-build-isolation`), or adding a `pyproject.toml` file to the source tree of 'sentinels'. Discussion can be found at https://github.com/pypa/pip/issues/6334
+2025-07-26T03:46:32.9634307Z #10 6.733   Building wheel for sentinels (setup.py): started
+2025-07-26T03:46:33.6078772Z #10 7.528   Building wheel for sentinels (setup.py): finished with status 'done'
+2025-07-26T03:46:33.7210827Z #10 7.529   Created wheel for sentinels: filename=sentinels-1.0.0-py3-none-any.whl size=3175 sha256=cd47e9d14de519b6561533ff1d2e0c7798ce2da2ba9282641f2a639a4133aa99
+2025-07-26T03:46:33.7212781Z #10 7.529   Stored in directory: /tmp/pip-ephem-wheel-cache-vxq41hhy/wheels/26/bc/eb/67e56405e0684b3d8c011cf4d18129c41be394775fd5ba2347
+2025-07-26T03:46:33.7213852Z #10 7.531 Successfully built sentinels
+2025-07-26T03:46:33.7217251Z #10 7.641 Installing collected packages: sentinels, pytz, urllib3, typing_extensions, tqdm, tomli, tabulate, sniffio, sh, setuptools, python-dotenv, Pygments, pluggy, paho-mqtt, packaging, mdurl, MarkupSafe, loguru, jiter, itsdangerous, iniconfig, idna, h11, dnspython, distro, click, charset-normalizer, certifi, blinker, annotated-types, Werkzeug, typing-inspection, requests, pymongo, pydantic_core, mongomock, markdown-it-py, Jinja2, httpcore, exceptiongroup, dotenv, rich, pytest, pydantic, Flask, anyio, httpx, Flask-PyMongo, openai, autodevops-cli
+2025-07-26T03:46:34.0008033Z #10 7.921   Attempting uninstall: setuptools
+2025-07-26T03:46:34.1863258Z #10 7.922     Found existing installation: setuptools 65.5.1
+2025-07-26T03:46:34.1864197Z #10 7.941     Uninstalling setuptools-65.5.1:
+2025-07-26T03:46:37.6224591Z #10 7.956       Successfully uninstalled setuptools-65.5.1
+2025-07-26T03:46:37.6225089Z #10 11.54 
+2025-07-26T03:46:37.7836315Z #10 11.55 Successfully installed Flask-3.1.0 Flask-PyMongo-3.0.1 Jinja2-3.1.6 MarkupSafe-3.0.2 Pygments-2.19.2 Werkzeug-3.1.3 annotated-types-0.7.0 anyio-4.9.0 autodevops-cli-5.1 blinker-1.9.0 certifi-2025.7.14 charset-normalizer-3.4.2 click-8.2.1 distro-1.9.0 dnspython-2.7.0 dotenv-0.9.9 exceptiongroup-1.3.0 h11-0.16.0 httpcore-1.0.9 httpx-0.28.1 idna-3.10 iniconfig-2.1.0 itsdangerous-2.2.0 jiter-0.10.0 loguru-0.7.3 markdown-it-py-3.0.0 mdurl-0.1.2 mongomock-4.3.0 openai-1.96.1 packaging-25.0 paho-mqtt-2.1.0 pluggy-1.6.0 pydantic-2.11.7 pydantic_core-2.33.2 pymongo-4.13.2 pytest-8.2.1 python-dotenv-1.1.1 pytz-2025.2 requests-2.32.4 rich-14.0.0 sentinels-1.0.0 setuptools-80.9.0 sh-2.2.2 sniffio-1.3.1 tabulate-0.9.0 tomli-2.2.1 tqdm-4.67.1 typing-inspection-0.4.1 typing_extensions-4.14.1 urllib3-2.5.0
+2025-07-26T03:46:37.7840185Z #10 11.55 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+2025-07-26T03:46:38.0464046Z #10 DONE 12.0s
+2025-07-26T03:46:38.1975253Z 
+2025-07-26T03:46:38.1975793Z #11 [6/7] RUN pip install --no-cache-dir python-dotenv
+2025-07-26T03:46:38.8357698Z #11 0.789 Requirement already satisfied: python-dotenv in /usr/local/lib/python3.10/site-packages (1.1.1)
+2025-07-26T03:46:39.0370992Z #11 0.874 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+2025-07-26T03:46:39.0376177Z #11 DONE 1.0s
+2025-07-26T03:46:39.1887498Z 
+2025-07-26T03:46:39.1887787Z #12 [7/7] COPY . .
+2025-07-26T03:46:40.0575458Z #12 DONE 1.0s
+2025-07-26T03:46:40.2090327Z 
+2025-07-26T03:46:40.2090739Z #13 exporting to image
+2025-07-26T03:46:40.2091169Z #13 exporting layers
+2025-07-26T03:46:42.5008082Z #13 exporting layers 2.4s done
+2025-07-26T03:46:42.5175078Z #13 writing image sha256:1b5389e4908124c1b33b40260692f041d3f5de9f342928974926c2d2e9ad2118 done
+2025-07-26T03:46:42.5176134Z #13 naming to docker.io/***/flask-ci-cd-demo done
+2025-07-26T03:46:42.5176651Z #13 DONE 2.4s
+2025-07-26T03:46:42.5265312Z ##[group]Run docker push ***/flask-ci-cd-demo
+2025-07-26T03:46:42.5265967Z [36;1mdocker push ***/flask-ci-cd-demo[0m
+2025-07-26T03:46:42.5307108Z shell: /usr/bin/bash -e {0}
+2025-07-26T03:46:42.5307500Z env:
+2025-07-26T03:46:42.5307943Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-26T03:46:42.5308933Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib/pkgconfig
+2025-07-26T03:46:42.5309676Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-26T03:46:42.5310353Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-26T03:46:42.5311037Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-26T03:46:42.5311694Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib
+2025-07-26T03:46:42.5312248Z ##[endgroup]
+2025-07-26T03:46:42.5469142Z Using default tag: latest
+2025-07-26T03:46:42.5484883Z The push refers to repository [docker.io/***/flask-ci-cd-demo]
+2025-07-26T03:46:42.5662497Z 20d16d9cf639: Preparing
+2025-07-26T03:46:42.5662960Z 5f70bf18a086: Preparing
+2025-07-26T03:46:42.5663266Z a3d8040c52d5: Preparing
+2025-07-26T03:46:42.5663655Z b70faf12f59f: Preparing
+2025-07-26T03:46:42.5664022Z 3665060b1339: Preparing
+2025-07-26T03:46:42.5664388Z aaac6a4c4be2: Preparing
+2025-07-26T03:46:42.5664624Z f6dc80d9d167: Preparing
+2025-07-26T03:46:42.5665129Z 3ba4af0751c6: Preparing
+2025-07-26T03:46:42.5665340Z d379451f91b6: Preparing
+2025-07-26T03:46:42.5665572Z 7cc7fe68eff6: Preparing
+2025-07-26T03:46:42.5665804Z f6dc80d9d167: Waiting
+2025-07-26T03:46:42.5666081Z 3ba4af0751c6: Waiting
+2025-07-26T03:46:42.5666294Z d379451f91b6: Waiting
+2025-07-26T03:46:42.5666503Z 7cc7fe68eff6: Waiting
+2025-07-26T03:46:42.5666710Z aaac6a4c4be2: Waiting
+2025-07-26T03:46:43.6378313Z b70faf12f59f: Pushed
+2025-07-26T03:46:43.6530914Z 3665060b1339: Pushed
+2025-07-26T03:46:43.8028956Z f6dc80d9d167: Layer already exists
+2025-07-26T03:46:43.9585368Z 3ba4af0751c6: Layer already exists
+2025-07-26T03:46:44.0867540Z d379451f91b6: Layer already exists
+2025-07-26T03:46:44.1745899Z 7cc7fe68eff6: Layer already exists
+2025-07-26T03:46:44.4526699Z 5f70bf18a086: Pushed
+2025-07-26T03:46:47.1291538Z a3d8040c52d5: Pushed
+2025-07-26T03:46:48.5484919Z 20d16d9cf639: Pushed
+2025-07-26T03:47:00.5965164Z aaac6a4c4be2: Pushed
+2025-07-26T03:47:02.5796038Z latest: digest: sha256:3cbffd1d5f6f5ad3a36edb8640be3011a5a387114583d16e2e984ed7fc69eeb9 size: 2415
+2025-07-26T03:47:02.5860832Z Post job cleanup.
+2025-07-26T03:47:02.8758909Z [command]/usr/bin/docker logout 
+2025-07-26T03:47:02.8957803Z Removing login credentials for https://index.docker.io/v1/
+2025-07-26T03:47:02.8991975Z ##[group]Post cache
+2025-07-26T03:47:02.8993596Z State not set
+2025-07-26T03:47:02.8994892Z ##[endgroup]
+2025-07-26T03:47:02.9107245Z Post job cleanup.
+2025-07-26T03:47:03.0756018Z Post job cleanup.
+2025-07-26T03:47:03.1470232Z [command]/usr/bin/git version
+2025-07-26T03:47:03.1503247Z git version 2.50.1
+2025-07-26T03:47:03.1547389Z Temporarily overriding HOME='/home/runner/work/_temp/6a35ea89-fe31-4365-a6b5-169edd480bc5' before making global git config changes
+2025-07-26T03:47:03.1548908Z Adding repository directory to the temporary git global config as a safe directory
+2025-07-26T03:47:03.1552371Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/testing-CI-CD/testing-CI-CD
+2025-07-26T03:47:03.1582786Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-07-26T03:47:03.1610997Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-07-26T03:47:03.1839053Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-07-26T03:47:03.1858244Z http.https://github.com/.extraheader
+2025-07-26T03:47:03.1868798Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-07-26T03:47:03.1895639Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-07-26T03:47:03.2218609Z Cleaning up orphan processes

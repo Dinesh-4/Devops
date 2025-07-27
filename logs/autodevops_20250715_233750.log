@@ -1,0 +1,82 @@
+2025-07-15 23:37:52.190 | ERROR    | autodevops_cli.cli:autodevops:183 - ❌ AutoDevOps failed
+Traceback (most recent call last):
+
+  File "/home/kannan/testing-CI-CD/venv/bin/autodevops", line 8, in <module>
+    sys.exit(autodevops())
+    │   │    └ <Command autodevops>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+  File "/home/kannan/testing-CI-CD/venv/lib/python3.12/site-packages/click/core.py", line 1442, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function Command.main at 0x71e813b85e40>
+           └ <Command autodevops>
+  File "/home/kannan/testing-CI-CD/venv/lib/python3.12/site-packages/click/core.py", line 1363, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x71e814391c70>
+         │    └ <function Command.invoke at 0x71e813b85b20>
+         └ <Command autodevops>
+  File "/home/kannan/testing-CI-CD/venv/lib/python3.12/site-packages/click/core.py", line 1226, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'message': ' Now check me'}
+           │   │      │    │           └ <click.core.Context object at 0x71e814391c70>
+           │   │      │    └ <function autodevops at 0x71e8135ab560>
+           │   │      └ <Command autodevops>
+           │   └ <function Context.invoke at 0x71e813b84d60>
+           └ <click.core.Context object at 0x71e814391c70>
+  File "/home/kannan/testing-CI-CD/venv/lib/python3.12/site-packages/click/core.py", line 794, in invoke
+    return callback(*args, **kwargs)
+           │         │       └ {'message': ' Now check me'}
+           │         └ ()
+           └ <function autodevops at 0x71e8135ab560>
+> File "/home/kannan/testing-CI-CD/venv/lib/python3.12/site-packages/autodevops_cli/cli.py", line 159, in autodevops
+    git.pull()
+    └ <Command '/usr/bin/git'>
+  File "/home/kannan/testing-CI-CD/venv/lib/python3.12/site-packages/sh.py", line 1511, in __call__
+    rc = self.__class__.RunningCommandCls(cmd, call_args, stdin, stdout, stderr)
+         │    │                           │    │          │      │       └ None
+         │    │                           │    │          │      └ None
+         │    │                           │    │          └ None
+         │    │                           │    └ {'fg': False, 'bg': False, 'bg_exc': True, 'with': False, 'in': None, 'out': None, 'err': None, 'err_to_out': None, 'in_bufsi...
+         │    │                           └ ['/usr/bin/git', 'pull']
+         │    └ <attribute '__class__' of 'object' objects>
+         └ <Command '/usr/bin/git pull'>
+  File "/home/kannan/testing-CI-CD/venv/lib/python3.12/site-packages/sh.py", line 734, in __init__
+    self.wait()
+    │    └ <function RunningCommand.wait at 0x71e813626ac0>
+    └ Updating c9d4e67..1bc317b
+  File "/home/kannan/testing-CI-CD/venv/lib/python3.12/site-packages/sh.py", line 796, in wait
+    self.handle_command_exit_code(exit_code)
+    │    │                        └ 1
+    │    └ <function RunningCommand.handle_command_exit_code at 0x71e813626c00>
+    └ Updating c9d4e67..1bc317b
+  File "/home/kannan/testing-CI-CD/venv/lib/python3.12/site-packages/sh.py", line 823, in handle_command_exit_code
+    raise exc
+          └ ErrorReturnCode_1('\n\n  RAN: /usr/bin/git pull\n\n  STDOUT:\nUpdating c9d4e67..1bc317b\n\n\n  STDERR:\nerror: Your local cha...
+
+sh.ErrorReturnCode_1: 
+
+  RAN: /usr/bin/git pull
+
+  STDOUT:
+Updating c9d4e67..1bc317b
+
+
+  STDERR:
+error: Your local changes to the following files would be overwritten by merge:
+	ci_summary.txt
+	logs/0_build-test-deploy.txt
+	logs/build-test-deploy/14_Post Log in to Docker Hub.txt
+	logs/build-test-deploy/15_Post Set up Python.txt
+	logs/build-test-deploy/16_Post Checkout code.txt
+	logs/build-test-deploy/17_Complete job.txt
+	logs/build-test-deploy/1_Set up job.txt
+	logs/build-test-deploy/2_Checkout code.txt
+	logs/build-test-deploy/3_Set up Python.txt
+	logs/build-test-deploy/4_Install dependencies.txt
+	logs/build-test-deploy/5_Run Pytest.txt
+	logs/build-test-deploy/6_Log in to Docker Hub.txt
+	logs/build-test-deploy/7_Build Docker image.txt
+Please commit your changes or stash them before you merge.
+error: The following untracked working tree... (140 more, please see e.stderr)

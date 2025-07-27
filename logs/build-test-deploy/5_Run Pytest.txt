@@ -1,0 +1,26 @@
+﻿2025-07-26T03:46:06.1918756Z ##[group]Run export PYTHONPATH=.
+2025-07-26T03:46:06.1919091Z [36;1mexport PYTHONPATH=.[0m
+2025-07-26T03:46:06.1919340Z [36;1mpytest test_main.py -v[0m
+2025-07-26T03:46:06.1947161Z shell: /usr/bin/bash -e {0}
+2025-07-26T03:46:06.1947395Z env:
+2025-07-26T03:46:06.1947656Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-26T03:46:06.1948083Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib/pkgconfig
+2025-07-26T03:46:06.1948604Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-26T03:46:06.1948966Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-26T03:46:06.1949329Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-26T03:46:06.1949681Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib
+2025-07-26T03:46:06.1949980Z ##[endgroup]
+2025-07-26T03:46:06.5409601Z ============================= test session starts ==============================
+2025-07-26T03:46:06.5410313Z platform linux -- Python 3.10.18, pytest-8.2.1, pluggy-1.6.0 -- /opt/hostedtoolcache/Python/3.10.18/x64/bin/python
+2025-07-26T03:46:06.5410926Z cachedir: .pytest_cache
+2025-07-26T03:46:06.5411231Z rootdir: /home/runner/work/testing-CI-CD/testing-CI-CD
+2025-07-26T03:46:06.5411572Z plugins: anyio-4.9.0
+2025-07-26T03:46:06.7033785Z collecting ... collected 5 items
+2025-07-26T03:46:06.7034114Z 
+2025-07-26T03:46:07.0498774Z test_main.py::test_home_page PASSED                                      [ 20%]
+2025-07-26T03:46:07.0591704Z test_main.py::test_admin_dashboard PASSED                                [ 40%]
+2025-07-26T03:46:07.0674775Z test_main.py::test_student_dashboard PASSED                              [ 60%]
+2025-07-26T03:46:07.0738947Z test_main.py::test_generate_attendance_no_input PASSED                   [ 80%]
+2025-07-26T03:46:07.0816970Z test_main.py::test_receive_rfid_missing PASSED                           [100%]
+2025-07-26T03:46:07.0817522Z 
+2025-07-26T03:46:07.0817766Z ============================== 5 passed in 0.54s ===============================
